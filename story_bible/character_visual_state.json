@@ -1,0 +1,87 @@
+{
+  "_purpose": "Tracks the current visual/physical state of each character across episodes. The image generator reads this before every scene to ensure wounds, scars, aging, and equipment changes appear correctly and consistently.",
+
+  "_update_rule": "Updated automatically by the pipeline after each episode using character_visual_state_updates from the episode JSON. Never manually edited — always managed by the pipeline.",
+
+  "episode_last_updated": 0,
+
+  "characters": {
+    "Kairo Voss": {
+      "base_age": 19,
+      "age_appearance": "19-year-old male",
+      "active_injuries": [],
+      "healing_injuries": [],
+      "permanent_changes": [
+        "small scar above left eyebrow — pre-story, always present"
+      ],
+      "equipment_changes": [],
+      "prompt_additions": "",
+      "prompt_removals": ""
+    },
+
+    "Serin Alda": {
+      "base_age": 23,
+      "age_appearance": "23-year-old woman",
+      "active_injuries": [],
+      "healing_injuries": [],
+      "permanent_changes": [],
+      "equipment_changes": [],
+      "prompt_additions": "",
+      "prompt_removals": ""
+    },
+
+    "Director Malec Thorne": {
+      "base_age": 58,
+      "age_appearance": "58-year-old man",
+      "active_injuries": [],
+      "healing_injuries": [],
+      "permanent_changes": [],
+      "equipment_changes": [],
+      "prompt_additions": "",
+      "prompt_removals": ""
+    },
+
+    "Ren": {
+      "base_age": 17,
+      "age_appearance": "17-year-old male",
+      "active_injuries": [],
+      "healing_injuries": [],
+      "permanent_changes": [],
+      "equipment_changes": [],
+      "prompt_additions": "",
+      "prompt_removals": ""
+    },
+
+    "The Voice": {
+      "base_age": null,
+      "age_appearance": null,
+      "active_injuries": [],
+      "healing_injuries": [],
+      "permanent_changes": [],
+      "equipment_changes": [],
+      "prompt_additions": "",
+      "prompt_removals": ""
+    }
+  },
+
+  "_injury_format_example": {
+    "description": "Shows format for active_injuries entries",
+    "example": {
+      "description": "deep gash on left forearm, hastily bandaged with torn cloth, still bleeding",
+      "received_episode": 3,
+      "heals_episode": 8,
+      "prompt_tag": "deep wound on left forearm wrapped in torn cloth bandage",
+      "severity": "moderate"
+    }
+  },
+
+  "_equipment_change_format_example": {
+    "description": "Shows format for equipment_changes entries",
+    "example": {
+      "description": "now carries a Guild-issue resonance dampener on belt",
+      "acquired_episode": 5,
+      "prompt_tag": "resonance dampener device clipped to belt",
+      "permanent": false
+    }
+  }
+}

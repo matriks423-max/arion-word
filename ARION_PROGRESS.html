@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arion World — Setup Progress</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #06060a;
+      color: #e0d8c8;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      color: #4a4540;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 40px;
+    }
+
+    /* Progress bar */
+    .progress-wrap {
+      background: #12121a;
+      border: 1px solid #1e1e28;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 4px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7a7368;
+      margin-bottom: 10px;
+    }
+
+    .progress-label span:last-child { color: #c9a84c; }
+
+    .progress-bar-bg {
+      background: #1a1a24;
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #8b6914, #c9a84c);
+      border-radius: 3px;
+      transition: width 0.6s ease;
+    }
+
+    /* Section */
+    .section { margin-bottom: 36px; }
+
+    .section-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #4a4540;
+      border-bottom: 1px solid #1a1a22;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    /* Item */
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 16px;
+      margin-bottom: 6px;
+      border-radius: 3px;
+      border: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .item:hover { border-color: #2a2a36; }
+
+    .item.done { background: #0d1410; }
+    .item.todo { background: #10100e; }
+    .item.warn { background: #120d08; }
+
+    .check {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .check.done { color: #4a9a6a; }
+    .check.todo { color: #3a3a50; }
+    .check.warn { color: #b87333; }
+
+    .item-body { flex: 1; min-width: 0; }
+
+    .item-title {
+      font-size: 0.9rem;
+      color: #d0c8b8;
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    .item.done .item-title { color: #6a7a66; }
+
+    .item-desc {
+      font-size: 0.78rem;
+      color: #4a4540;
+      line-height: 1.5;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-left: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    .tag.auto { background: #1a2a1a; color: #4a9a6a; border: 1px solid #2a4a2a; }
+    .tag.manual { background: #2a1a0a; color: #b87333; border: 1px solid #4a2a0a; }
+    .tag.optional { background: #1a1a2a; color: #5a5a8a; border: 1px solid #2a2a4a; }
+
+    /* Two-col grid for manual steps */
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    @media (max-width: 600px) { .grid2 { grid-template-columns: 1fr; } }
+
+    /* CI badge */
+    .ci-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .ci-badge {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid;
+    }
+
+    .ci-badge.pass { background: #0d1a10; border-color: #2a4a2a; color: #4a9a6a; }
+    .ci-badge.fail { background: #1a0d0a; border-color: #4a2a1a; color: #c05a3a; }
+    .ci-badge.skip { background: #12121a; border-color: #2a2a3a; color: #5a5a7a; }
+
+    .note {
+      background: #0e0e16;
+      border: 1px solid #1e1e28;
+      border-left: 3px solid #c9a84c;
+      padding: 14px 18px;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      color: #7a7368;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .note strong { color: #c9a84c; }
+
+    a { color: #c9a84c; text-decoration: none; }
+    a:hover { color: #f0c866; text-decoration: underline; }
+
+    code {
+      background: #1a1a24;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      color: #a0a8b8;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Arion World</h1>
+  <p class="subtitle">Setup Progress — Open this file in a browser to track what's done</p>
+
+  <!-- Overall progress bar -->
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span>Overall Progress</span>
+      <span id="pct">calculating…</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="bar" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- CI Status -->
+  <div class="section">
+    <div class="section-title">CI Status — PR #1</div>
+    <div class="ci-row">
+      <span class="ci-badge pass">✓ Build Website — passing</span>
+      <span class="ci-badge skip">⊘ Deploy to GitHub Pages — skipped on PR branch (enable Pages first)</span>
+    </div>
+  </div>
+
+  <!-- CODE — ALL DONE -->
+  <div class="section">
+    <div class="section-title">Code — Pipeline</div>
+
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">pipeline.py — main orchestrator <span class="tag auto">auto</span></div>
+        <div class="item-desc">Runs all 8 steps: story → voice → images → subtitles → video → trailer → publish → merch</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">generate_story.py — Claude Opus episode writer <span class="tag auto">auto</span></div>
+        <div class="item-desc">1-hr episodes, 20-28 scenes, 8500+ words, max_tokens=32000. Full story philosophy injected.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">generate_voice.py — ElevenLabs narration <span class="tag auto">auto</span></div>
+        <div class="item-desc">MP3 per scene, dialogue handled naturally (not "X said: line")</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">generate_images.py — Replicate SDXL with visual consistency <span class="tag auto">auto</span></div>
+        <div class="item-desc">Characters always look the same. Injuries persist. Technique effects are visually identical.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">generate_subtitles.py — SRT + DeepL translations <span class="tag auto">auto</span></div>
+        <div class="item-desc">EN always generated. ES/PT/FR/DE/JA if DEEPL_API_KEY set.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">assemble_video.py — FFmpeg 1-hr MP4 <span class="tag auto">auto</span></div>
+        <div class="item-desc">Ken Burns effect, crossfades, background music mixing. Auto-detects pre-rendered clips.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">create_trailer.py — 2-min portrait trailer <span class="tag auto">auto</span></div>
+        <div class="item-desc">9:16 crop, burned EN subtitles for TikTok/Instagram auto-mute.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">publish_youtube.py — Resumable upload + subtitle tracks <span class="tag auto">auto</span></div>
+        <div class="item-desc">10MB chunk upload, all language SRT uploaded as caption tracks.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">publish_facebook.py / publish_instagram.py / publish_tiktok.py <span class="tag auto">auto</span></div>
+        <div class="item-desc">All with retry logic (3 attempts, exponential backoff). Instagram fails gracefully without TRAILER_PUBLIC_URL.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">publish_merch.py + generate_merch_designs.py — Printful auto-merch <span class="tag auto">auto</span></div>
+        <div class="item-desc">Picks 3 best scene images → composites branding → creates t-shirt/poster/mug on Printful.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">auto_lore_builder.py — autonomous lore expansion <span class="tag auto">auto</span></div>
+        <div class="item-desc">10 rotating tasks, every 5 hours via GitHub Actions. Backup before overwrite. JSON validation.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">refresh_tokens.py — monthly Facebook/TikTok token refresh <span class="tag auto">auto</span></div>
+        <div class="item-desc">Creates GitHub issue if manual renewal is needed.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Code — Story Bible (14 files)</div>
+    <div class="grid2">
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">universe.json</div><div class="item-desc">World, timelines, power system, Founding Age truth</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">characters.json</div><div class="item-desc">5 main cast with SDXL visual profiles</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">races.json</div><div class="item-desc">10 races with civilisations + Fracture history</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">continents.json</div><div class="item-desc">6 continents, named cities, secrets</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">techniques.json</div><div class="item-desc">13 named abilities — game-ready skill tree</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">curses.json</div><div class="item-desc">16 curses, equivalent exchange (cost + hidden gift)</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">crafting_arts.json</div><div class="item-desc">Alchemy + True Smithing, 4 named practitioners</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">caelum_city.json</div><div class="item-desc">Street-level city texture, named locations</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">chroniclers.json</div><div class="item-desc">5-member faction, Erian's 4th document, Dena watching Kairo</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">story_philosophy.json</div><div class="item-desc">8 permanent rules: Snape Principle, Death Note, etc.</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">season1_soil.json</div><div class="item-desc">Board state day before Episode 1</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">visual_style.json</div><div class="item-desc">Global SDXL art direction</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">character_visual_state.json</div><div class="item-desc">Injury/aging/equipment persistence tracker</div></div></div>
+      <div class="item done"><span class="check done">✓</span><div class="item-body"><div class="item-title">future_hooks.json</div><div class="item-desc">Planted clues with payoff episodes (expanding)</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Code — Website, Bot &amp; Workflows</div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">Astro website — 8 pages</div>
+        <div class="item-desc">Home, Episodes (list + detail), Characters (list + detail), World, Mysteries, Merch. All JSON-driven.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">ChatWidget + ContactForm components</div>
+        <div class="item-desc">Floating FAQ widget + Formspree contact form (replace FORMSPREE_FORM_ID).</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">Discord bot (disnake) — commands + auto-announce</div>
+        <div class="item-desc">!episode, !characters, !mystery, !lore, !contact, /ask. Docker + Railway deploy guide.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">GitHub Actions — 4 workflows</div>
+        <div class="item-desc">Weekly publish (Mon 9am), auto-lore (5h), monthly token refresh, website deploy.</div>
+      </div>
+    </div>
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">Migration workflow for arion-word repo</div>
+        <div class="item-desc">Ready to run — needs ARION_WORLD_PAT secret (classic PAT with repo scope).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANUAL STEPS -->
+  <div class="section">
+    <div class="section-title">Manual Steps — Do These When You Get Home</div>
+
+    <div class="note">
+      <strong>Do these in order.</strong> Steps 1–3 must be done before anything runs.
+      Steps 4–9 are account creation — open them in separate tabs simultaneously to save time.
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">1. Move code to arion-word repo <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          Create a <strong>classic</strong> PAT at <a href="https://github.com/settings/tokens" target="_blank">github.com/settings/tokens</a> (tick <code>repo</code>) →
+          add as secret <code>ARION_WORLD_PAT</code> in jobsy-lv →
+          run <strong>"Migrate — Copy Arion World"</strong> workflow in Actions tab →
+          delete the secret after.
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">2. Fix Formspree placeholder <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          Create free form at <a href="https://formspree.io" target="_blank">formspree.io</a> →
+          open <code>website/src/components/ContactForm.astro</code> →
+          replace <code>FORMSPREE_FORM_ID</code> with your actual ID.
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">3. Enable GitHub Pages on arion-word repo <span class="tag manual">manual</span></div>
+        <div class="item-desc">arion-word → Settings → Pages → Source → <strong>GitHub Actions</strong> → Save.</div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">4. Create API accounts <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          <a href="https://console.anthropic.com" target="_blank">Anthropic</a> (API key) ·
+          <a href="https://elevenlabs.io" target="_blank">ElevenLabs</a> (API key + Voice ID) ·
+          <a href="https://replicate.com" target="_blank">Replicate</a> (API token) ·
+          <a href="https://www.deepl.com/pro-api" target="_blank">DeepL</a> (free key) ·
+          <a href="https://printful.com" target="_blank">Printful</a> (API key) ·
+          <a href="https://formspree.io" target="_blank">Formspree</a> (Form ID)
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">5. Create social channels <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          YouTube channel <code>@ArionWorld</code> ·
+          Facebook Page "Arion World" ·
+          Instagram Business <code>@ArionWorld</code> (link to FB Page) ·
+          TikTok creator <code>@ArionWorld</code>
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">6. Get YouTube OAuth token <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          Google Cloud Console → Enable YouTube Data API v3 → OAuth 2.0 credentials (Desktop) →
+          run <code>python src/youtube_auth.py</code> locally → copy printed <code>YOUTUBE_REFRESH_TOKEN</code>.
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">7. Get Facebook/Instagram tokens <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          <a href="https://developers.facebook.com" target="_blank">developers.facebook.com</a> →
+          Create App (Business) → add Instagram Graph API + Pages API →
+          generate long-lived Page Access Token →
+          copy: <code>FACEBOOK_PAGE_ID</code>, <code>FACEBOOK_ACCESS_TOKEN</code>,
+          <code>FACEBOOK_APP_ID</code>, <code>FACEBOOK_APP_SECRET</code>, <code>INSTAGRAM_ACCOUNT_ID</code>.
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">8. Get TikTok tokens <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          <a href="https://developers.tiktok.com" target="_blank">developers.tiktok.com</a> →
+          Create app → enable Content Posting API → OAuth flow →
+          copy: <code>TIKTOK_ACCESS_TOKEN</code>, <code>TIKTOK_REFRESH_TOKEN</code>,
+          <code>TIKTOK_CLIENT_KEY</code>, <code>TIKTOK_CLIENT_SECRET</code>.
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">9. Create Discord server + bot <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          <a href="https://discord.com/developers/applications" target="_blank">discord.com/developers</a> →
+          New Application → Bot → copy <code>DISCORD_BOT_TOKEN</code> →
+          Create server → #announcements channel → copy <code>DISCORD_ANNOUNCEMENT_CHANNEL_ID</code> →
+          invite bot with Send Messages + Embed Links permissions.
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">10. Add all secrets to arion-word repo <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          arion-word → Settings → Secrets → Actions → add all 22 secrets
+          (see <code>MANUAL_ACTIONS_REQUIRED.md</code> for full list).
+        </div>
+      </div>
+    </div>
+
+    <div class="item todo">
+      <span class="check todo">○</span>
+      <div class="item-body">
+        <div class="item-title">11. Test dry run <span class="tag manual">manual</span></div>
+        <div class="item-desc">
+          arion-word → Actions → "Arion World — Weekly Episode" →
+          Run workflow → <code>dry_run: true</code>.
+          Should print episode title, scene count, cliffhanger.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTIONAL -->
+  <div class="section">
+    <div class="section-title">Optional — After Launch</div>
+
+    <div class="item done">
+      <span class="check done">✓</span>
+      <div class="item-body">
+        <div class="item-title">Instagram video hosting — solved via GitHub Releases <span class="tag auto">auto</span></div>
+        <div class="item-desc">Pipeline splits into generate → upload trailer to GitHub Release → publish. Instagram gets a public HTTPS URL automatically. No Cloudflare R2 needed.</div>
+      </div>
+    </div>
+    <div class="item warn">
+      <span class="check warn">◐</span>
+      <div class="item-body">
+        <div class="item-title">Discord bot hosting — Railway.app <span class="tag optional">optional</span></div>
+        <div class="item-desc">For 24/7 bot. Free tier covers it. Without it, use Discord webhook (announcements-only) — already wired into weekly-publish.yml.</div>
+      </div>
+    </div>
+    <div class="item warn">
+      <span class="check warn">◐</span>
+      <div class="item-body">
+        <div class="item-title">Custom domain — arionworld.com <span class="tag optional">optional</span></div>
+        <div class="item-desc">~€10/yr. Add CNAME to GitHub Pages. Already configured in website/public/CNAME and astro.config.mjs.</div>
+      </div>
+    </div>
+    <div class="item warn">
+      <span class="check warn">◐</span>
+      <div class="item-body">
+        <div class="item-title">Rename repo arion-word → arion-world <span class="tag optional">optional</span></div>
+        <div class="item-desc">Typo from when you created it. arion-word Settings → rename to arion-world.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Auto-calculate progress from checked items
+  const done = document.querySelectorAll('.item.done').length;
+  const todo = document.querySelectorAll('.item.todo').length;
+  const warn = document.querySelectorAll('.item.warn').length;
+  const total = done + todo + warn;
+  const pct = Math.round((done / total) * 100);
+  document.getElementById('pct').textContent = pct + '% complete';
+  document.getElementById('bar').style.width = pct + '%';
+</script>
+</body>
+</html>

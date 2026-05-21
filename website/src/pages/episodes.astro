@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const path = join(process.cwd(), 'public/content/episodes.json');
+const data = existsSync(path)
+  ? JSON.parse(readFileSync(path, 'utf-8'))
+  : { episodes: [] };
+
+const episodes = [...data.episodes].reverse();
+---
+
+<Layout title="Episodes" description="Every episode of Arion World. New episodes every Monday.">
+  <div class="max-w-4xl mx-auto px-6 py-24">
+
+    <div class="text-center mb-16">
+      <h1 class="font-display text-4xl text-gold tracking-widest uppercase mb-4">Episodes</h1>
+      <p class="text-text-muted italic">New episode every Monday. Summaries contain spoilers.</p>
+    </div>
+
+    {episodes.length === 0 && (
+      <p class="text-center text-text-dim italic">Episode 1 is coming. Subscribe on YouTube so you don't miss it.</p>
+    )}
+
+    <div class="space-y-px">
+      {episodes.map((ep: any) => (
+        <a href={`/episodes/${ep.episode_number}`} class="block bg-ash hover:bg-mist transition-colors group p-8 border-l-2 border-transparent hover:border-gold">
+          <div class="flex items-start justify-between gap-8">
+            <div class="flex-1">
+              <div class="flex items-center gap-4 mb-3">
+                <span class="font-mono text-xs text-text-dim tracking-widest">EP {String(ep.episode_number).padStart(3, '0')}</span>
+                {ep.major_death && <span class="text-xs text-crimson-bright tracking-widest uppercase">⚠ Major Death</span>}
+              </div>
+              <h2 class="font-display text-xl text-text-primary group-hover:text-gold transition-colors mb-2">
+                {ep.title}
+              </h2>
+              <p class="text-text-muted text-sm italic leading-relaxed">{ep.logline}</p>
+            </div>
+            <span class="text-text-dim group-hover:text-gold transition-colors mt-1">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

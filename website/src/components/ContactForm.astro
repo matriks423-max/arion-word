@@ -1,0 +1,176 @@
+---
+// ContactForm.astro — Formspree-backed contact form
+// Set FORMSPREE_FORM_ID env var in GitHub Actions / .env to wire this up.
+// If unset, the form renders but submission will 404 (safe fallback).
+const formId = import.meta.env.FORMSPREE_FORM_ID || 'FORMSPREE_FORM_ID';
+const formAction = `https://formspree.io/f/${formId}`;
+---
+
+<section class="max-w-2xl mx-auto px-6 py-16">
+  <h2 class="font-display text-gold tracking-[0.3em] uppercase text-sm mb-2 text-center">
+    Get In Touch
+  </h2>
+  <p class="text-text-dim text-xs text-center tracking-wider mb-10">
+    Business inquiries, collaborations, fan mail — we read everything.
+  </p>
+
+  <form
+    id="contact-form"
+    action={formAction}
+    method="POST"
+    novalidate
+    class="space-y-6"
+  >
+    <!-- Name -->
+    <div>
+      <label for="cf-name" class="block text-xs tracking-widest uppercase text-text-muted mb-2">
+        Name
+      </label>
+      <input
+        id="cf-name"
+        type="text"
+        name="name"
+        required
+        placeholder="Your name"
+        class="w-full bg-ash border border-white/10 text-text-primary placeholder-text-dim
+               px-4 py-3 text-sm focus:outline-none focus:border-gold/50 transition-colors"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="cf-email" class="block text-xs tracking-widest uppercase text-text-muted mb-2">
+        Email
+      </label>
+      <input
+        id="cf-email"
+        type="email"
+        name="email"
+        required
+        placeholder="your@email.com"
+        class="w-full bg-ash border border-white/10 text-text-primary placeholder-text-dim
+               px-4 py-3 text-sm focus:outline-none focus:border-gold/50 transition-colors"
+      />
+    </div>
+
+    <!-- Subject -->
+    <div>
+      <label for="cf-subject" class="block text-xs tracking-widest uppercase text-text-muted mb-2">
+        Subject
+      </label>
+      <select
+        id="cf-subject"
+        name="subject"
+        required
+        class="w-full bg-ash border border-white/10 text-text-primary
+               px-4 py-3 text-sm focus:outline-none focus:border-gold/50 transition-colors
+               appearance-none cursor-pointer"
+      >
+        <option value="" disabled selected class="text-text-dim">Select a subject</option>
+        <option value="Business Inquiry">Business Inquiry</option>
+        <option value="Collab Proposal">Collab Proposal</option>
+        <option value="Fan Mail">Fan Mail</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="cf-message" class="block text-xs tracking-widest uppercase text-text-muted mb-2">
+        Message
+      </label>
+      <textarea
+        id="cf-message"
+        name="message"
+        required
+        rows="6"
+        placeholder="Tell us what's on your mind..."
+        class="w-full bg-ash border border-white/10 text-text-primary placeholder-text-dim
+               px-4 py-3 text-sm focus:outline-none focus:border-gold/50 transition-colors
+               resize-vertical"
+      ></textarea>
+    </div>
+
+    <!-- Honeypot (spam protection) -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <!-- Submit -->
+    <div class="flex items-center gap-4">
+      <button
+        type="submit"
+        id="cf-submit"
+        class="px-8 py-3 bg-gold text-void font-display tracking-widest uppercase text-sm
+               hover:bg-gold-bright transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Send Message
+      </button>
+      <span id="cf-status" class="text-sm italic text-text-dim" aria-live="polite"></span>
+    </div>
+  </form>
+
+  <!-- Success / error states -->
+  <div id="cf-success" class="hidden text-center py-12">
+    <p class="font-display text-gold tracking-widest uppercase text-sm mb-3">Message Sent</p>
+    <p class="text-text-muted text-sm">Thank you — we'll be in touch soon.</p>
+  </div>
+
+  <div id="cf-error" class="hidden text-center py-12">
+    <p class="font-display text-crimson tracking-widest uppercase text-sm mb-3">Something went wrong</p>
+    <p class="text-text-muted text-sm">
+      Please try again or email us directly at
+      <a href="mailto:contact@arionworld.com" class="text-gold hover:text-gold-bright transition-colors">
+        contact@arionworld.com
+      </a>
+    </p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('cf-submit') as HTMLButtonElement | null;
+  const statusEl = document.getElementById('cf-status');
+  const successEl = document.getElementById('cf-success');
+  const errorEl = document.getElementById('cf-error');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!submitBtn || !statusEl || !successEl || !errorEl) return;
+
+      // Basic client-side validation
+      const name = (document.getElementById('cf-name') as HTMLInputElement)?.value.trim();
+      const email = (document.getElementById('cf-email') as HTMLInputElement)?.value.trim();
+      const subject = (document.getElementById('cf-subject') as HTMLSelectElement)?.value;
+      const message = (document.getElementById('cf-message') as HTMLTextAreaElement)?.value.trim();
+
+      if (!name || !email || !subject || !message) {
+        statusEl.textContent = 'Please fill in all fields.';
+        statusEl.style.color = '#EF4444';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      statusEl.textContent = 'Sending…';
+      statusEl.style.color = '#6B6B75';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          successEl.classList.remove('hidden');
+        } else {
+          throw new Error(`HTTP ${response.status}`);
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        statusEl.textContent = '';
+        errorEl.classList.remove('hidden');
+      }
+    });
+  }
+</script>

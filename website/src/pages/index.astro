@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const contentDir = join(process.cwd(), 'public/content');
+
+function loadJSON(filename: string, fallback: any) {
+  const path = join(contentDir, filename);
+  if (!existsSync(path)) return fallback;
+  return JSON.parse(readFileSync(path, 'utf-8'));
+}
+
+const siteState = loadJSON('site_state.json', {
+  episode_number: 0,
+  latest_episode_title: 'Coming Soon',
+  latest_episode_logline: 'The story begins.',
+  latest_episode_cliffhanger: '',
+  active_characters: [],
+  world_tone: 'mysterious',
+});
+
+const characters = loadJSON('characters_public.json', { characters: [] });
+const episodes = loadJSON('episodes.json', { episodes: [] });
+
+const featuredCharacters = (characters.characters ?? []).slice(0, 4);
+const recentEpisodes = (episodes.episodes ?? []).slice(-3).reverse();
+
+const toneColors: Record<string, string> = {
+  hopeful: 'from-gold/10',
+  tense: 'from-crimson/10',
+  dark: 'from-fracture/10',
+  catastrophic: 'from-crimson/20',
+  mysterious: 'from-resonance/10',
+};
+const heroBg = toneColors[siteState.world_tone] ?? toneColors.mysterious;
+---
+
+<Layout title="Arion World" description="An epic anime-style fantasy story spanning broken timelines. New episode every Monday.">
+
+  <!-- Hero -->
+  <section class={`relative min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-b ${heroBg} via-void to-void px-6 text-center`}>
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/20 via-transparent to-transparent pointer-events-none"></div>
+
+    <p class="font-mono text-xs tracking-[0.4em] uppercase text-text-dim mb-6">
+      {siteState.episode_number > 0 ? `Episode ${siteState.episode_number} — Now Streaming` : 'Coming Soon'}
+    </p>
+
+    <h1 class="font-display text-6xl md:text-8xl text-gold tracking-widest uppercase mb-4">
+      Arion World
+    </h1>
+
+    <p class="text-text-muted italic text-lg md:text-xl max-w-xl mb-10">
+      "Where every truth is a lie waiting to be remembered."
+    </p>
+
+    {siteState.episode_number > 0 && (
+      <div class="max-w-2xl mb-10">
+        <p class="font-display text-text-primary/70 text-sm tracking-widest uppercase mb-2">
+          Latest — Episode {siteState.episode_number}: {siteState.latest_episode_title}
+        </p>
+        <p class="text-text-muted text-base italic">{siteState.latest_episode_logline}</p>
+      </div>
+    )}
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="https://youtube.com/@ArionWorld" target="_blank" rel="noopener"
+         class="px-8 py-3 bg-gold text-void font-display tracking-widest uppercase text-sm hover:bg-gold-bright transition-colors">
+        Watch Now
+      </a>
+      <a href="/world"
+         class="px-8 py-3 border border-gold/30 text-gold font-display tracking-widest uppercase text-sm hover:border-gold hover:text-gold-bright transition-colors">
+        Enter the World
+      </a>
+    </div>
+
+    {siteState.latest_episode_cliffhanger && (
+      <p class="mt-16 text-text-dim text-xs italic max-w-md">
+        "{siteState.latest_episode_cliffhanger}"
+      </p>
+    )}
+  </section>
+
+  <!-- Latest Episodes -->
+  {recentEpisodes.length > 0 && (
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <h2 class="font-display text-gold tracking-[0.3em] uppercase text-sm mb-12 text-center">Recent Episodes</h2>
+      <div class="grid md:grid-cols-3 gap-px bg-white/5">
+        {recentEpisodes.map((ep: any) => (
+          <a href={`/episodes/${ep.episode_number}`} class="bg-ash p-8 hover:bg-mist transition-colors group">
+            <p class="font-mono text-xs text-text-dim tracking-widest uppercase mb-3">
+              Episode {ep.episode_number}
+            </p>
+            <h3 class="font-display text-text-primary group-hover:text-gold transition-colors mb-3">
+              {ep.title}
+            </h3>
+            <p class="text-text-muted text-sm italic leading-relaxed">{ep.logline}</p>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/episodes" class="text-sm tracking-widest uppercase text-text-dim hover:text-gold transition-colors">
+          All Episodes →
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- Characters -->
+  {featuredCharacters.length > 0 && (
+    <section class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+      <h2 class="font-display text-gold tracking-[0.3em] uppercase text-sm mb-2 text-center">Characters</h2>
+      <p class="text-text-dim text-xs text-center tracking-wider mb-12">Profiles update as the story reveals them</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+        {featuredCharacters.map((char: any) => (
+          <a href={`/characters/${char.slug}`} class="bg-ash p-6 hover:bg-mist transition-colors group">
+            <div class="flex items-start justify-between mb-4">
+              <span class={char.status === 'deceased' ? 'tag-status-deceased' : char.status === 'unknown' ? 'tag-status-unknown' : 'tag-status-alive'}>
+                {char.status}
+              </span>
+            </div>
+            <h3 class="font-display text-text-primary group-hover:text-gold transition-colors mb-1">
+              {char.name}
+            </h3>
+            <p class="text-text-dim text-xs tracking-wider uppercase mb-3">{char.role}</p>
+            <p class="text-text-muted text-sm leading-relaxed line-clamp-3">{char.public_description}</p>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/characters" class="text-sm tracking-widest uppercase text-text-dim hover:text-gold transition-colors">
+          All Characters →
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- World teaser -->
+  <section class="max-w-6xl mx-auto px-6 py-24 border-t border-white/5 text-center">
+    <h2 class="font-display text-gold tracking-[0.3em] uppercase text-sm mb-6">The World</h2>
+    <p class="text-text-muted max-w-2xl mx-auto leading-relaxed mb-8">
+      Arion World spans broken timelines and centuries of buried truth.
+      The world you see in Episode 1 is not the world you will understand in Episode 100.
+    </p>
+    <a href="/world" class="text-sm tracking-widest uppercase text-gold/70 hover:text-gold transition-colors">
+      Explore the Lore →
+    </a>
+  </section>
+
+</Layout>

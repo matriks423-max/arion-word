@@ -1,0 +1,173 @@
+{
+  "hooks": [
+    {
+      "id": "hook_001",
+      "description": "In Episode 1, Ren mentions his oldest clock stopped at '3:12'. This is the exact year (Year 312) the Great Betrayal occurred in the Founding Age.",
+      "planted_episode": 1,
+      "payoff_episode": 88,
+      "payoff_description": "Ren realises all his clocks correspond to Fracture timeline events and confronts the truth that he is Shattered",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_002",
+      "description": "Kairo's sketchbook drawings are described as 'weird abstract city maps'. In Episode 1 he draws a city with a strange spiral tower that doesn't exist in Caelum City.",
+      "planted_episode": 1,
+      "payoff_episode": 45,
+      "payoff_description": "The spiral tower is a landmark in the Echo Timeline version of Caelum City. Lyra recognises it instantly when she arrives.",
+      "revealed": false,
+      "category": "world_lore"
+    },
+    {
+      "id": "hook_003",
+      "description": "Director Malec's office has a large antique clock on the wall. It has 13 hour marks instead of 12. Never commented on.",
+      "planted_episode": 2,
+      "payoff_episode": 120,
+      "payoff_description": "The 13-hour clock is a Veilkeeper symbol — 13 representing the 13 original members of the order that caused the Fracture. Malec's ancestry is revealed.",
+      "revealed": false,
+      "category": "villain_secret"
+    },
+    {
+      "id": "hook_004",
+      "description": "Serin has a habit of touching her left temple when she is about to make a decision. She thinks it is a nervous tic.",
+      "planted_episode": 1,
+      "payoff_episode": 67,
+      "payoff_description": "The compulsion chip implanted during her Guild training is located at her left temple. When the trigger command is spoken she physically cannot act against the Guild — and she finally understands what her gesture meant.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_005",
+      "description": "The Voice tells Kairo in Episode 1: 'You have already made this choice. You will make it again. The third time you get it right.'",
+      "planted_episode": 1,
+      "payoff_episode": 200,
+      "payoff_description": "Kairo faces the exact same moral choice three times across three timelines. The first two times he fails. The third time — in the final arc — he succeeds, fulfilling this prophecy.",
+      "revealed": false,
+      "category": "long_game_prophecy"
+    },
+    {
+      "id": "hook_006",
+      "description": "There is graffiti on a wall in the outer district that reads 'ARION REMEMBERS'. Nobody in the story comments on it.",
+      "planted_episode": 1,
+      "payoff_episode": 150,
+      "payoff_description": "The Shattered use this phrase as a coded signal to each other. The graffiti means there is a Shattered living in that building — it is Ren's building.",
+      "revealed": false,
+      "category": "world_lore"
+    },
+    {
+      "id": "hook_007",
+      "description": "When Kairo first meets Serin and she introduces herself by name, he pauses for exactly one beat before responding — a pause he covers by looking away. The show never draws attention to it.",
+      "planted_episode": 3,
+      "payoff_episode": 112,
+      "payoff_description": "Kairo has been drawing the same face — Varos's face, surfacing from buried memory — for months. When Serin gives her full name, Alda, it is Erian's family name, last used in the Founding Age. Some part of Kairo's buried memory registered it before his conscious mind could. The pause is the first crack.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_008",
+      "description": "In the Dusk Market, Vesper's book stall has a handwritten sign above it that reads: 'Every word survives somewhere.' Kairo reads it in passing and makes a small joke to Ren about it. They walk on.",
+      "planted_episode": 4,
+      "payoff_episode": 78,
+      "payoff_description": "Vesper is a Mirror who has memorised the second Founding Age document in full. The sign she wrote is not a bookseller's motto — it is the final line of that document, which she absorbed so completely she no longer knows it came from somewhere. When Kairo eventually needs the passage she carries, the sign will play back and the audience will understand she has been holding it in plain sight from the beginning.",
+      "revealed": false,
+      "category": "world_lore"
+    },
+    {
+      "id": "hook_009",
+      "description": "Corvel Ash's practice has a small carved stone on the reception desk — dark grey, smooth, about the size of a fist. It is never referenced in dialogue. In the background of two early scenes it is simply there, unremarkable.",
+      "planted_episode": 6,
+      "payoff_episode": 95,
+      "payoff_description": "The stone is a Founding Age resonance marker — one of the objects Kairo read for Hedda two years before Episode 1 that left him non-functional for the rest of the day. Kairo handled it briefly, under a false name, during a single visit to Corvel's practice. Corvel kept it because the resonance residue Kairo left on it is the only identifying trace he has of his unnamed patient. When Kairo enters Corvel's practice for the first time on screen, he clocks the stone instantly. The audience realises simultaneously that Kairo has been there before and that Corvel has been hunting him using the ghost Kairo left on that object.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_010",
+      "description": "Harro Feld's pamphlets are sold at the Dusk Market for two coins each. In Episode 5, Ren buys one — not for any story reason, just because he likes the cover, a drawing of a ruined tower. He tucks it in his jacket pocket and it is never mentioned again.",
+      "planted_episode": 5,
+      "payoff_episode": 82,
+      "payoff_description": "The pamphlet is one of Harro Feld's four serialised Chronicler publications. The ruined tower on the cover is an accurate rendering of the primary Founding Age structure above the Undercity entrance — drawn from a document none of Ren's acquaintances should have access to. When the Undercity is finally found, Ren pulls the pamphlet from wherever he filed it and shows Kairo the cover in silence. The tower on the cover and the tower in front of them are identical. He bought the map four episodes before anyone knew there was a map.",
+      "revealed": false,
+      "category": "world_lore"
+    },
+    {
+      "id": "hook_011",
+      "description": "In Episode 2, Malec is seen standing at his office window for a long silent moment before his first scene begins. On the street below, just visible at the frame's edge, a woman in a brown coat is walking away from the building. The camera does not follow her. The scene proceeds.",
+      "planted_episode": 2,
+      "payoff_episode": 130,
+      "payoff_description": "The woman is Dena Croft. She had come to within forty metres of Malec's building — close enough that his perimeter Listeners would have flagged her presence — and then turned back. She has been doing this periodically for three years: approaching the Veilkeeper infrastructure and retreating. Malec does not know. When this moment is revisited in Episode 130, the audience understands she was making the decision that Episode 130 finally forces her to complete. She has been standing at the edge of this for years.",
+      "revealed": false,
+      "category": "villain_secret"
+    },
+    {
+      "id": "hook_012",
+      "description": "Serin's Guild personnel file, glimpsed briefly in Episode 3 as she flips past it to another document, lists her place of birth as 'unknown — outer district registration.' A clerk detail. Unremarkable.",
+      "planted_episode": 3,
+      "payoff_episode": 140,
+      "payoff_description": "Serin's mother is a high-ranking Veilkeeper. The 'outer district registration' entry was deliberately falsified when Serin was placed in the Guild as a long-term intelligence asset — her true birthplace is a Veilkeeper estate outside the city. Her entire origin story is a constructed document. The file she skimmed past in Episode 3 is the paper architecture of a false identity she has lived inside her whole life without knowing it existed.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_013",
+      "description": "The Founding Gate — the one that opens at dawn and closes at dusk on its own — makes a specific sound when it moves: a low resonant tone that lasts approximately two seconds. In early episodes it is ambient background. Kairo walks past it twice without reacting. In Episode 7, Ren walks past it and pauses mid-step for just a moment before continuing.",
+      "planted_episode": 7,
+      "payoff_episode": 55,
+      "payoff_description": "The tone the Gate produces is a Fracture frequency — the specific resonance signature that Shattered individuals are most sensitive to, because it matches the frequency of the timeline boundary they exist across. Kairo does not hear it because his ability is Fracture Walking, not Shattered perception. Ren hears it because he is Shattered. His pause is the first visible evidence of what he is, planted in plain sight twelve episodes before he discovers it himself.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_014",
+      "description": "The Voice, in its first two appearances, speaks to Kairo in full sentences. In its third appearance it begins a sentence, stops, and says instead: 'Not yet.' The interruption is treated as a moment of cryptic restraint. Kairo accepts it.",
+      "planted_episode": 8,
+      "payoff_episode": 165,
+      "payoff_description": "The Voice cannot directly tell Kairo he is Varos — the moment Kairo consciously knows, the Veilkeepers' containment protocol triggers. The Voice did not stop itself out of mystery. It stopped because it started to say his name — Varos — and caught it before the word formed. In Episode 165, when the memory finally surfaces and Kairo understands what he is, the Voice says: 'I have been trying to tell you that for a very long time.' The 'not yet' in Episode 8 was not patience. It was anguish.",
+      "revealed": false,
+      "category": "long_game_prophecy"
+    },
+    {
+      "id": "hook_015",
+      "description": "In Episode 4, Kairo walks past a seamstress's shop near his building block. There is a woman through the window doing alterations. She does not look up. He does not look in. The shop sign reads 'E. Marsh — Repairs.'",
+      "planted_episode": 4,
+      "payoff_episode": 22,
+      "payoff_description": "Elara Marsh is Dena Croft. The woman through the window is the only person alive who has read all of Erian's fourth document and can explain to Kairo what he is. She has been 90 metres from him for two and a half years. He has walked past her shop at least a hundred times. When Dena finally approaches him in Episode 22, the audience will understand that she was never a stranger — she was a recurring background detail they stopped seeing because she was always there.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_016",
+      "description": "The three surviving Founding Age documents are described in passing by Tobias Greel in Episode 9 as 'the only things the Veilkeepers couldn't burn.' He uses the phrase once, casually, and moves on to other business.",
+      "planted_episode": 9,
+      "payoff_episode": 180,
+      "payoff_description": "The Unnamed One — Fael — personally preserved all three documents across 2847 years. She was in Caelum City when the Veilkeepers tried to destroy the historical record. She hid the documents. She placed them where they would eventually be found by the right people. When Fael is finally revealed in Episode 180, Tobias's phrase replays with devastating weight: he was right that the Veilkeepers couldn't burn them. He didn't know there was a person whose entire life for eight centuries had been refusing to let them.",
+      "revealed": false,
+      "category": "long_game_prophecy"
+    },
+    {
+      "id": "hook_017",
+      "description": "Serin's silver ring — which she unconsciously touches when stressed — is shown in Episode 1 to have a faint inscription on the inside of the band. The inscription is never read on screen. It is in a script that appears in Founding Age ruins as decorative stonework.",
+      "planted_episode": 1,
+      "payoff_episode": 98,
+      "payoff_description": "The inscription is in the Founding Age administrative script — the same one carved into every foundation stone in Caelum, which modern scholars declared decorative because they cannot read it. The ring was given to Serin by her mother before her mother 'died' — it is a Veilkeeper signal object, and it carries her mother's name in the old language. When the script is finally translated, Serin reads her own ring and learns her mother is alive, has always been alive, and put her name on the inside of something she gave her daughter to carry every day.",
+      "revealed": false,
+      "category": "character_secret"
+    },
+    {
+      "id": "hook_018",
+      "description": "In Episode 10, during a scene set at the morning market, one of the anonymous market vendors in the background is an older woman, silver-haired, described in the stage direction only as 'watching.' She appears in the background of three separate outdoor scenes in the first twelve episodes, always watching, never interacting. She is never named or addressed.",
+      "planted_episode": 10,
+      "payoff_episode": 200,
+      "payoff_description": "She is Fael — the Unnamed One — 847 years old, the last living person who knew Erian personally, who has been waiting for the Threshold Configuration to emerge for centuries. She has been watching Kairo since before Dena Croft moved to the outer district. She does not intervene because she has been deciding whether to for eight hundred years. When she finally speaks in Episode 200, the audience will have seen her in the background of dozens of scenes. She was never absent. Nobody looked.",
+      "revealed": false,
+      "category": "long_game_prophecy"
+    }
+  ],
+
+  "meta": {
+    "total_hooks": 18,
+    "revealed_hooks": 0,
+    "categories": ["character_secret", "world_lore", "villain_secret", "long_game_prophecy"],
+    "instruction": "Each episode should plant at least 2 new hooks and optionally pay off 1 existing hook if the episode number matches or the story calls for it."
+  }
+}

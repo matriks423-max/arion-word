@@ -1,0 +1,87 @@
+# Arion World — arionworld.com
+# Copyright (c) 2025 Arion World. All rights reserved.
+# Unauthorised reproduction of story, characters, lore, or world-building
+# content from this site is prohibited.
+
+# ── Block AI training crawlers ────────────────────────────────────────────────
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Gemini-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+# ── Allow standard search engines (for discoverability) ──────────────────────
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ── All other crawlers: block lore content, allow index ──────────────────────
+
+User-agent: *
+Disallow: /world
+Disallow: /characters
+Disallow: /mysteries
+Disallow: /content/
+Allow: /
+Allow: /episodes
+
+Sitemap: https://arionworld.com/sitemap.xml
+Host: arionworld.com

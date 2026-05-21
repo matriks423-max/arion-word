@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const path = join(process.cwd(), 'public/content/characters_public.json');
+const data = existsSync(path)
+  ? JSON.parse(readFileSync(path, 'utf-8'))
+  : { characters: [], last_updated_episode: 0 };
+
+const alive = data.characters.filter((c: any) => c.status === 'alive');
+const deceased = data.characters.filter((c: any) => c.status === 'deceased');
+const unknown = data.characters.filter((c: any) => c.status === 'unknown');
+---
+
+<Layout title="Characters" description="The people of Arion World. Profiles update as the story reveals them.">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+
+    <div class="text-center mb-16">
+      <h1 class="font-display text-4xl text-gold tracking-widest uppercase mb-4">Characters</h1>
+      <p class="text-text-muted italic max-w-xl mx-auto">
+        What you know about each person is only what the story has revealed.
+        Some truths are still buried.
+      </p>
+      {data.last_updated_episode > 0 && (
+        <p class="text-text-dim text-xs tracking-widest uppercase mt-4">
+          Updated through Episode {data.last_updated_episode}
+        </p>
+      )}
+    </div>
+
+    {data.characters.length === 0 && (
+      <p class="text-center text-text-dim italic">The story hasn't started yet. Check back after Episode 1.</p>
+    )}
+
+    {alive.length > 0 && (
+      <section class="mb-16">
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-text-dim mb-8 flex items-center gap-4">
+          <span class="flex-1 h-px bg-white/5"></span>
+          <span>Active</span>
+          <span class="flex-1 h-px bg-white/5"></span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+          {alive.map((char: any) => (
+            <a href={`/characters/${char.slug}`} class="bg-ash p-8 hover:bg-mist transition-colors group">
+              <div class="mb-4">
+                <span class="tag-status-alive">Alive</span>
+              </div>
+              <h3 class="font-display text-xl text-text-primary group-hover:text-gold transition-colors mb-1">
+                {char.name}
+              </h3>
+              <p class="text-text-dim text-xs tracking-wider uppercase mb-4">{char.role}</p>
+              <p class="text-text-muted text-sm leading-relaxed">{char.public_description}</p>
+              {char.first_appeared_episode && (
+                <p class="mt-4 text-text-dim text-xs">First appeared: Episode {char.first_appeared_episode}</p>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {deceased.length > 0 && (
+      <section class="mb-16">
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-crimson-bright/50 mb-8 flex items-center gap-4">
+          <span class="flex-1 h-px bg-crimson/10"></span>
+          <span>Fallen</span>
+          <span class="flex-1 h-px bg-crimson/10"></span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-crimson/5">
+          {deceased.map((char: any) => (
+            <a href={`/characters/${char.slug}`} class="bg-ash p-8 hover:bg-mist transition-colors group opacity-70 hover:opacity-100">
+              <div class="mb-4">
+                <span class="tag-status-deceased">Deceased</span>
+              </div>
+              <h3 class="font-display text-xl text-text-muted group-hover:text-crimson-bright transition-colors mb-1 line-through decoration-crimson/40">
+                {char.name}
+              </h3>
+              <p class="text-text-dim text-xs tracking-wider uppercase mb-4">{char.role}</p>
+              <p class="text-text-muted text-sm leading-relaxed">{char.public_description}</p>
+              {char.died_episode && (
+                <p class="mt-4 text-crimson-bright/50 text-xs">Died: Episode {char.died_episode}</p>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {unknown.length > 0 && (
+      <section>
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-text-dim mb-8 flex items-center gap-4">
+          <span class="flex-1 h-px bg-white/5"></span>
+          <span>Whereabouts Unknown</span>
+          <span class="flex-1 h-px bg-white/5"></span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+          {unknown.map((char: any) => (
+            <a href={`/characters/${char.slug}`} class="bg-ash p-8 hover:bg-mist transition-colors group opacity-50 hover:opacity-80">
+              <div class="mb-4">
+                <span class="tag-status-unknown">Unknown</span>
+              </div>
+              <h3 class="font-display text-xl text-text-muted group-hover:text-text-primary transition-colors mb-1">
+                {char.name}
+              </h3>
+              <p class="text-text-dim text-xs tracking-wider uppercase mb-4">{char.role}</p>
+              <p class="text-text-muted text-sm leading-relaxed">{char.public_description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Layout>

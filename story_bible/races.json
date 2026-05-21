@@ -1,0 +1,117 @@
+{
+  "_copyright": "© Arion World. All rights reserved.",
+  "_note": "Each race has internal complexity — no race is purely good or evil. Every race has its own politics, class divides, regional accents, and eventually its own story arcs. The design rule: two members of the same race can be enemies while both are allies to someone from a different race.",
+
+  "races": {
+    "Humans": {
+      "known_name": "Humans",
+      "homeland": "The Known Continent — primarily Caelum City and surrounding territories",
+      "lifespan": "60-80 years",
+      "open_path_strength": "Generalists. No natural advantage in any single branch but the only race with no instilled bias toward one path. A human who finds the right knowledge in the right order can theoretically reach any branch.",
+      "fracture_history": "The race most devastated by the Fracture. Humans in Year 400 lost nearly everything — cities, archives, lineages of knowledge. The 2847 years since have been rebuilding from almost nothing, often without knowing that's what they're doing. Their greatest disadvantage is also their driver: short lives mean urgency, and urgency means discovery.",
+      "cultural_notes": "Enormous internal variation. Caelum City humans are urban, Guild-aware, politically conscious. Outer district humans are scrappy, self-taught, more likely to stumble into genuine discoveries. Rural humans have folk traditions that work better than anyone admits.",
+      "relationship_with_other_races": {
+        "Aelindri": "Complicated. Elves remember human history better than humans do, which is infuriating. Some humans resent it. Some are desperate to access that memory.",
+        "Vorath": "Mostly fear shaped by propaganda. The Guild has strategic reasons for humans to see Vorath as dangerous. The reality is more complex.",
+        "Keth": "Practical respect. Keth build things that don't fall down. Humans use those things.",
+        "Seren": "Uneasy tolerance. Seren look human, mostly act human, but something is slightly off. People feel it without being able to name it."
+      }
+    },
+
+    "Aelindri": {
+      "known_name": "Elves",
+      "homeland": "The Eastern Reach — ancient forests so dense that Resonance is visible as ambient light between the trees at night",
+      "lifespan": "600-900 years",
+      "open_path_strength": "Resonance Arts at depths no human institution has reached. Not because they're more talented — because they've had 600 years per individual to study. An Aelindri elder has more personal practice hours than an entire human generation combined.",
+      "fracture_history": "The Aelindri who were alive in Year 400 are still alive. Some of them. A few. They don't talk about it much. The Fracture hit differently for long-lived beings — watching everyone around you fracture in time while you remained continuous was its own kind of damage. Some of those elders have not fully recovered. Some of what they know from Year 400 has never been said aloud.",
+      "cultural_notes": "Not monolithic. The Eastern Reach has at least six distinct Aelindri cultures with different values, accents, and relationships to Resonance. The coastal Aelindri trade knowledge openly. The deep forest Aelindri do not speak to outsiders at all. The mountain border Aelindri have been in low-level conflict with Vorath clans for 400 years over territorial boundaries that both sides drew differently.",
+      "visual_accent": "Lean, precise movement. Colours that echo the forest — deep greens, silver, occasional vivid gold when Resonance use is visible. Their written language flows like water. Their spoken language has registers — a formal register that sounds like song, a common register that sounds like nothing unusual.",
+      "internal_conflict": "The elders who survived Year 400 believe patience is the answer to everything. The younger Aelindri — only 100-200 years old — think the elders have confused patience with avoidance. This is the political fault line the story can crack open.",
+      "what_they_know_that_nobody_else_does": "Three Aelindri elders witnessed the Arion Fracture directly. Not from a distance — they were close enough to see Varos and Erian. Nobody has asked them what they saw. Nobody knows to ask."
+    },
+
+    "Vorath": {
+      "known_name": "Orcs",
+      "homeland": "The Iron Peaks — a western continent of mountain ranges, deep valleys, cold plains. Each mountain range is a different clan territory.",
+      "lifespan": "70-90 years — slightly longer than humans, denser bodies",
+      "open_path_strength": "Body Arts at a level that looks like magic to outsiders. Vorath clan combat lineages are 1000 years of refinement — techniques passed from elder to student with obsessive precision. But the deeper tradition is shamanic Mind Arts — Vorath shamans have maintained communication with the Shattered for generations and carry knowledge of the Fracture's effects that no human scholar has.",
+      "fracture_history": "The Fracture hit the Iron Peaks as a physical event — the mountains cracked, new valleys formed, entire clan territories changed overnight. Vorath oral tradition from Year 400 describes 'the day the sky tore and the stone remembered.' Their shamans interpreted the Shattered not as damaged people but as people who had been given an unwanted gift. They have been helping the Shattered survive — quietly, without asking anything in return — for 2000 years.",
+      "cultural_notes": "Clan identity is everything. The Vorath do not think of themselves primarily as 'Vorath' — they are Kharrath clan, or Dur Veth clan, or Stoneback clan. Alliances between clans are formal, negotiated, and honoured absolutely. Betrayal of a clan pact is the worst crime in Vorath culture. Every clan has its own Body Arts lineage — two Vorath from different clans fight completely differently.",
+      "visual_accent": "Built heavier than humans, greens and greys and deep browns. Scarification that records lineage and achievement — not decoration, biography. Their spoken language is percussive and precise. They use silence deliberately — a Vorath who stops speaking mid-conversation is making a point.",
+      "what_humans_get_wrong": "The Guild's official position is that Vorath are aggressive and territorial. This serves the Guild's purposes. The actual Vorath relationship to violence: it is a language they speak fluently and prefer not to waste. They have more elaborate conflict resolution traditions than any human culture — the fighting happens when those traditions fail, not before.",
+      "what_they_know_that_nobody_else_does": "Vorath shamans have spoken to The Shattered for 2000 years. They know what the Shattered actually are. They have not told anyone outside the clans. The question is not whether they know — it is why they've kept it."
+    },
+
+    "Keth": {
+      "known_name": "The Deep-Kin (humans often call them Stone-kin or Dwarves)",
+      "homeland": "Underground — beneath every continent. They do not have surface nations. They have depth territories measured in levels below ground.",
+      "lifespan": "120-180 years",
+      "open_path_strength": "Craft Arts and Body Arts — specifically the combination. A Keth engineer who is also a trained fighter builds weapons with structural understanding that makes them differently effective than anything a surface craftsperson produces. Their greatest distinction: they kept Founding Age physical engineering knowledge. Not the Resonance mechanics — the structural principles. They build using rules they inherited without fully understanding why those rules work.",
+      "fracture_history": "The Fracture concentrated underground. The Keth ancestors were exposed to more Fracture energy than any surface race. It changed them physically over generations — denser bone, stone-patch skin clusters that serve as natural armour, reduced sensitivity to pain in those areas. They are not the same species they were in Year 400. They adapted. They consider this neither good nor bad. It is what happened.",
+      "cultural_notes": "Deeply communal underground — resources are shared, knowledge is guild-organised within Keth society (not the surface Guild — their own, older system). They surface for trade and occasionally for contracts. On the surface they are often misread as blunt or humourless. Underground they are intensely social. The bluntness is efficiency — underground, unclear communication gets people killed.",
+      "visual_accent": "Shorter and wider than humans. Stone-patch skin in greys and deep blues. Tools and crafted items are always functional-beautiful — nothing made by a Keth has unnecessary ornamentation, but the functional elements are made with a precision that becomes aesthetic by accident.",
+      "what_they_know_that_nobody_else_does": "The Undercity beneath Caelum City — the Keth have known it exists for 400 years. They have not entered it. Something in the deepest levels of the Undercity makes their stone-patch skin resonate in a way that frightens them. They have collectively agreed not to discuss this with surface races."
+    },
+
+    "Valdri": {
+      "known_name": "The Time-touched (humans often call them Seers or Broken-eyes)",
+      "homeland": "No fixed homeland — scattered across all continents in small communities",
+      "lifespan": "Unpredictable. A Valdri might live 40 years or 200. Time moves differently for them.",
+      "open_path_strength": "Perception Arts at a biological level. They don't train to perceive — they perceive, and spend their lives learning to manage it.",
+      "fracture_history": "Their ancestors were mid-ritual in Year 400. The Fracture interrupted the ritual permanently. Every Valdri born since carries the unfinished resonance of that interrupted working as biology.",
+      "cultural_notes": "Small tight communities because the experience of being Valdri is isolating — you cannot explain to a non-Valdri what it is like to remember tomorrow and forget yesterday. Their communities are built around helping each other function. They do not seek leadership roles. They seek quiet.",
+      "what_they_know": "They see timeline echoes. Some of what they see relates to the Fracture directly. Most of them do not know what they're seeing — they see events but not the structure that produces them. One Valdri elder, somewhere, has been seeing the same event repeat for 60 years and recently realised it hasn't happened yet."
+    },
+
+    "Seren": {
+      "known_name": "The Crossed (humans often just call them by name — Seren is both individual and collective)",
+      "homeland": "Human cities, mostly. They crossed from the Echo Timeline generations ago and could not return.",
+      "lifespan": "80-100 years",
+      "open_path_strength": "Resonance Arts built on Echo Timeline foundations — a completely different understanding of the same energy. Their techniques don't look like Guild techniques. They work differently, cost differently, and produce results the Guild has no framework to analyse.",
+      "fracture_history": "Natural Fracture tears opened in the Shadow Centuries. Some people from the Echo Timeline — where the Great Betrayal never happened and Resonance developed differently — crossed through. The tears closed behind them. Their descendants are still here.",
+      "cultural_notes": "Mostly integrated. Some Seren communities maintain Echo Timeline cultural practices as identity, not survival. Children of Seren and humans are possible but rare — those children are often Shattered, which the Seren communities treat as a known grief rather than a surprise.",
+      "what_they_know": "Techniques that developed in a world where the Fracture never happened. Some of those techniques, if applied to Fracture-related problems, would work in ways nobody expects. The Seren largely don't know this because nobody has asked the right questions."
+    },
+
+    "Resonborn": {
+      "known_name": "Resonborn (no human nickname has stuck — they don't correct the ones tried)",
+      "homeland": "Isolated coastal and island communities",
+      "lifespan": "90-110 years",
+      "open_path_strength": "They do not use Resonance — they ARE Resonance-native. It is their primary sense. They perceive every living thing's Luminal signature the way humans perceive faces. Deception, fear, intention — all have distinct signatures. They cannot be manipulated by someone who understands what they are.",
+      "fracture_history": "The Fracture changed their sensory baseline permanently. Before Year 400, their ancestors perceived Resonance as one layer among several. After, it became primary. The adjustment took generations.",
+      "cultural_notes": "Quiet. Not unfriendly — they simply communicate more in Resonance-readable signals than in words. A Resonborn standing near you is reading your emotional state continuously. Most people find this uncomfortable once they know. The Resonborn find the discomfort readable too, which they consider genuinely unfortunate.",
+      "what_they_know": "The deepest practical understanding of Resonance mechanics outside Founding Age archives. They don't know they know this. They've never had a framework to recognise their perception as knowledge rather than just sense."
+    },
+
+    "Tide-kin": {
+      "known_name": "Tide-kin (their own name for themselves is unpronounceable in air)",
+      "homeland": "The ocean — the deep currents, the shelf cities, the abyssal communities nobody on land knows exist",
+      "lifespan": "150-200 years",
+      "open_path_strength": "Essence Arts and water-based techniques at depths no land race has reached. They understand living systems the way the Keth understand stone. Their healing knowledge is extraordinary. Their ability to alter biological processes — their own and others — goes places most land races would call horrifying and they would call medicine.",
+      "fracture_history": "The Fracture reached the ocean as a change in current, not a break in time. The Tide-kin experienced it as a shift in the deep pull — wrong, persistent, never quite corrected. They adapted over generations rather than fracturing. This means they carry a continuity of pre-Fracture ocean knowledge that land races completely lack.",
+      "cultural_notes": "Unknown to most land dwellers in Season 1. The world map expansion moment when they are properly introduced should feel like discovering a second world existed the whole time.",
+      "what_they_know": "Pre-Fracture ocean knowledge. The ocean connects all continents — the Tide-kin have been observing all of them for 2847 years. They know things about every land race that the land races don't know about themselves."
+    },
+
+    "Ashborn": {
+      "known_name": "The Watchers (their own name), The Desert People (humans who've heard of them)",
+      "homeland": "The Scorched Expanse — a desert continent beyond the Fractured Wastes that most people believe is uninhabitable",
+      "lifespan": "90-120 years",
+      "open_path_strength": "Perception Arts and Body Arts evolved in extreme heat — their situational awareness and endurance under hostile conditions is unmatched. But their real advantage: they preserved Founding Age knowledge. Not fragments — actual structured archives, maintained and studied for 2847 years. They understand what the Founding Age built at a level that would terrify the Veilkeepers.",
+      "fracture_history": "The Scorched Expanse was close to the epicentre of the Fracture. The Ashborn ancestors survived by going underground (not as deep as the Keth — the desert's underground levels) during the worst of it. When they emerged, they found Founding Age archives that had survived in the dry heat. They have been studying those archives ever since.",
+      "cultural_notes": "They have been watching Caelum City and the Known Continent for 200 years. They send occasional observers who move through human society without identifying themselves. They have made a collective decision not to introduce themselves until they understand whether Caelum's current trajectory ends in catastrophe. They are still watching.",
+      "visual_accent": "Adapted to extreme heat — lean, precise, layered clothing for protection not modesty. Deep ochres, burnt reds, sand whites. Their written language is the closest living thing to the Founding Age script. They can read the carvings on Caelum's foundation stones.",
+      "what_they_know": "They can read the Founding Age script. They know what the Undercity door says. They have not yet decided whether to share this."
+    },
+
+    "Fael": {
+      "known_name": "Fael (they gave humans this name — it is not their actual name)",
+      "homeland": "Unknown",
+      "lifespan": "Unknown",
+      "open_path_strength": "All branches. The depth is unclear because they never demonstrate more than what the trade requires.",
+      "fracture_history": "Unknown. Three theories exist among scholars: (1) they are Founding Age humans who survived unchanged, (2) they are from the Far Future walking backward, (3) they are something that predates the Arion civilisation entirely. They find all three theories accurate enough not to bother correcting.",
+      "cultural_notes": "They trade knowledge for knowledge — always fair, always exactly what was needed, never more. They appear rarely, never in groups larger than two, and never explain themselves. They remember every transaction. A Fael who appears a second time to the same person has a reason.",
+      "what_they_know": "Everything relevant to what they've chosen to trade. What they haven't traded is the question."
+    }
+  }
+}

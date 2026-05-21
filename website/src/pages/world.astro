@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const path = join(process.cwd(), 'public/content/world_public.json');
+const data = existsSync(path)
+  ? JSON.parse(readFileSync(path, 'utf-8'))
+  : {
+      overview: 'Arion World is a vast universe spanning multiple timelines and civilisations. The full truth has not yet been revealed.',
+      timelines_known: [],
+      factions_known: [],
+      locations_known: [],
+      power_system_known: null,
+      last_updated_episode: 0,
+    };
+---
+
+<Layout title="The World" description="The lore of Arion World — updated as the story reveals it.">
+  <div class="max-w-4xl mx-auto px-6 py-24">
+
+    <div class="text-center mb-16">
+      <h1 class="font-display text-4xl text-gold tracking-widest uppercase mb-4">The World</h1>
+      <p class="text-text-muted italic max-w-xl mx-auto">
+        This encyclopedia updates as episodes reveal new truths.
+        What you read here is only what has been shown.
+      </p>
+      {data.last_updated_episode > 0 && (
+        <p class="text-text-dim text-xs tracking-widest uppercase mt-4">
+          Through Episode {data.last_updated_episode}
+        </p>
+      )}
+    </div>
+
+    <!-- Overview -->
+    <section class="mb-16">
+      <h2 class="font-display text-gold/70 tracking-[0.3em] uppercase text-xs mb-6">Overview</h2>
+      <p class="text-text-muted leading-relaxed text-lg italic">{data.overview}</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Power System -->
+    {data.power_system_known && (
+      <section class="my-16">
+        <h2 class="font-display text-gold/70 tracking-[0.3em] uppercase text-xs mb-8">Luminal Resonance</h2>
+        <div class="lore-card mb-4">
+          <p class="text-text-muted leading-relaxed mb-6">{data.power_system_known.description}</p>
+          {data.power_system_known.tiers_known?.length > 0 && (
+            <div class="space-y-4">
+              {data.power_system_known.tiers_known.map((tier: any) => (
+                <div class="flex gap-6 border-t border-white/5 pt-4">
+                  <div class="w-24 shrink-0">
+                    <span class="font-mono text-xs text-resonance">Tier {tier.tier}</span>
+                  </div>
+                  <div>
+                    <p class="font-display text-text-primary text-sm mb-1">{tier.name}</p>
+                    <p class="text-text-muted text-sm">{tier.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    <!-- Timelines -->
+    {data.timelines_known?.length > 0 && (
+      <section class="my-16">
+        <h2 class="font-display text-gold/70 tracking-[0.3em] uppercase text-xs mb-8">Known Timelines</h2>
+        <div class="space-y-4">
+          {data.timelines_known.map((timeline: any) => (
+            <div class="lore-card">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-display text-text-primary">{timeline.name}</h3>
+                <span class="font-mono text-xs text-text-dim">{timeline.era}</span>
+              </div>
+              <p class="text-text-muted text-sm leading-relaxed">{timeline.public_description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="section-divider"></div>
+
+    <!-- Factions -->
+    {data.factions_known?.length > 0 && (
+      <section class="my-16">
+        <h2 class="font-display text-gold/70 tracking-[0.3em] uppercase text-xs mb-8">Factions</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          {data.factions_known.map((faction: any) => (
+            <div class="lore-card">
+              <h3 class="font-display text-text-primary mb-2">{faction.name}</h3>
+              <p class="text-text-muted text-sm leading-relaxed">{faction.public_description}</p>
+              {faction.known_secret && (
+                <p class="mt-3 text-xs text-crimson-bright/70 italic border-t border-crimson/10 pt-3">
+                  Revealed: {faction.known_secret}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Locations -->
+    {data.locations_known?.length > 0 && (
+      <section class="my-16">
+        <h2 class="font-display text-gold/70 tracking-[0.3em] uppercase text-xs mb-8">Locations</h2>
+        <div class="space-y-4">
+          {data.locations_known.map((loc: any) => (
+            <div class="lore-card">
+              <h3 class="font-display text-text-primary mb-2">{loc.name}</h3>
+              <p class="text-text-muted text-sm leading-relaxed">{loc.public_description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {data.timelines_known?.length === 0 && !data.power_system_known && (
+      <p class="text-center text-text-dim italic py-16">
+        The world reveals itself through the story. Watch Episode 1 to begin.
+      </p>
+    )}
+  </div>
+</Layout>

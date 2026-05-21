@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+const path = join(process.cwd(), 'public/content/mysteries.json');
+const data = existsSync(path)
+  ? JSON.parse(readFileSync(path, 'utf-8'))
+  : { open: [], solved: [], last_updated_episode: 0 };
+---
+
+<Layout title="Mysteries" description="The unanswered questions of Arion World. Some will take hundreds of episodes to resolve.">
+  <div class="max-w-3xl mx-auto px-6 py-24">
+
+    <div class="text-center mb-16">
+      <h1 class="font-display text-4xl text-gold tracking-widest uppercase mb-4">Mysteries</h1>
+      <p class="text-text-muted italic max-w-xl mx-auto">
+        These questions have been raised by the story. Some answers are close.
+        Others will take years. A few may never come.
+      </p>
+      {data.last_updated_episode > 0 && (
+        <p class="text-text-dim text-xs tracking-widest uppercase mt-4">
+          {data.open.length} open — {data.solved.length} resolved — through Episode {data.last_updated_episode}
+        </p>
+      )}
+    </div>
+
+    {data.open.length === 0 && data.solved.length === 0 && (
+      <p class="text-center text-text-dim italic py-16">
+        The mysteries emerge as the story begins. Nothing is hidden yet because nothing has been shown.
+      </p>
+    )}
+
+    {data.open.length > 0 && (
+      <section class="mb-16">
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-fracture mb-8 flex items-center gap-4">
+          <span class="flex-1 h-px bg-fracture/20"></span>
+          <span>Unanswered</span>
+          <span class="flex-1 h-px bg-fracture/20"></span>
+        </h2>
+        <div class="space-y-4">
+          {data.open.map((m: any, i: number) => (
+            <div class="border border-fracture/20 bg-fracture/5 p-6 hover:border-fracture/40 transition-colors">
+              <div class="flex items-start gap-4">
+                <span class="font-mono text-xs text-fracture/50 mt-1 shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <p class="text-text-primary leading-relaxed">{m.question}</p>
+                  {m.first_raised_episode && (
+                    <p class="text-text-dim text-xs mt-2">First raised: Episode {m.first_raised_episode}</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {data.solved.length > 0 && (
+      <section>
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-text-dim mb-8 flex items-center gap-4">
+          <span class="flex-1 h-px bg-white/5"></span>
+          <span>Resolved</span>
+          <span class="flex-1 h-px bg-white/5"></span>
+        </h2>
+        <div class="space-y-4">
+          {data.solved.map((m: any) => (
+            <div class="border border-white/5 bg-ash p-6 opacity-60">
+              <p class="text-text-muted leading-relaxed line-through decoration-white/20">{m.question}</p>
+              <p class="text-gold/60 text-sm italic mt-3">Answered in Episode {m.resolved_episode}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Layout>

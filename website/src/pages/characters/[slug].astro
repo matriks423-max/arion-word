@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+export async function getStaticPaths() {
+  const path = join(process.cwd(), 'public/content/characters_public.json');
+  if (!existsSync(path)) return [];
+  const data = JSON.parse(readFileSync(path, 'utf-8'));
+  return (data.characters ?? []).map((char: any) => ({
+    params: { slug: char.slug },
+    props: { char },
+  }));
+}
+
+const { char } = Astro.props;
+
+// Find episodes where this character appeared or died
+const episodesPath = join(process.cwd(), 'public/content/episodes.json');
+const episodesData = existsSync(episodesPath)
+  ? JSON.parse(readFileSync(episodesPath, 'utf-8'))
+  : { episodes: [] };
+
+const firstEp = episodesData.episodes.find(
+  (ep: any) => ep.episode_number === char.first_appeared_episode
+);
+---
+
+<Layout
+  title={char.name}
+  description={char.public_description}
+>
+  <div class="max-w-3xl mx-auto px-6 py-24">
+
+    <!-- Back -->
+    <a href="/characters" class="text-xs tracking-widest uppercase text-text-dim hover:text-gold transition-colors mb-12 inline-block">
+      ← All Characters
+    </a>
+
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-4 mb-4">
+        <span class={
+          char.status === 'deceased'
+            ? 'tag-status-deceased'
+            : char.status === 'unknown'
+            ? 'tag-status-unknown'
+            : 'tag-status-alive'
+        }>
+          {char.status}
+        </span>
+        {char.died_episode && (
+          <span class="text-xs text-crimson-bright/60 italic">Died Episode {char.died_episode}</span>
+        )}
+      </div>
+      <h1 class={`font-display text-5xl tracking-wide mb-3 ${char.status === 'deceased' ? 'text-text-muted line-through decoration-crimson/30' : 'text-gold'}`}>
+        {char.name}
+      </h1>
+      {char.role && (
+        <p class="text-text-dim text-xs tracking-[0.3em] uppercase">{char.role}</p>
+      )}
+    </div>
+
+    <div class="gold-rule mb-12"></div>
+
+    <!-- Description -->
+    <section class="mb-12">
+      <h2 class="font-display text-xs tracking-[0.4em] uppercase text-gold/70 mb-6">Known Profile</h2>
+      <p class="text-text-muted leading-relaxed text-lg">{char.public_description}</p>
+      <p class="text-text-dim text-xs mt-6 italic">
+        This profile only reflects what the story has revealed. Hidden truths are not shown here.
+      </p>
+    </section>
+
+    <!-- First appearance -->
+    {char.first_appeared_episode && (
+      <section class="mb-12">
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-gold/70 mb-6">First Appearance</h2>
+        <a
+          href={`/episodes/${char.first_appeared_episode}`}
+          class="lore-card block hover:border-gold/30 transition-colors group"
+        >
+          <p class="font-mono text-xs text-text-dim tracking-widest mb-2">
+            Episode {char.first_appeared_episode}
+          </p>
+          {firstEp && (
+            <>
+              <p class="font-display text-text-primary group-hover:text-gold transition-colors mb-2">
+                {firstEp.title}
+              </p>
+              <p class="text-text-muted text-sm italic">{firstEp.logline}</p>
+            </>
+          )}
+        </a>
+      </section>
+    )}
+
+    <!-- Back nav -->
+    <div class="pt-12 border-t border-white/5">
+      <a href="/characters" class="text-sm tracking-widest uppercase text-text-dim hover:text-gold transition-colors">
+        ← Back to all characters
+      </a>
+    </div>
+
+  </div>
+</Layout>

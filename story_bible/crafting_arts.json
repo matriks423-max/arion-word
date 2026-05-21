@@ -1,0 +1,282 @@
+{
+  "_copyright": "© Arion World. All rights reserved. All story, lore, characters, world-building, and systems are original intellectual property. Unauthorised reproduction or commercial use is prohibited.",
+  "_purpose": "Complete documentation of the Craft Arts branch of The Open Path — Alchemy and True Smithing. Includes traditions, techniques, named practitioners, mechanical rules, and game mechanics.",
+
+  "overview": {
+    "the_underestimation": "Craft Arts is the most consistently underestimated branch of the Open Path. The Resonant Guild teaches it last. The curriculum covers basic material craft with minimal resonance application. Guild instructors with Craft Arts backgrounds are considered technicians, not practitioners. This is not an accident. The Guild underteaches Craft Arts because three senior Veilkeepers understand what advanced Craft Arts is actually capable of — and what it could dismantle.",
+    "what_craft_arts_actually_is": "At surface level: making things. Tools, weapons, structures, medicine. At the level the Guild acknowledges: making things with resonance assistance — a blade that holds an edge better, a building that resists resonance disturbance. At the level they do not teach: encoding permanent resonance modifications into objects and substances. Producing items that affect the Open Path of anyone who uses them. Interacting directly with Resonance residue as if it were physical matter. Potentially reverse-engineering Founding Age technology. This is not theory. The Founding Age practitioners did all of it.",
+    "the_two_traditions": "Alchemy and True Smithing developed independently, diverged over centuries, and now hold complementary knowledge neither fully shares with the other. An alchemist who learned True Smithing, or a smith who learned Alchemy, would be extraordinarily capable and almost certainly dangerous. The Guild has never officially acknowledged that this combination is possible. It has very quietly prevented it from happening twice."
+  },
+
+  "alchemy": {
+    "philosophy": {
+      "core_law": "You cannot create from nothing. You cannot destroy — only transform. Everything is in exchange with everything. An alchemist who forgets this stops being an alchemist and starts being someone who is about to cause an incident.",
+      "founding_principle": "Alchemy begins with the observation that everything is the same thing in different arrangements. Rock is not fundamentally different from water — both are matter in states. The Open Path is not fundamentally different from matter — both are energy in configurations. An alchemist who truly understands this has removed the wall between substance and resonance. Nobody living has fully removed it. Three people are closer than the Guild knows.",
+      "cultural_position": "Alchemists are considered eccentric academics. Their public work — producing medicines, refining materials for other crafts, creating specialty compounds — is valued but not respected. They are invited to academic functions and seated at the second table. This suits most of them. The attention of people who understand what advanced alchemy is capable of is not the kind of attention alchemists want.",
+      "the_living_prohibition": "Alchemists have collectively agreed, without formal agreement, never to perform transmutation on living things. The historical accounts of what happens are held in one surviving Founding Age document that every serious alchemist has read and none have discussed publicly. The document describes results that the author, who appears to have survived witnessing them, describes as 'an argument for never doing this again.' The accounts are in the restricted section of the Chroniclers' archive. Three alchemists have requested access. Two were granted it. Both stopped asking questions about living transmutation afterward."
+    },
+
+    "mechanical_rules": {
+      "what_is_possible": [
+        "Transmuting one inorganic substance into another of equivalent mass and energy",
+        "Accelerating or reversing natural chemical processes — aging wine to vintage, reversing rust, hardening soft metals",
+        "Extracting and concentrating properties from substances — the pain-numbing component of a plant extracted to ten times its natural concentration",
+        "Creating stable compounds from incompatible materials through resonance-bridged transmutation",
+        "Working with Resonance residue as if it were physical matter (Resonance Alchemy — rare, dangerous, see below)",
+        "Encoding transformation instructions into objects that activate under specified conditions (Inscription Alchemy)",
+        "Extracting experiential essences from living sources under specific, controversial, grey-area-legal conditions (Distillation)"
+      ],
+      "what_is_forbidden": [
+        "Transmutation of living tissue — officially illegal under Guild law; consequence of violation listed as 'permanent suspension of practice and indefinite Guild monitoring.' Actual consequence, if any account is accurate: worse.",
+        "Transmutation that increases total mass or energy in a closed system — the Open Path does not permit this, and attempting it does not produce more matter; it produces consequences the alchemist did not intend",
+        "Binding Resonance residue into living tissue — on the boundary of Essence Arts and Resonance Alchemy, this is what certain Founding Age documents describe as 'the mechanism of voluntary curse acquisition.' The Guild does not acknowledge that it is possible. It is possible.",
+        "Transmutation of currency metals without a Guild Mint licence — this is an economic regulation, not a resonance rule, but it is the regulation that results in the most arrests"
+      ],
+      "what_is_unknown": [
+        "Whether Resonance residue has mass in the conventional sense — three alchemists are actively investigating this without sharing results",
+        "Whether Founding Age transmutation operated at a deeper level than matter — whether they were transmuting information rather than substance",
+        "Whether Distillation can extract something from a living person's experience without their knowledge — the technique as currently practiced requires consent and proximity; what the full version looks like is in the restricted Founding Age records"
+      ]
+    },
+
+    "sub_types": {
+      "Material_Alchemy": {
+        "description": "The foundation of the tradition. Transform one substance into another of equal mass and energy. Most licensed alchemical practice is Material Alchemy.",
+        "examples": "Iron into steel. Raw ore into refined metal. Poison into inert compound. Sand into glass. Coal into carbon crystal (extremely energy-intensive). Conventional Guild curriculum covers the stable, predictable, commercially useful transformations. The unstable and unpredictable ones are taught informally, if at all."
+      },
+      "Resonance_Alchemy": {
+        "description": "Treating Resonance residue — the energy impressions left on objects, places, and people — as if it were matter. Scooping it up, compressing it, diluting it, transmuting it. The implications are staggering and the Guild has never formally acknowledged this sub-type exists.",
+        "what_it_can_do": "A skilled Resonance Alchemist can clean an object's emotional history — remove decades of accumulated negative residue from a cursed site. Can concentrate resonance residue to create a form of stored experience that can be transferred to another person — this is functionally a memory distillation, and it is extremely controversial. Can transmute the type of resonance residue — transforming grief-residue into something else is theoretically possible. Three practitioners believe they have done it once each.",
+        "why_it_alarms_the_veilkeepers": "The rebuilt suppression layer over the Open Path is, in part, resonance residue at scale — it is Founding Age resonance engineering embedded in the world's infrastructure. A Resonance Alchemist working at sufficient depth could potentially interact with the suppression layer the way they would interact with any other resonance residue. This is not theoretical. Erian's fourth document describes this mechanism. Director Malec has read the relevant section eleven times.",
+        "current_practitioners_in_caelum": 3
+      },
+      "Inscription_Alchemy": {
+        "description": "Encoding transformative instructions into objects — creating items that perform a specific alchemical transformation when activated by specified conditions. A coin engraved with transformation instructions that activates when submerged. A ring that purifies any liquid it touches. A paper that burns without producing smoke.",
+        "the_complexity": "The inscription must be complete. An incomplete instruction produces incomplete transformation — which is another way of saying unpredictable transformation. Most Inscription Alchemists have a collection of their early failures in a locked cabinet. None of them show the cabinet to students.",
+        "applications": "Medical — inscribed patches that accelerate healing through controlled cellular-level transmutation. Military — items with offensive alchemical effects that activate on impact. Infrastructure — pipes with inscribed interior surfaces that purify water as it flows through them. The Guild licenses Inscription Alchemy tightly. They cannot license what they cannot detect, and detection requires knowing what to look for."
+      },
+      "Distillation": {
+        "description": "Extracting the essence of a thing — the quality, property, or experience that defines it — as a stable concentrate. Applied to plants and minerals: unambiguous, widely practiced, the basis of most alchemical medicine. Applied to moments and experiences: controversial, technically legal in grey areas, rarely practiced openly.",
+        "experiential_distillation": "Extracting an experience from a living person — with their consent and presence — producing a small volume of concentrated essence that carries the emotional and sensory core of that experience. Courage distilled from someone who demonstrated extraordinary bravery at the moment they demonstrated it. A last breath distilled into a few drops that carry the complete emotional content of a dying person's final moment. This is not metaphor. The product is a substance that can be administered to another person, who will experience something like the original moment — not perfectly, not completely, but with the essential character of it.",
+        "the_grey_area": "The legal ambiguity exists because Distillation as practiced on non-living materials is unambiguously legal and commercially valuable. The Guild's regulations specify that experiential Distillation requires 'informed participation of the source.' The word 'informed' has been argued in two Guild tribunals. The word 'participation' is still being argued.",
+        "what_the_chroniclers_have": "Tobias Greel has a small vial — acquired from an unnamed source, through channels he will not describe — that he believes contains a Distillation product from the Shadow Centuries. He has not had it analyzed. He is not sure he wants to know what it contains."
+      }
+    },
+
+    "named_techniques": [
+      {
+        "id": "alch_001",
+        "name": "The Equivalent Exchange",
+        "description": "The foundational transmutation — declare input and output clearly before beginning. The practitioner states the mass, the desired product, and the transformation vector. The Open Path facilitates the change. This is the technique every alchemist learns first and the one most of them underestimate throughout their careers.",
+        "game_mechanic": "Core ability: transmute one inorganic material into another of equal mass. Unlocks all other alchemy techniques. Success rate scales with skill level. Failure on complex transmutations can produce unexpected substances.",
+        "cost": "Low to moderate Resonance energy. Scales with the complexity of the transformation — iron to steel is trivial; coal to diamond is an hour of sustained effort.",
+        "visual_effect_tags": "amber-gold light forming geometric transformation patterns between practitioner's hands, matter visibly restructuring in place, particles lifting and resettling in new configuration, soft chemical smoke at transformation point, substance glowing briefly at transformation peak"
+      },
+      {
+        "id": "alch_002",
+        "name": "Deep Reading",
+        "description": "Sensing the complete resonance history of a substance — not just what was done to it but what it is made of at every level, including accumulated Resonance residue layers. The alchemist experiences the object's full material biography. Required before any complex transmutation — you cannot transform what you do not understand.",
+        "game_mechanic": "Passive diagnostic ability: reveals full material composition, resonance history, and any embedded alchemical or resonance modifications in an object. High skill level reveals embedded Inscription Alchemy and curse modifications.",
+        "cost": "Low. Passively available to trained alchemists. Deep Reading of high-residue objects can cause temporary perceptual overload — the alchemist receives too much history at once.",
+        "visual_effect_tags": "practitioner's eyes shifting to amber deep-sight glow, faint chemical structural lines visible overlaid on object, resonance residue layers visible as depth strata in warm color spectrum, quiet focused expression"
+      },
+      {
+        "id": "alch_003",
+        "name": "Residue Sculpt",
+        "description": "Resonance Alchemy application — treating accumulated resonance residue as physical matter, scooping, concentrating, and relocating it. A skilled practitioner can clean a haunted building's emotional history the way another trades clean water from dirty. Can also be used to concentrate residue deliberately.",
+        "game_mechanic": "Utility ability: remove resonance residue from objects, locations, or people (with consent). High skill allows residue concentration — creating containers of harvested residue for later use. Advanced use can target specific types of residue for selective removal.",
+        "cost": "Moderate Resonance energy. Working with concentrated or ancient residue increases cost. Contact with negative high-density residue is psychologically hazardous regardless of skill.",
+        "visual_effect_tags": "practitioner's hands cupping visible golden-amber mist lifting from surface, resonance residue flowing upward and gathering like luminous fog being shaped, clean clear field expanding from contact point, soft warm light trailing from gathered residue"
+      },
+      {
+        "id": "alch_004",
+        "name": "Inscription Write",
+        "description": "Encoding a transformation instruction into an object in a form that activates under specified conditions. The practitioner writes the instruction into the material structure of the object using resonance — the inscription is not visible to conventional sight but readable by anyone with Resonance perception. The object performs the inscribed transformation when conditions are met.",
+        "game_mechanic": "Crafting ability: create items with conditional alchemical effects. Item performs specified transformation when activation condition occurs. Complexity of inscription determines item creation time (minutes to days). Item can be used repeatedly until the inscription degrades. Advanced inscriptions can be conditional on multiple variables.",
+        "cost": "High. Scales with inscription complexity and desired number of activations. Inscription errors produce items with incorrect or unpredictable trigger conditions — typically not discovered until activation.",
+        "visual_effect_tags": "glowing amber text and geometric formulae being written into object surface, script burning in then fading to invisible, faint resonance shimmer remaining on surface, practitioner's finger trailing light as it inscribes, completed object with subtle warm glow"
+      },
+      {
+        "id": "alch_005",
+        "name": "Essence Pull",
+        "description": "Distillation technique — extracting the defining quality of a substance or experience into concentrated form. From plants and minerals: the active compound concentrated, the inert removed. From experiences: requires the living source present and willing. The practitioner identifies the essential quality and draws it out, leaving the source intact but temporarily diminished in that quality — courage briefly depleted from someone whose courage was distilled; the quality returns within days.",
+        "game_mechanic": "Crafting ability: produce concentrated substance extracts (medicine, poison, compound ingredients) or experiential essence vials (single-use consumables that temporarily grant the extracted quality to the user). Experiential essence quality scales with the intensity of the source moment — extracted during peak performance produces stronger essence.",
+        "cost": "Moderate to high depending on what is being distilled. Extracting experiential essence from a person requires their cooperation and has a cost to them as well — temporary depletion of the extracted quality that takes 24-72 hours to restore.",
+        "visual_effect_tags": "thin thread of golden light drawing from source material or person into practitioner's cupped hands, source material dimming slightly, concentrate forming as a small glowing liquid drop, warm amber concentration point against dimmed surroundings"
+      },
+      {
+        "id": "alch_006",
+        "name": "The Stone Record",
+        "description": "Advanced Resonance Alchemy — reading and then encoding the complete resonance history of a location into a portable medium. A practitioner who performs the Stone Record on a significant site produces a stone or coin that, when activated, allows the holder to fully perceive the resonance history of that location as if standing in it.",
+        "game_mechanic": "Rare utility: create a portable resonance archive of a location. Holder who activates the Stone Record perceives the full residue history of the recorded location (visions, emotional impressions, event fragments). Each Stone Record is unique and irreplaceable — destroying it destroys the captured history. Advanced practitioners can record specific time windows rather than complete histories.",
+        "cost": "Very high. Recording a significant historical site takes a full day of sustained work and produces lasting fatigue. The practitioner is fully exposed to the site's history during recording — psychological hazard scales with site intensity.",
+        "visual_effect_tags": "practitioner with both hands flat against surface, amber light flowing up from stone into their arms and chest, tears or visible emotional response during intensive recording, finished stone faintly warm and glowing with internal amber light"
+      }
+    ],
+
+    "named_practitioners": {
+      "corvel_ash": {
+        "name": "Corvel Ash",
+        "age": 52,
+        "location": "Officially: a licensed medical alchemical practice in the Scholar District, inner city. Actually: the practice is the public face. The real work happens in the sub-basement, which does not appear in the licensing documentation.",
+        "public_face": "A respectable, slightly expensive alchemical physician. Known for unusually effective treatments. Referred to by three Guild medical officers who value results and do not ask about methods.",
+        "what_he_actually_does": "Corvel Ash is one of three practicing Resonance Alchemists in Caelum City. His public medical work is genuine — he is an excellent medical alchemist. His private work is the reason the sub-basement exists. He is the only current practitioner he knows of who has successfully transmuted resonance residue of Type II (grief-class) into neutral matter. He does not know what to do with this knowledge. He has told no one.",
+        "his_secret": "Three years ago, while doing a Deep Reading on a patient who came to him with unspecified resonance symptoms, he identified what he now believes is a very early-stage Threshold Configuration. He did not record the patient's name — he was following his own privacy protocol. He has been trying to find that patient again ever since. He does not know the patient was Kairo Voss, who came to him once under a false name after a vision episode he was frightened enough to seek help for.",
+        "his_relationship_with_the_guild": "Licensed, current, never flagged. Corvel has been maintaining his license carefully for twenty-two years. He is aware that what he does in the sub-basement would result in license suspension if discovered. He is more aware that what he is close to discovering would result in something worse than suspension.",
+        "what_he_knows_that_smiths_do_not": "That resonance residue has what appears to be a conversion rate — it can be transmuted into other forms of resonance residue, which implies it has structure. An object with True Smith Binding is not simply inscribed with resonance — it has a specific residue signature that he has been able to read and partially catalog. He does not yet know how it is produced. He suspects it requires a practitioner willing to use their own resonance as the transmutation medium."
+      },
+      "mirela_voss": {
+        "name": "Mirela Voss",
+        "note": "No relation to Kairo — the surname is common in the outer districts. This has caused two separate moments of confusion in the Guild's filing system.",
+        "age": 38,
+        "location": "A rented workroom in the outer district — one of the buildings nearest the Founding Gate, which she chose for reasons she would describe as 'favorable resonance conditions' and which are actually because the Gate's residue influence is excellent for Inscription Alchemy work.",
+        "public_face": "An inscription specialist — she makes household inscribed objects. Items that clean themselves. Locks with resonance-signature conditions. Vessels that preserve food. Commercially successful, considered a skilled but unremarkable practitioner.",
+        "what_she_actually_does": "Mirela Voss is one of two people in Caelum City who has independently developed what she calls 'layered inscription' — encoding multiple conditional instructions into a single object that interact based on activation sequence. A lock that opens only when the correct person touches it in the correct sequence while holding a specific emotional state is a trivial example. She has produced more complex systems and tested none of them because testing would require conditions she cannot replicate safely.",
+        "her_secret": "She discovered six months ago that the Founding Gate has an inscription on it. Not carved — embedded at the resonance level, invisible to everything except Deep Reading from a practitioner of her specific skill set. She has been reading it in fragments during her evening walks past the Gate. She has decoded approximately a third of it. It appears to be an activation instruction. She does not yet know what it is an instruction to activate. She has told no one.",
+        "her_relationship_with_the_guild": "Marginal. Licensed for Inscription Alchemy at the commercial level, evaluated annually, consistently passing. She is not on any watchlist. She is not in any special category. She is a reliable, paying licensee who has never caused an incident. The inspector who processes her annual renewal has given her file less than four minutes of attention in seven years.",
+        "what_she_knows_that_smiths_do_not": "That inscriptions can be written at the resonance level without any physical marking — a pure resonance inscription with no material component. True Smithing Binding requires physical material as the carrier. Her pure-resonance inscriptions do not. She does not know whether this has ever been done before. She suspects the Founding Gate inscription is an example of the same technique at a scale she cannot comprehend."
+      }
+    }
+  },
+
+  "true_smithing": {
+    "philosophy": {
+      "core_principle": "A blade is just metal until the smith puts something of themselves into it. Not effort — something. Intent made permanent. The difference between a smith who shapes metal and a True Smith is the difference between someone who writes words and someone who means them.",
+      "the_naming": "'True Smithing' is the term practitioners use. The Guild's curriculum calls it 'Resonance-Assisted Fabrication' and licenses it at two tiers. The top tier license covers what the Guild considers advanced True Smithing. The actual advanced practitioners consider the top tier license to be approximately the second step.",
+      "what_it_is": "Smithing that integrates Resonance energy directly into the material structure of the object being created — not as a surface modification, not as a post-fabrication enchantment, but as a fundamental component of the metal's grain structure. The resonance becomes part of the material. It cannot be removed without destroying the object. It cannot be replicated by any post-fabrication process. It requires the smith to have Open Path access, the materials to be prepared correctly, and the work to happen across days rather than hours.",
+      "the_guild_relationship": "The Guild licenses True Smithing heavily. They claim this is for quality control and public safety. It is also for information control — the Guild licensing system requires practitioners to submit technique documentation, which means the Guild has a catalog of every True Smithing method it is aware of. Methods it is not aware of are not in the catalog. Several are not in the catalog.",
+      "what_it_produces": "Objects with persistent resonance properties that do not fade, do not require recharging, and do not depend on the user's own Resonance ability to function. A blade forged by a True Smith holds its edge because the resonance integrated into the grain structure is part of what the edge is. A lock forged to a specific person's resonance signature does not simply check if the right person is there — it is only possible to open by that person because at the material level, the lock is an expression of their signature."
+    },
+
+    "mechanical_rules": {
+      "requirements": [
+        "The smith must have at least Tier 1 Open Path access — not Thread Weaving capability, just conscious Resonance awareness. The work channels what is available; the smith does not need to be a powerful Resonant, but they must be a real one.",
+        "The materials must be prepared specifically — not purified in the standard metallurgical sense but resonance-cleared, which requires either a Resonance Alchemist's Residue Sculpt or extended exposure to resonance-neutral conditions. Using materials with heavy accumulated resonance history produces objects with unintended properties.",
+        "The work takes days. A standard licensed True Smithing project takes three to seven days of sustained work. Advanced projects — weapons with complex bonded properties, architectural items — take weeks. The Guild imposes this as a quality standard. It is a quality standard. It is also how complex properties get integrated.",
+        "During the forging, the smith must be in a specific mental state — focused awareness of the intended property, held as lived experience rather than abstract concept. You cannot forge a blade that holds an edge by thinking about edge-holding. You forge it while feeling what it is to be sharp. This is why True Smithing cannot be automated or systematized completely — it requires a person who understands what they are making."
+      ],
+      "what_objects_can_be_produced": [
+        "Blades that hold their edge through resonance-integrated grain structure — functionally permanent sharpness that no resharpening technique can damage",
+        "Armor with resonance properties that provide specific resistances — heat, minor resonance effects, impact force distribution",
+        "Locks with resonance signature binding — functional only for the person whose Open Path signature is matched at forging",
+        "Tools that perform their function with resonance-assistance — a carpenter's chisel that feels the grain of the wood, a surgeon's blade that does not pull at tissue",
+        "Objects with persistent passive resonance effects — a lamp that converts ambient resonance residue to light without fuel",
+        "Advanced: objects that store and release specific resonance states — the smith forges in a specific quality of awareness and the object releases it under the right conditions"
+      ],
+      "binding": {
+        "description": "Forging an object that bears a curse — transferring a curse from a person or site into a material object through the True Smithing process. Extremely illegal. The only technique the Guild has moved to formally criminalize at the level of immediate detention without trial.",
+        "why_it_is_illegal": "The curse exists in the object. Anyone who touches or uses the object acquires the curse. It is, functionally, a curse delivery weapon. The Guild's stated reason for criminalization is public safety. This is accurate as far as it goes. The deeper concern: a skilled practitioner who understood both Curse mechanics and True Smithing could theoretically bind a hidden-gift curse into an object in a way that any user acquires the gift without the cost — separating the equivalent exchange by distributing it across the binding process. This is theoretically possible. It has been attempted. The results of those attempts are in the Guild's restricted archive.",
+        "known_practitioners": "The Guild currently has three named individuals flagged for Binding practice. Two are in custody. One is not in custody. He is not in the city either."
+      }
+    },
+
+    "named_techniques": [
+      {
+        "id": "smith_001",
+        "name": "The First Breath",
+        "description": "The foundational act of True Smithing — the moment the smith places their Open Path presence into the material for the first time, establishing the resonance channel through which all further integration will flow. A smith who rushes this step produces an object with an unstable integration. A smith who takes the full time needed produces an object whose resonance is part of its structure from the first moment.",
+        "game_mechanic": "Required starting technique for all True Smithing. Determines the quality ceiling of the finished object. Longer preparation time improves maximum possible object quality. Rushing reduces both property strength and property stability.",
+        "cost": "Low Resonance energy. High focus and time cost — typically several hours of sustained attention before physical work begins.",
+        "visual_effect_tags": "smith's hands resting flat on unworked metal with closed eyes, faint warm amber resonance transferring from hands into material, metal taking on very subtle inner glow, smith's breath visible as if in cold air regardless of temperature, stillness and silence"
+      },
+      {
+        "id": "smith_002",
+        "name": "Grain Weave",
+        "description": "The core physical technique of True Smithing — working the metal while maintaining continuous Resonance awareness through the material. The smith feels the grain structure of the metal through their Open Path perception and guides the work to align the grain optimally. A blade forged with Grain Weave has a structural consistency that conventional metallurgy cannot replicate.",
+        "game_mechanic": "Passive technique active during all True Smithing work. Improves finished object's base physical properties (durability, edge retention, structural integrity) by a significant margin over standard smithing. Requires sustained Resonance attention throughout the physical work — distraction or exhaustion causes quality degradation.",
+        "cost": "Moderate Resonance energy sustained over the full working period. Physically and mentally exhausting for extended projects.",
+        "visual_effect_tags": "smith hammering with visible resonance light-trails following the hammer, metal glowing with embedded amber patterns that shift as the grain structure changes, sparks carrying faint resonance shimmer, smith's eyes reflecting the metal glow rather than the forge fire"
+      },
+      {
+        "id": "smith_003",
+        "name": "Property Bind",
+        "description": "Integrating a specific resonance property into the object during the forging — the smith holds the intended property as an experienced state and channels it into the metal during the working. The property becomes part of the material structure. It cannot be removed post-fabrication. It is not surface — it is the thing itself.",
+        "game_mechanic": "Core object enchantment: during forging, choose one property to permanently bind into the object. Property effects scale with smith's skill level and the intensity of the mental state held during binding. Available properties expand with skill level (edge, resistance types, signature lock, sensing, amplification, storage).",
+        "cost": "High. The intensity of the bound state must be sustained throughout the relevant phase of the work — minutes to hours depending on property complexity. Binding a complex property while physically working metal is one of the most demanding techniques in any branch of the Open Path.",
+        "visual_effect_tags": "forge fire shifting color to match the property being bound (amber for edge, blue-white for resonance resistance, gold for signature lock), metal surface showing brief crystalline resonance pattern before cooling, finished object retaining a subtle persistent inner light"
+      },
+      {
+        "id": "smith_004",
+        "name": "Signature Lock",
+        "description": "Binding a specific person's Open Path signature into an object as a functional requirement — the object will only function for the person whose signature is matched. Requires the person whose signature is being used to be present during the final phase of the forging, their resonance in contact with the metal at the moment the binding seals.",
+        "game_mechanic": "Crafting ability: produce an object usable only by a specific individual. For weapons: non-bonded users find the weapon awkward and difficult (no bonded properties activate). For locks: impassable to anyone but the bonded individual. For armor: properties active only for bonded wearer. Bonding is permanent and cannot be transferred.",
+        "cost": "High. The bonded individual must participate and their participation has a resonance cost — brief fatigue as their signature is drawn from and integrated. Both smith and subject must be in clear mental state for the binding to seat correctly.",
+        "visual_effect_tags": "bonded person's hand on cooling metal, smith's hand over theirs, gold resonance light flowing from subject's palm into metal, subtle pattern impression forming on metal surface that matches no standard symbol, brief intense resonance glow that then subsides to faint warmth"
+      },
+      {
+        "id": "smith_005",
+        "name": "The Resonance Forge",
+        "description": "An advanced preparation technique — creating forging conditions where ambient resonance in the environment is drawn into the forge fire itself, making the heat resonance-active. Metal worked in a Resonance Forge absorbs resonance from the fire as well as from the smith directly, allowing properties to be integrated at temperatures and speeds that normal True Smithing cannot match. Requires specific environmental conditions — either a naturally resonance-rich location, or pre-prepared resonance residue introduced to the forge.",
+        "game_mechanic": "Advanced preparation: increases available Resonance energy during smithing session and reduces cost of Property Bind techniques during that session. Can allow binding of properties that normally require a higher skill tier. Requires either a resonance-rich location (outer districts of Caelum City qualify at moderate level) or prepared resonance fuel (Resonance Alchemy product).",
+        "cost": "Preparation cost moderate; ongoing session cost reduced. The combination of alchemy and smithing required to create resonance fuel specifically for a Resonance Forge is the practical barrier — it requires both skills.",
+        "visual_effect_tags": "forge fire burning with unusual colors — amber and gold mixed with conventional flame, metal taking on resonance glow from heat alone rather than requiring direct smith contact, visible resonance currents in the forge air, heat shimmer with resonance distortion effect"
+      },
+      {
+        "id": "smith_006",
+        "name": "The Long Work",
+        "description": "Technique for extended projects — objects that require sustained True Smithing across days or weeks. The smith maintains the Resonance channel to the object continuously across the full working period, sleeping near it, returning to it across multiple sessions, building the integration layer by layer. Objects produced through the Long Work have a depth of property integration that single-session work cannot produce.",
+        "game_mechanic": "Extended crafting mode: project takes minimum 7 days in-game. Each day of sustained work adds one layer of property depth. Maximum property depth achievable through normal single-session smithing is 1; Long Work can achieve up to 5 layers. Each layer increases property strength and stability. Multi-property objects require Long Work.",
+        "cost": "Daily Resonance investment across the full project period. Smith cannot perform other significant resonance work during the Long Work period. If the continuous channel is broken (combat, major emotional disruption, extended physical incapacitation), the work degrades and must be restarted.",
+        "visual_effect_tags": "time-lapse visual of smith returning to the same object across days, object's inner glow deepening with each session, accumulated resonance layers visible as depth in the metal, finished object carrying visible resonance depth compared to single-session work"
+      }
+    ],
+
+    "named_practitioners": {
+      "harven_soldt": {
+        "name": "Harven Soldt",
+        "age": 61,
+        "location": "The Ironstone Yard — a licensed smithing operation on the outer edge of the commercial district, one step from where the inner city prices meet the outer district willingness to work. Technically outer district. Functions as inner city. Harven arranged this deliberately.",
+        "public_face": "A Master Smith with Guild licensing at the highest tier. Known for exceptional quality. Expensive. The waiting list for his personally forged work is eighteen months. He employs seven journeyman smiths who do the standard commercial work while he takes the high-value commissions.",
+        "what_he_actually_does": "Harven Soldt is, in the private judgment of the three people who know enough to evaluate him, the most skilled True Smith currently practicing in Caelum City. His Guild licensing does not reflect this — he qualified at the highest licensed tier decades ago and has not applied for any extension because no extension exists for what he now does. He has developed three techniques that the Guild curriculum does not contain. He has never submitted documentation.",
+        "his_secret": "Eleven years ago, Harven produced an object under contract that he later realized was a Binding — his client described what they wanted as 'a weapon that carries a specific quality permanently,' and Harven, believing this to mean Property Bind, executed it. He discovered two years later that the quality the client wanted bound was a documented curse. He does not know if what he produced actually worked. He does not know what happened to the object. He does not know who the client was — the commission came through an intermediary. He has not done another commissioned work through an intermediary since.",
+        "what_he_knows_that_alchemists_do_not": "That the Resonance integrated into True Smithed objects has a specific grain-level structure that appears to correspond to the practitioner's Open Path signature at the time of the binding. He can identify who made a True Smithed object by reading its resonance signature. He has confirmed this for eight objects. He has not told anyone because the implications — that every True Smithed object is traceable to its maker — would alarm the Guild and every practitioner who has ever done work they would not want traced.",
+        "relationship_with_mirela_voss": "They have met twice — once at a Guild licensing event, once when she brought him a project that required both inscription and forging. He recognized her as unusually skilled within three minutes of conversation. She recognized him the same way. Neither acknowledged it. They have not spoken since. Both have thought about changing that."
+      },
+      "brix": {
+        "name": "Brix",
+        "surname": "None given. One name. This is not unusual in the outer districts.",
+        "age": 29,
+        "location": "A small forge at the back of a general goods store in the outer district, approximately a fifteen-minute walk from Kairo's building. The forge occupies a space that was originally a storage room. Brix expanded into it over four years.",
+        "public_face": "An unlicensed smith — she does not have Guild True Smithing licensing because she has never applied. Her public work is conventional smithing: repairs, hardware, the basic metal goods the outer district needs. She charges what people can pay. She has regulars.",
+        "what_she_actually_does": "Brix has Guild licensing for basic metalwork and nothing beyond. What she practices is not in the licensing system because she learned it from her grandfather, who learned it from his, without any Guild involvement at any point in the lineage. The technique her family uses is older than the current Guild curriculum. She did not know this until she watched a licensed True Smith at work two years ago and realized they were doing approximately half of what she does.",
+        "her_secret": "She is one of the best Long Work practitioners currently active — she simply does not know the term for what she does. She refers to it as 'the sitting time.' Her grandfather called it 'keeping company with the metal.' She has produced two objects through extended Long Work that Harven Soldt, if he examined them, would classify as genuine artifacts — objects with five-layer property integration that no single-session work can produce. Both objects are in regular use by their owners, who know they are unusually good tools and nothing more.",
+        "why_she_matters_to_the_story": "She does not have a Guild license. She has a technique that predates Guild organization. If the Guild's curriculum was constructed partly to control what True Smithing could produce — if the licensing system is knowledge management as much as quality control — then Brix represents the tradition that survived outside that control. She doesn't know any of this. She is just very good at her work and genuinely proud of it.",
+        "what_she_knows_that_alchemists_do_not": "Nothing specific about alchemy — she has no training in it. But her intuitive understanding of what she calls 'what the metal wants to be' is a practical form of Deep Reading that no one has ever formally described to her. She reads material structure through the physical work the way a Resonance Alchemist reads it through perception. She just does it with her hands."
+      }
+    }
+  },
+
+  "cross_tradition_knowledge": {
+    "what_alchemists_know_that_smiths_do_not": "Resonance residue has structure that can be read, transmuted, and interacted with as a substance. True Smithed objects contain resonance of a specific type. An alchemist who understood True Smithing could read a bound object's full resonance composition — including the maker's signature and, potentially, the emotional state during binding.",
+    "what_smiths_know_that_alchemists_do_not": "Resonance can be permanently integrated into physical structure, not merely overlaid on it. A True Smithed property is not deposited resonance — it is resonance that has become part of what the material is. An alchemist trying to remove it would have to transmute the material itself.",
+    "the_combination": "A practitioner skilled in both traditions could theoretically produce objects that no current practitioner can match: True Smithed physical integration with Inscription Alchemy conditional activation and Resonance Alchemy residue management. The Guild has identified this combination as a threat category. The term is 'Founder-class production capability.' It appears in two internal documents. Neither document is accessible to people below senior Guild rank.",
+    "what_neither_knows": "How the Founding Age practitioners produced the objects still active beneath Caelum City. Both traditions are partially descended from Founding Age techniques. Neither is complete. The Founding Gate's embedded inscription — which Mirela Voss is slowly reading — is a demonstration of the full technique that both traditions are missing pieces of."
+  },
+
+  "curse_interaction": {
+    "binding": {
+      "description": "The practice of forging an object that bears a curse — transferring a curse's resonance modification into a material object rather than a living bearer. Extremely illegal. The Guild classifies Binding as a Category A violation — immediate detention, permanent license revocation, criminal prosecution.",
+      "how_it_works_mechanically": "A practitioner who understands both True Smithing and Curse mechanics can, during the forging process, draw a curse's resonance modification from its current bearer and integrate it into the metal using Property Bind techniques. The curse leaves the bearer and enters the object. Anyone who then uses or touches the object acquires the curse — the hidden gift and the cost both.",
+      "why_it_is_illegal": "The Guild's stated reason: contact-transfer curse deployment is a public danger. This is accurate. The deeper concern: an object bound with a documented curse can be used to deliberately curse specific individuals. More alarmingly — a skilled enough practitioner who understood both the Binding technique and the equivalent exchange principle could theoretically engineer the Binding to distribute the curse's cost across multiple users, with each individual receiving a fraction of the cost and the full gift. This would effectively be manufacturing hidden gifts for sale. The Guild considers this scenario civilizationally destabilizing.",
+      "objects_that_may_be_bound": "Not all curses can be successfully Bound. Curses that are deeply integrated with the bearer's specific Open Path signature — the Tethered Name, the Cartographer's Burden — resist extraction. Curses that operate more generically — the Iron Sleep, the Honest Tongue — can be Bound more readily. The practical catalog of what can and cannot be Bound is suppressed Chronicler knowledge."
+    }
+  },
+
+  "game_mechanics_summary": {
+    "alchemy_progression": {
+      "tier_1": "Material Alchemy basics — simple transmutations, limited to two material types. Unlocks: The Equivalent Exchange, Deep Reading.",
+      "tier_2": "Expanded material range, Inscription Alchemy access, basic Distillation. Unlocks: Inscription Write, Essence Pull.",
+      "tier_3": "Resonance Alchemy access, complex Inscription (multi-conditional), experiential Distillation. Unlocks: Residue Sculpt.",
+      "tier_4": "The Stone Record, Resonance Alchemy at historical-site scale, experiential Distillation of non-present sources (from residue rather than living source). High risk, high capability.",
+      "mastery_unlock": "Combination alchemy — transmuting resonance residue type to type, creating compound inscriptions that interact with each other, producing Resonance Forge fuel."
+    },
+    "smithing_progression": {
+      "tier_1": "Standard smithing quality improvement through Resonance. Unlocks: The First Breath, basic Grain Weave.",
+      "tier_2": "Single-property binding, Signature Lock. Unlocks: Property Bind, Signature Lock.",
+      "tier_3": "The Resonance Forge preparation, multi-property work (Long Work required), complex Signature conditions. Unlocks: The Resonance Forge, The Long Work.",
+      "tier_4": "Multi-property Long Work at 5-layer depth, novel property development (properties not in standard catalog), limited Binding work (illegal — game consequence applies). Unlocks: advanced variants of all techniques.",
+      "mastery_unlock": "Reading another smith's work — identifying maker and binding conditions from examination. Producing objects with properties that interact with each other rather than simply coexisting."
+    },
+    "combination_benefits": "A player who invests in both Alchemy and True Smithing at Tier 2 or above unlocks the Founder-class crafting path — a hidden progression track with techniques from neither standard tree. These techniques require both skill sets and produce objects categorically superior to single-tradition work. This path is not documented in any in-game guild curriculum. It must be discovered."
+  }
+}

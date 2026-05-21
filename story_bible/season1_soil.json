@@ -1,0 +1,247 @@
+{
+  "_copyright": "© Arion World. All rights reserved. All story, lore, characters, world-building, and systems are original intellectual property. Unauthorised reproduction or commercial use is prohibited.",
+  "_purpose": "The state of the board on the day before Episode 1 begins. Not plot — positions. Where every piece is, what they know, what they don't know, and what is already in motion.",
+  "_writer_note": "This document is for internal consistency. Before writing any scene, check positions. Every character is somewhere, doing something, with specific knowledge. If two things appear to conflict, the most detailed specification wins, and the conflict should be investigated — it usually means something needs to be resolved in the timeline.",
+
+  "characters": {
+    "kairo_voss": {
+      "location": "Third floor, 14 Ashburn Lane, Outer District, Caelum City",
+      "what_he_is_doing": "Working four days a week loading and carrying for market stalls at the morning market. Three evenings a week at the Dusk Market for Hedda — using Echo Sight to read object histories that Hedda's clients want appraised. Has had two odd jobs for people who came to Ren's shop asking for him — one he will not describe, one that required him to read an object that left him non-functional for the rest of that day.",
+      "financial_state": "Functional. Not comfortable. He can pay his rent, eat regularly if not well, and buy charcoal and paper for drawing. A bad week at the market tips this balance. He has had two bad weeks this month.",
+      "physical_state": "Tired. Sleeping poorly — the visions interrupt sleep when they come at night. Has a three-week-old bruise from a market loading incident that has mostly faded. Otherwise healthy.",
+      "mental_state": "Managing. He has a system: work fills the days, drawing fills the hours when he can't sleep, Ren fills the social space that would otherwise be empty. The visions are getting more frequent. He has been careful not to think about how much more frequent.",
+      "what_he_knows": "See what_kairo_knows section. Summary: he knows his immediate world accurately, has significant gaps about everything beyond it.",
+      "what_he_wants": "To be left alone by the Guild. To make enough money to not worry about money. To understand what his visions are without having to tell anyone about them.",
+      "what_he_fears": "That the visions are getting worse because something is happening to him. That the incident report on file with Inspector Tav will eventually reach someone higher than Tav. That Ren knows something is wrong and is protecting Kairo from knowing that he knows.",
+      "what_he_does_not_know": "Who Dena Croft is or that she lives in the same building block. What the Threshold Configuration is. That Malec's team is methodically working through incident files. That his parents did not die in an accident. That the Voice is the man who caused the Fracture. That he is the reincarnation of that man. That Rian's fourth document describes him specifically."
+    },
+
+    "serin_alda": {
+      "location": "Standard Guild quarters in the inner city, assigned to the enforcement division under Director Malec. Spends significant time in the outer districts conducting what she believes is routine Resonance monitoring.",
+      "what_she_is_doing": "Ongoing monitoring of a list of flagged Resonants in the outer districts — periodic presence checks, incident cross-referencing, quality control on Inspector Tav's outer district reports. This is her official assignment. The actual reason for her outer-district positioning is Malec's interest in finding the Threshold Configuration, which she does not know. She is doing her job as she understands it, with competence.",
+      "what_she_knows": "Guild procedures, current outer-district incident history, the names and rough profiles of flagged Resonants including Kairo (incident report: 'unstable and potentially hazardous, Tier 1 classification uncertain'). That the outer districts have a higher-than-expected density of self-taught Resonants. That Inspector Tav is significantly more effective than her file reviews suggest.",
+      "what_she_wants": "To do her job correctly. To understand why Malec assigned her specifically to outer-district monitoring when she has the skills for more complex work. To feel like her competence is being used rather than parked.",
+      "what_she_fears": "That she was assigned here because Malec considers this work beneath his more skilled people, and that she is not as valued as she believes. (She is wrong about the reason for the assignment but correct that she is being used without being told why.) That her instincts, which she trusts, will lead her to a conclusion her loyalty to the Guild makes her refuse to reach.",
+      "what_she_does_not_know": "About the compulsion chip at her left temple. That her mother is alive and a senior Veilkeeper. That she was placed in the Guild as an intelligence asset. That Malec assigned her to the outer districts specifically to get close to Kairo. The exact content of her own personnel file. That she has broken Guild protocol twice and both times Malec was informed and chose to do nothing."
+    },
+
+    "director_malec_thorne": {
+      "location": "His office in Guild Enforcement headquarters, inner city. He is there most of the time. He sleeps in the building two nights out of five.",
+      "what_he_is_doing": "Managing the Guild's enforcement division — routine work that occupies approximately forty percent of his attention. Thirty percent: the quiet, undocumented search for the Threshold Configuration, which involves systematically reviewing incident files from the outer districts with his personal attention rather than delegating. Twenty percent: managing three specific Veilkeeper operations that he does not document in any Guild system. Ten percent: thinking about two members of the Veilkeeper inner circle who he believes have reached conclusions he hasn't, and considering what those conclusions might be and what they are doing about them.",
+      "what_he_knows": "The content of Erian's fourth document (partial — the key section, approximately 400 words). That the Threshold Configuration should theoretically appear in the outer districts. That the Chroniclers found the document and that their senior archivist was taken. That the archivist died in a facility fire fourteen months after being taken (he believes). That the Great Opening succeeded and the suppression layer is rebuilt. The location of one Luminal Core fragment, which is in a vault beneath his office. That Kairo's parents had to be removed — he ordered it himself when he confirmed their bloodline.",
+      "what_he_wants": "To find the Threshold Configuration before it activates, to contain or redirect it, to maintain the suppression layer, to prevent another Fracture. He genuinely believes all of this is necessary. He is not lying to himself.",
+      "what_he_fears": "That he is wrong about the cause of the Fracture and has spent thirty years solving the wrong problem. That two of the seven Veilkeeper inner circle members have already found the Threshold Configuration and are acting on it without him. That Kairo Voss, nineteen years old and working loading jobs in the outer district, is who the document describes — and that the encounter, when it comes, will be impossible to manage cleanly.",
+      "what_he_does_not_know": "That Dena Croft is alive and living in the outer districts. That Kairo's incident report is currently in a stack on his desk and he will reach it in approximately twelve days. That Serin Alda has begun to feel unease about her assignment that she has not reported. That the Founding Gate has an embedded inscription that Mirela Voss is currently reading.",
+      "the_stack_on_his_desk": "122 outer district incident reports, reviewed personally rather than delegated. He is looking for a specific pattern: Echo Sight operating at structural rather than surface level, involuntary perception bleeds, creative output reflecting Fracture content. Kairo's incident report, filed two years ago by Inspector Tav, is report number 109 in the current stack. Malec reads approximately ten per day when time allows."
+    },
+
+    "ren": {
+      "location": "Ground floor corner, 2 Ashburn Lane — at the repair bench when he's working, which is most of the time. Upstairs at his flat above the shop in the evenings.",
+      "what_he_is_doing": "Running the repair shop — clocks, mechanisms, tools. Three jobs in progress on the bench. Has taken on a new client who brings broken resonance-integrated tools because Ren has a reputation for diagnosing them even without his own Resonance ability. Winds his stopped-clock collection every morning without thinking about why.",
+      "what_he_knows": "Everything about his immediate neighborhood. Kairo's schedule with more accuracy than Kairo knows. That something is wrong with him — not conceptually, but felt. That his time sense is not normal. That his clocks show different times and he winds them anyway. That in certain dreams — when he has them — he is someone who died.",
+      "what_he_wants": "For Kairo to be okay. For his shop to stay solvent. For whatever is wrong with him to not require Kairo's attention.",
+      "what_he_fears": "Time. He has no precise language for this. He fears it the way someone fears a thing that is everywhere, invisible, and specifically hunting them.",
+      "what_he_does_not_know": "That he is Shattered. What the Shattered condition is. Why his clocks record the times they do. That the dream about being someone who died at seventeen is accurate history from the Echo Timeline. That the Voice has been watching him through the Fracture with something that in a less constrained entity might be recognized as grief."
+    },
+
+    "the_voice": {
+      "location": "The Fracture. Everywhere that the Fracture touches — which is everywhere, at different depths. Most present in locations near Fracture bleeds, in the Fractured Wastes, and wherever Kairo is.",
+      "what_it_is_doing": "Watching. Waiting. Maintaining the careful silence it has maintained since Kairo was three years old, when Malec ordered Kairo's parents removed and the Voice understood that direct guidance would make Kairo's position worse. It has spoken to Kairo twice in the last six months — both times in response to situations where the danger was immediate enough that silence was worse than speech. Both times it gave Kairo enough to act on and nothing more.",
+      "what_it_knows": "Everything that happened. Everything that preceded what happened. Approximately seventy percent of what is currently happening — the Fracture is not omniscient, and there are people and places whose activities do not generate the resonance signature the Voice can track. It does not know that Dena Croft is alive. It does not know what the inner circle's two concerning members are planning.",
+      "what_it_wants": "For Kairo to survive long enough to understand what he is. Not to become Varos — to become what Varos was trying to become before the choice at Year 312.",
+      "what_it_fears": "The same choice. The same situation — someone Kairo loves in danger, Kairo in the middle of a critical moment, the choice between completing the thing and saving the person. Varos made that choice, and the Voice has had 2847 years to think about it."
+    },
+
+    "dena_croft_as_elara_marsh": {
+      "location": "14 Callery Street, Outer District. One floor below Kairo's building on the same block. She has been here for exactly two and a half years.",
+      "what_she_is_doing": "Working as a seamstress. She has twelve regular clients, two who are becoming friends in a careful limited way that she allows herself. She takes evening walks that route past Ren's shop, the Dusk Market, and — twice a week — past Hedda's stall at the market where Kairo works. She does not watch him. She observes.",
+      "what_she_knows": "The complete text of Erian's fourth document, in her memory. That Kairo Voss is the person the document describes. Five specific observations over two and a half years that confirmed this (see the_two_and_a_half_year_watch section). That an inner-city enforcement inspector has appeared in the outer districts twice in the last month conducting what is not a routine check. That Tobias Greel believes she is dead.",
+      "what_she_wants": "To have enough information to know whether approaching Kairo will help him or harm him. She has spent two and a half years getting that information and she is still not sure.",
+      "what_she_fears": "Being the thing that ends his ordinary life. That the Veilkeeper search will find him before she decides. That her two and a half years of watching have given her enough information to be confident and she has been using confidence as an excuse to delay.",
+      "what_she_does_not_know": "That the Unnamed One has left a note for her at their shared location that says 'He is ready now.' She has not collected her messages from that location in eleven days. That Malec's desk stack is 13 reports away from Kairo's file. That Kairo came to Corvel Ash's practice once, briefly, under a false name, and that Corvel identified something in him."
+    },
+
+    "tobias_greel": {
+      "location": "Scholar District, inner city. Rented apartment above a mapmaker's shop. He has not left the building in four days — he is working through a primary source translation that requires sustained attention.",
+      "what_he_is_doing": "Translation work. Planning — in his head, not on paper — how to transfer knowledge of one of the three document locations to a trusted person before he dies. Has not identified the person. Has received no new information from his anonymous source (the Guild curse-removal practitioner) in three weeks and is considering whether this means the source has been compromised.",
+      "what_he_knows": "The locations of all three surviving Founding Age documents. Enough of the fourth document to know what it contained. That Dena Croft was taken and died in a facility fire (he believes). The basic content of 31 curse hidden gifts from the informal registry in his memory. That the Chroniclers' network has 847 members, which is roughly twice his public estimate.",
+      "what_he_wants": "To transfer the document location knowledge before he dies. To see the Chroniclers' mission completed in some form before he dies. He is 67 and pragmatic about mortality.",
+      "what_he_does_not_know": "That Dena Croft is alive. That Vesper carries the second document's relevant section without knowing it. That the Unnamed One has identified Kairo Voss and left Dena a message."
+    },
+
+    "inspector_tav": {
+      "location": "The Warden's Post, corner of Ashburn Lane and the Market Road, Outer District.",
+      "what_she_is_doing": "Running the outer district Guild liaison office. The job she has done for seven years with more effectiveness than anyone who set her budget accounts for. Today specifically: reviewing a noise complaint that is probably a resonance equipment malfunction and not an incident, and writing up a patrol report she was supposed to file three days ago.",
+      "what_she_knows": "Everything significant that has happened in the outer district for seven years. Every name that has been in any incident report. The difference between someone who needs help and someone who needs to be stopped, based on seven years of making that call and living with the outcomes. That Kairo Voss has one incident report and she is not sure the flagging was right.",
+      "what_she_wants": "To do her job well. To not have her outer district jurisdiction become interesting to people from the inner city, which is always bad news for the outer district.",
+      "what_she_does_not_know": "That Director Malec will reach Kairo's incident report in twelve days and that when he does, her outer district will become very interesting to him."
+    },
+
+    "vesper": {
+      "location": "Dusk Market, three alleys from Hedda's stall. She and Kairo have spoken twice. About nothing.",
+      "what_she_is_doing": "Selling books. Reading everything. Quoting from memory at volumes her regulars find charming. Existing in complete ignorance of what she carries.",
+      "what_she_knows": "What she has read, which is everything. What she has memorized, which includes the second surviving Founding Age document in full — she believes it was a translation exercise.",
+      "what_she_does_not_know": "That she is a Mirror. What the document she carries means. That she and Kairo have spoken and that the information in her memory is the most direct description that exists of what is happening to him."
+    },
+
+    "corvel_ash": {
+      "location": "His licensed medical alchemical practice, Scholar District, inner city.",
+      "what_he_is_doing": "Running his practice. Morning appointments, afternoon preparation work, evening research in the sub-basement. Three days ago he reviewed his notes from the Deep Reading he did on the unnamed patient two years ago. He has done this four times this month. He is running out of leads on who the patient was.",
+      "what_he_knows": "That he performed a Deep Reading on someone with early-stage Threshold Configuration approximately two years ago. That the patient came under a false name and has not returned. That Resonance residue can be transmuted between types. That True Smithed objects have readable maker-signatures.",
+      "what_he_does_not_know": "That the patient was Kairo Voss. That Kairo lives twelve minutes' walk from his practice."
+    },
+
+    "harven_soldt": {
+      "location": "The Ironstone Yard, commercial district edge.",
+      "what_he_is_doing": "Working through his commission list. Currently three weeks into a Long Work commission — a set of surgical tools for a physician. Has not taken an intermediary commission in eleven years.",
+      "what_he_knows": "True Smithed objects carry the maker's signature. The binding incident eleven years ago. That there is a practitioner in the commercial district whose Inscription Alchemy work he briefly examined and that she is unusually skilled.",
+      "what_he_does_not_know": "That Mirela Voss is currently reading an inscription on the Founding Gate that is more significant than anything either of them has ever encountered."
+    },
+
+    "mirela_voss": {
+      "location": "Her workroom, near the Founding Gate, inner city edge.",
+      "what_she_is_doing": "Three client projects in progress. Evening walks past the Gate, during which she continues reading the embedded inscription. Has decoded approximately one-third of it.",
+      "what_she_knows": "That the Founding Gate has a resonance inscription that no other practitioner she knows of has detected. The first third of the inscription's content, which appears to be an activation instruction for something. That the inscription is significantly more sophisticated than any contemporary Inscription Alchemy.",
+      "what_she_does_not_know": "What the inscription activates. That the Gate is the primary resonance anchor for the rebuilt suppression layer. That reading the inscription at full depth will require the same skill level as performing the inscription — which means she is close to the limit of what she can decode alone."
+    }
+  },
+
+  "factions": {
+    "the_veilkeepers": {
+      "current_operational_state": "Active, organized, and running three simultaneous operations: the outer-district Threshold Configuration search (Malec's project), an internal audit of Chronicler network activity following the fourth-document incident three years ago, and what two inner circle members are calling 'contingency preparation' without being more specific to the other five.",
+      "internal_state": "Functionally cohesive at the operational level, privately fractured at the top. Director Malec is confident in five of the seven inner circle members. He has unresolved doubts about two: Archivist Prenn and Field Director Asha Vane. Both have been unusually focused on Founding Age site mapping in the past six months. He does not know what they are mapping or why. He has not asked directly.",
+      "what_they_believe": "That the Opening failed and the Fracture was the consequence of Varos's reckless power seizure. That the suppression layer prevents another Fracture. That the Threshold Configuration, if it activates, risks destabilizing the suppression layer and triggering another Fracture. Most of them are sincere. The inner circle knows the Opening succeeded. They have convinced themselves this does not change the danger.",
+      "what_they_do_not_know": "That Dena Croft is alive. That the Founding Gate has a readable inscription. That two of their own inner circle members may be operating on conclusions the other five have not reached."
+    },
+
+    "the_resonant_guild": {
+      "current_operational_state": "Functioning normally at the city-services level — license checks, incident response, training programs. Upper leadership is operating as Veilkeeper instruments without all of them understanding this relationship explicitly. Director Malec runs enforcement. The Guild's administrative head, Chancellor Roven, believes the Guild is fully independent. He is one of the more useful people the Veilkeepers have — a genuine believer in institutional authority who will enforce rules reliably without needing to be told why.",
+      "what_they_are_watching": "Outer districts: elevated self-taught Resonant activity, flagged in quarterly reports but never fully explained. Three practitioners operating above their licensed tier — noted, not yet actioned. Chronicler pamphlet series from Harro Feld: noted twice as low-quality historical fiction, no further action.",
+      "what_they_do_not_know": "The content of the Threshold Configuration profile. That Malec is using the outer-district monitoring program for a purpose not described in the official mandate. That twelve of their senior enforcement officers have been modified by the Iron Sleep Guild protocol without being told what 'sleep architecture modification' means."
+    },
+
+    "the_chroniclers": {
+      "current_operational_state": "Network functioning at normal speed — which is slow. Information moving through threads in fragments. Tobias Greel is the effective center of gravity without actively directing anything. Harro Feld has begun printing pamphlet four. Vesper is at the Dusk Market. Listener Six is producing useful intelligence without knowing the full context of what she is reporting.",
+      "critical_gap": "The fourth document's existence is not held by anyone who can act on it. Tobias has the content in his head but doesn't know Dena Croft is alive and is the complete copy. Dena has the complete text but is isolated and has not reported to the network. The Unnamed One has assembled the full picture but has not acted and may not act without the right trigger.",
+      "what_they_do_not_know": "That Kairo Voss exists. That Malec has a partial copy of the fourth document. That their network is approximately 400 members larger than Tobias Greel's best estimate."
+    },
+
+    "the_shattered": {
+      "current_operational_state": "Scattered, unorganized, existing. There are currently seven Shattered individuals in Caelum City that the Vorath shamanic tradition could identify if any were here to look. None are identified. None know what they are.",
+      "ren_specifically": "Ren is Shattered. He does not know this. The other six are in various states of awareness about their condition — ranging from 'I have unusual dreams' to 'something is fundamentally wrong with my perception of time and I have stopped talking about it.' None of the seven have met. The graffiti on the building in the outer district that reads 'ARION REMEMBERS' marks Ren's building. He did not put it there. He has never mentioned it to anyone."
+    },
+
+    "the_unnamed_court": {
+      "current_operational_state": "Unknown. Watching. Have been watching for longer than any of the above factions have existed.",
+      "_writer_note": "Do not resolve. Do not reveal. Not yet."
+    }
+  },
+
+  "active_tensions": {
+    "_note": "These are things already in motion that Kairo does not know about. Each one will intersect with his story. The question is not whether — the question is when and in what order.",
+
+    "malec_stack_countdown": {
+      "description": "Director Malec is personally reviewing outer-district incident reports looking for the Threshold Configuration profile. He is 13 reports away from Kairo's file. At his current pace, he reaches it in approximately twelve days.",
+      "what_happens_when_he_reads_it": "He will not immediately recognize it as a match — the incident report describes 'uncontrolled resonance expression' and 'unstable Tier 1 classification,' which is close but not precise. He will put the file in a secondary category for follow-up. He will assign Serin Alda a more specific observation task. The net tightens.",
+      "kairo_does_not_know_this": true
+    },
+
+    "dena_crofts_decision_point": {
+      "description": "Dena has seen the enforcement inspector in the outer districts twice in one month. She knows the search pattern has changed. She is running out of time to decide whether to approach Kairo before the Veilkeepers find him.",
+      "what_is_stopping_her": "She does not know whether approaching him will help or harm him. She has the knowledge but not the certainty. She is, for the first time in two and a half years, close to deciding that certainty is not available and she has to act without it.",
+      "the_note_she_has_not_collected": "The Unnamed One left a message for Dena eleven days ago: four words — 'He is ready now.' Dena's isolation protocol means she collects messages only every two weeks at the shared location. The message is waiting. When she reads it, the decision will shift from 'should I act' to 'when.'",
+      "kairo_does_not_know_this": true
+    },
+
+    "mirela_voss_and_the_gate": {
+      "description": "Mirela Voss is reading the Founding Gate's embedded inscription. She has decoded a third of it. What she is reading is the activation instruction for the primary resonance anchor of the rebuilt suppression layer. She does not know this. She thinks it is an interesting historical artifact. She is getting closer to the activation sequence section of the inscription.",
+      "what_happens_if_she_completes_the_reading": "She will have, in her head, the specific activation condition for the primary anchor. This is functionally a partial key to the suppression layer mechanism — the exact section of Erian's fourth document that the Veilkeepers have been trying to contain. The two pieces of information reinforce each other. The combination would be significant.",
+      "who_does_not_know_this": "Everyone. Mirela does not know what she's reading. The Veilkeepers do not know she is reading it. Dena Croft, who holds the complementary information, does not know Mirela exists.",
+      "kairo_does_not_know_this": true
+    },
+
+    "the_two_inner_circle_members": {
+      "description": "Archivist Prenn and Field Director Asha Vane have been quietly mapping Founding Age sites in the outer districts for six months. Malec has noticed but not investigated. They are looking for the same thing Malec is looking for — but they have arrived at a different conclusion about what to do when they find it. They have not shared this conclusion with the other five inner circle members.",
+      "what_malec_suspects": "That they have found something or concluded something that he has not. That they are acting on it without full inner circle knowledge. He is correct on both counts.",
+      "what_they_have_found": "A partial match — not Kairo, but resonance site residue in the outer districts consistent with extended Threshold Configuration proximity. They believe the Configuration is present and active. They are two weeks away from identifying the individual.",
+      "kairo_does_not_know_this": true
+    },
+
+    "corvel_ash_and_the_lost_patient": {
+      "description": "Corvel Ash has been trying to find the unnamed patient from two years ago who he identified as having early Threshold Configuration. He has no identifying information. He has been quietly inquiring with three outer district contacts about any self-taught Resonant with unusual vision-type experiences.",
+      "how_close_he_is": "He has a name: a woman named Hedda who runs a resonance-object appraisal stall at the Dusk Market who uses an Echo Sight reader. He has not yet gone to the market to see this person. He is planning to go this week.",
+      "what_will_happen": "Corvel will go to the Dusk Market, observe Hedda's stall, and see Kairo working. He will recognize the resonance profile from his Deep Reading two years ago. He is not certain what he will do with this.",
+      "kairo_does_not_know_this": true
+    },
+
+    "rens_escalation": {
+      "description": "Ren's timeline displacement episodes are becoming more frequent. Last month: three. This month: already five, and the month is two weeks old. He is managing by not talking about it. The escalation is causing physical symptoms he is attributing to overwork — headaches, brief vertigo, moments where he looks at his clocks and all of them seem right simultaneously.",
+      "what_this_means": "The Shattered condition does not degrade quietly. As the Fracture boundary stress increases — and it has been increasing, correlating with the growing number of active pieces near the core sites — the stress on Shattered individuals increases first. Ren is the most complete Shattered person in Caelum City. He is feeling the pressure before anyone else.",
+      "kairo_does_not_know_this": true
+    }
+  },
+
+  "what_kairo_knows": {
+    "what_he_actually_knows": [
+      "His neighborhood, its people, its informal economy. He knows the outer district the way someone knows a place they have lived in for years with attention.",
+      "His own resonance ability as he experiences it: Echo Sight that sometimes overwhelms him, visions he cannot control or schedule, a sense of what an object has been through when he touches it. He has no theoretical framework for any of this.",
+      "Ren. He knows Ren well — better than he can articulate, less well than Ren knows him.",
+      "That the Guild flagged him as 'unstable and potentially hazardous' and that Inspector Tav did not push this further, and that he needs to keep his incident count at one.",
+      "That the Dusk Market operates outside Guild observation and that Hedda pays him not to ask questions about where some of the objects she appraises come from.",
+      "The Voice. He knows it exists. He knows it knows things it shouldn't. He has decided not to think about what this means."
+    ],
+
+    "what_he_suspects": [
+      "That his visions are not hallucinations, even though the Guild examiner who filed the incident report implied they were.",
+      "That whatever is happening to him is getting worse or more active, and that this is probably not random.",
+      "That Ren is worried about something and not saying so.",
+      "That the Voice is not random — that it appears in proportion to how much danger he is in, which means it is either connected to reality or it is a paranoid defense mechanism, and he cannot rule out either."
+    ],
+
+    "what_he_has_been_told_that_is_not_true": [
+      "That his parents died in a resonance accident in the outer districts when he was three. (They were removed by Director Malec's order.)",
+      "That his Guild incident report reflects genuine concern for his wellbeing. (It was a data collection event — the examiner was a low-level Veilkeeper instrument who reported the resonance profile upward.)",
+      "That his visions are a symptom of uncontrolled low-tier Resonance expression that poses a risk to himself and others. (They are Fracture Walking ability, the first documented in 500 years.)"
+    ],
+
+    "what_he_knows_that_he_does_not_know_he_knows": [
+      "The layout of the Founding Age city beneath Caelum — he has drawn it accurately in fragments across hundreds of sketches. He has never recognized what he is drawing.",
+      "The structure of the Echo Timeline version of Caelum — he has drawn the spiral tower that is a landmark in the Echo Timeline. He showed the drawing to Ren once as a joke about his 'weird city maps.'",
+      "The resonance signature of the suppression layer ceiling — he has encountered it in his visions as 'the wall,' a point in every deep vision where something stops him. He describes it to no one. He does not know it is a structure."
+    ]
+  },
+
+  "the_two_and_a_half_year_watch": {
+    "_context": "Dena Croft has been living at 14 Callery Street for two and a half years. She identified Kairo approximately six months after arriving. Since then she has been observing carefully, recording nothing, remembering everything. These are the five most significant observations that confirmed to her that Kairo Voss is the person Erian's fourth document describes.",
+
+    "observation_one": {
+      "when": "Approximately eight months into her observation period. Late afternoon, Dusk Market.",
+      "what_she_saw": "Kairo reading an object for Hedda — a piece of carved stone, small, clearly old. He held it for approximately four seconds before he set it down and stepped back. Hedda asked him something. He shook his head. He had not touched it with his bare hands since. Dena was close enough to see his expression during the four seconds. What she saw was not a person experiencing resonance impression. It was a person experiencing recognition.",
+      "why_it_mattered": "The document's description: 'Echo Sight operating at the structural rather than surface level — perceiving temporal layers, not just object histories.' A standard Echo Sight reader receives impressions: what happened to this object, who touched it, what emotions were present. What Dena saw in Kairo's expression was not 'I am reading impressions.' It was 'I know this place.' The stone was from the Founding Age undercity. Kairo had never been there. He was recognizing somewhere he had never been. The document was right."
+    },
+
+    "observation_two": {
+      "when": "Approximately fourteen months into her observation period. His building, the external wall.",
+      "what_she_saw": "A drawing pushed under his door by a draft, which slid into the hallway. Dena picked it up before anyone else reached it. The drawing showed a street in a city she did not recognize. She almost put it down before she noticed: the road layout matched the Founding Age street grid described in document two of the three surviving texts — the administrative records, which included a partial city map. Not approximately matched. Precisely matched. The proportions, the junction angles, the spacing. Kairo had drawn the Founding Age city from the inside.",
+      "why_it_mattered": "The document: 'Creative output reflecting perceived Fracture content without conscious intention.' He was not drawing from reference. He was drawing from somewhere. The Fracture bleeds he was experiencing in his visions were giving him architectural information he was transcribing without knowing what it was. She gave the drawing back. She did not knock on his door."
+    },
+
+    "observation_three": {
+      "when": "Approximately eighteen months into her observation period. The street between their buildings, evening.",
+      "what_she_saw": "Kairo, walking home, stopped mid-step for approximately two seconds. Not a stumble. A complete pause — the kind that follows a strong resonance impression, or the first second of a vision. When he started walking again he changed direction — not toward his building but toward an alley off the market road. Dena followed, staying well back. He walked to the base of a Founding Age structure — one of the sections where the original stone was exposed, cracked through later paving. He stood there for perhaps three minutes. He put his hand on the stone. She saw his expression from across the street. He was not afraid. He was sad.",
+      "why_it_mattered": "The Threshold Configuration document: 'The person who matches this Configuration will not understand what they are. They will believe they are broken.' What Dena saw in his face at the Founding Age stone was not confusion. It was grief — the particular grief of someone mourning something they cannot name. He was mourning the place he kept seeing in visions, the place the stone reminded him of, the thing he couldn't explain. She nearly crossed the street. She did not."
+    },
+
+    "observation_four": {
+      "when": "Approximately twenty-two months into her observation period. The morning market, early, before most stalls were open.",
+      "what_she_saw": "Two men she did not recognize talking to a market vendor near Kairo's loading position. She did not recognize the men until one of them turned: a Veilkeeper field operative, working without Guild identification, conducting what was clearly an information-gathering visit about a specific person in the outer district. He was describing Kairo's build and coloring to the vendor without using his name. The vendor did not know the name. The operative left. Kairo arrived for work fifteen minutes later. He walked past the vendor, said hello by name, got his day's assignment. He had no idea what had just happened.",
+      "why_it_mattered": "The Veilkeepers had identified the outer district as a search zone. They were asking questions. They did not yet have a name or a face-to-file match. But they were here, and they were close, and Kairo was working in the market where they were asking questions with no knowledge that this was happening. The two-and-a-half year window was not as long as it had seemed. She began considering timelines seriously for the first time."
+    },
+
+    "observation_five": {
+      "when": "Eleven days ago — the most recent significant observation.",
+      "what_she_saw": "Kairo, late evening, sitting on the external steps of his building. She passed at a distance. He was drawing. She stopped at a point where she could see the paper without him seeing her. He was drawing a face. Not someone in front of him. Something from inside — he was sketching it from perception rather than observation, the way she had seen him sketch the city layouts. The face was male, older, strong-featured. She did not recognize it at first. Then she did. The face was from Erian's fourth document — specifically, from the section where Erian describes Varos as she remembered him. Dena had read the description more times than she had read most things. The drawing matched it. Kairo Voss was drawing the face of the man he was the reincarnation of, from an internal perception source, without knowing who it was.",
+      "why_it_mattered": "This was not Echo Sight. This was not vision bleed. This was the memory beginning to surface. Erian's document predicted this: 'The memory is not lost — it is not accessible yet. It will surface on its own timeline or be triggered.' The memory was beginning to surface. Which meant the timeline was shorter than any estimate she had made. She went back to her workroom and sat without moving for an hour. Then she began thinking about what she would say when she knocked on his door."
+    }
+  }
+}

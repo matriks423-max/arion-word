@@ -1,0 +1,160 @@
+{
+  "_purpose": "The Chroniclers — full internal detail. Their structure, named members, what Erian's fourth document actually says, and where Senior Archivist Dena Croft actually is. This is the faction the Veilkeepers fear more than any other, and most of the Chroniclers don't know why.",
+
+  "_writer_note": "The Chroniclers are not a resistance movement. They don't think of themselves as heroes. They are scholars and information workers who believe knowledge hoarding is the root of every power imbalance that has ever existed. They are not trying to overthrow anything. They are trying to make it impossible to hide things. The fact that this terrifies the Veilkeepers is, to the Chroniclers, the most revealing thing the Veilkeepers have ever said about themselves.",
+
+  "overview": {
+    "founding": "Not formally founded. The Chroniclers emerged from a loose network of scholars who, roughly 400 years ago, began sharing documents that individual institutions wouldn't publish. There was no founding manifesto, no founding meeting. There was just a moment — reconstructed later by historians inside the network — when the practice of sharing what shouldn't be shared became deliberate rather than accidental.",
+    "size": "Unknown even to its senior members. The network structure is designed to make headcount impossible. Senior Archivist Tobias Greel estimates between 200 and 400 active members across the Known Continent. The actual number is 847.",
+    "the_fundamental_rule": "No single person holds the whole picture. This is not just a security measure — it is the ideology made structural. If knowledge is distributed, it cannot be destroyed by destroying one person. The network is the archive.",
+    "what_the_guild_thinks": "Low-level nuisance. Eccentric scholars who occasionally publish documents that make the licensing system look bad. Not a serious threat.",
+    "what_the_veilkeepers_think": "The most dangerous organization alive, and they are not wrong."
+  },
+
+  "structure": {
+    "the_thread": {
+      "description": "The fundamental unit. Three people, each aware of the other two, each connected to other threads they cannot see. Information passes through threads in fragments — a thread receives a piece of a document, copies it, passes it forward. No single thread holds a complete picture.",
+      "security_logic": "A thread that is caught cannot reveal more than three names and one fragment. The network continues. The document survives.",
+      "weakness": "Speed. Information moves slowly through a fragmented network. The Chroniclers are not built for crisis response."
+    },
+    "the_thread_council": {
+      "description": "Not a formal leadership — there are no votes, no titles, no authority. The Thread Council is the name given, after the fact, to the 3-5 members who have lived long enough and moved through enough threads to have assembled a near-complete picture of the network's current state. They do not meet regularly. They communicate through intermediaries.",
+      "current_members": ["Tobias Greel", "The Unnamed One"],
+      "_note": "There were four Thread Council members until three years ago. Dena Croft was the fourth. Her disappearance reduced the council to three, and the third member — an archivist named Corvin — died of natural causes eight months later. The council has not rebuilt."
+    },
+    "roles": {
+      "archivists": "Field scholars. They locate, copy, and transport documents. The most exposed role. Three have been taken by the Veilkeepers in the past decade — two were released, one was not. They are the reason the Chroniclers have what they have.",
+      "mirrors": "People who have memorized sections of the archive. Most Mirrors don't know they are Mirrors — they believe they went through a translation exercise, or an unusually thorough apprenticeship, or a particularly rigorous conversation with an Archivist they haven't seen since. If every document is destroyed, the Mirrors still exist. The knowledge survives in human memory. There are 23 current Mirrors.",
+      "inkers": "People with printing presses, licensed copy shops, academic publishing connections. When the Chroniclers decide something should enter public knowledge, it passes to an Inker. They are patient people. A document can sit with an Inker for ten years before the moment is right.",
+      "listeners": "People in positions of ordinary life — Guild clerks, merchants, servants, market traders — who notice things and pass them through channels they barely understand. Most Listeners have never been formally recruited. They were identified by watching who seemed to pay careful attention, and then gently, over time, handed slightly more than the usual flow of information. Many have no idea they are Listeners. They think they are just people with unusually interesting acquaintances."
+    }
+  },
+
+  "named_members": {
+
+    "tobias_greel": {
+      "name": "Tobias Greel",
+      "age": 67,
+      "role": "Acting Senior Archivist — the title he refuses to use, because he insists Dena Croft is still the Senior Archivist and he is holding her position until she returns",
+      "location": "Scholar District, inner city — a rented apartment above a mapmaker's shop, three rooms, floor-to-ceiling shelving, books stacked everywhere except for one clear path from door to desk to bed",
+      "public_face": "A retired academic historian who writes commentary for licensed historical journals. Known for being pedantic about citations. Considered harmless.",
+      "what_he_actually_is": "The only living person who knows the locations of all three surviving Founding Age documents. He has never written them down. They live in his memory, and he is 67, and his memory is not what it was, and this terrifies him more than anything the Veilkeepers might do.",
+      "the_problem_he_has": "He is running out of time biologically. The three document locations need to be transferred to someone he trusts before he dies or loses them. He has not found that person yet. He is not sure such a person exists. He has been making his peace with the possibility that the documents will be lost when he dies, and he hates himself for it.",
+      "what_he_knows_about_dena": "He knows she was taken. He does not know she escaped. He believes she is dead. He blames himself — he left the room when she showed him the document, and by the time he came back there was someone in the building who had read it. He did not realize this for three days, and by then she was already gone.",
+      "his_relationship_with_the_fourth_document": "He read it. He understood enough of it to know what it meant. He does not know that the Veilkeepers also have a copy of the key section. He thinks the only copies are gone — Dena's, which was taken with her, and his memory, which he has never committed to paper because he does not trust paper anymore."
+    },
+
+    "dena_croft": {
+      "name": "Dena Croft — currently living as Elara Marsh",
+      "age": 44,
+      "role": "Senior Archivist — disappeared three years ago, believed dead by most of the network including Tobias Greel",
+      "location": "14 Callery Street, Outer Districts — one floor below Kairo's building on the same block. She has been here for two and a half years.",
+      "_writer_note": "This is not a coincidence. She chose this location deliberately. She is 90 meters from the person Erian's document describes. She has not approached him. She is still deciding whether she should.",
+      "what_actually_happened": "She was taken by Veilkeeper enforcement — two people, late evening, three days after she found the document. She was held for four days in a facility in the inner city that she now knows is an unofficial detention location the Guild does not know about. On the fourth day there was a shift change and the person covering the shift was undertrained and she walked out of an unlocked door. She has never been sure whether the door was actually unlocked or whether she was allowed to leave — whether the Veilkeepers wanted to follow her back to the network. She has operated on the assumption that she was followed for the first year. She may have been. She is less sure now.",
+      "current_life": "She works as a seamstress. She is genuinely good at it — she learned before she became an archivist and the skill came back. She has a small client base of outer district residents who need repairs rather than new garments. She does not charge what she could charge. She is liked in a low-key way by people who don't know her name.",
+      "what_she_knows": "She read the fourth document. She has a near-photographic memory for text — this is why she was Senior Archivist. The document is inside her head, all of it, word for word. She is a Mirror who knows she is a Mirror. She is the only complete copy of the fourth document that exists.",
+      "what_she_knows_about_kairo": "Everything the document describes. She identified him approximately six months after she moved to Callery Street — she noticed his drawings first, pushed under his door by a draft, lying in the hallway. She picked one up. It showed a city with wrong geometry that she recognized from the document's description of Founding Age Caelum. She has been watching him, carefully, since. She knows about the Hedda work. She knows about Ren. She knows about the incident report.",
+      "why_she_hasn't_approached_him": "Two reasons. First: she doesn't know if approaching him would help him or destroy him. The document says the Threshold Configuration leads inevitably to the suppression layer failing around that person — but 'inevitable' could mean in five years or in five minutes, and she doesn't know what triggering it prematurely would do to him or the city. Second: she is afraid. Not of him. Of what happens to him if she tells him what he is. She has watched him for two and a half years. She does not want to be the thing that ends his ordinary life.",
+      "what_will_force_her_hand": "The Veilkeepers are getting closer. She has seen an inner-city enforcement inspector in the outer districts twice in the last month — not conducting regular checks, conducting a specific search. She does not know they have Erian's description. She suspects it. She is running out of time to decide."
+    },
+
+    "vesper": {
+      "name": "Vesper",
+      "surname": "None given, none used",
+      "age": 28,
+      "role": "Mirror — does not know this",
+      "location": "A secondhand book stall in the Dusk Market, three alleys from where Kairo works for Hedda. They have spoken twice — brief, about nothing.",
+      "public_face": "A bookseller who reads everything. Known for being able to quote from memory passages she's read once. Her regulars think of it as a party trick. It is not a party trick.",
+      "what_she_has_memorized": "The second of the three surviving Founding Age documents — specifically, the section describing the Luminal Core's design and the mechanism by which it interfaces with individual Resonant ability. She memorized it during what she believed was an apprenticeship exercise five years ago. She has never been told what it was.",
+      "what_she_actually_knows": "Almost nothing about the Chroniclers. She knows Tobias Greel, who she thinks of as a dry academic who sometimes recommends books. She does not know she is a Mirror. She does not know what she has memorized. She thinks it was a translation exercise in a dead language she was told was an ancient scholarly dialect.",
+      "what_makes_her_important": "The section she carries describes, in Founding Age technical language, what a Resonant feels when they begin to perceive the Luminal Core. If Kairo starts experiencing symptoms — which he will — the passage she carries is the only surviving technical description of what is happening to him. Nobody alive can access this. Except her. And she doesn't know she has it."
+    },
+
+    "harro_feld": {
+      "name": "Harro Feld",
+      "age": 35,
+      "role": "Inker",
+      "location": "Feld's Print & Copy, Outer District edge — a licensed shop that does official city-notice printing during the day and other work in the evenings",
+      "the_pamphlets": "He has printed three pamphlets in the past ten years. They appear to be adventure fiction — short serialized stories about a traveler exploring ruins. The ruins are described accurately using Founding Age technical language disguised as narrative color. He prints 200 copies at a time and distributes them through the Dusk Market at two coins each. They sell slowly. They stay in circulation for years. He is now on the fourth pamphlet. At the current rate of production, the complete technical description of the Founding Age suppression mechanism will be publicly available in readable fiction form in approximately six years.",
+      "what_the_veilkeepers_think_of_the_pamphlets": "They have noticed them twice. Both times, the analyst concluded they were low-quality adventure fiction with an unusual interest in historical architecture. The pamphlets are still in circulation.",
+      "his_personality": "Extremely patient. Not ideologically driven in the way Tobias is — he didn't join the Chroniclers for the mission. He joined because an Archivist helped him once, years ago, when he needed a document to prove a property claim that a Guild-connected landlord was contesting. The Chroniclers found it, handed it over, asked for nothing. He has been paying it back ever since."
+    },
+
+    "the_unnamed_one": {
+      "name": "The Unnamed One",
+      "role": "Thread Council — the oldest active member",
+      "what_is_known_about_her": "She joined the Chroniclers approximately sixty years ago. She communicates only through written notes, delivered by intermediaries she selects personally. She has never been seen in person by more than four current members, and none of those four have compared notes. She is described differently by each of them — different apparent age, different build, different coloring. This is either a deliberate disguise maintained across six decades, or they are not all describing the same person, or something else is true.",
+      "what_the_thread_council_believes": "That she was alive during events the three surviving documents describe. That she has firsthand knowledge of the Founding Age that she has never committed to writing and has never fully shared. That she has been waiting for something specific for a very long time.",
+      "what_is_actually_true": "She is Fael. She is 847 years old. She was in Caelum City during the Shadow Centuries — she was one of the people who watched the Veilkeepers construct their founding narrative and said nothing, because she was not sure what the alternative was. She has been saying nothing for over 800 years and she is no longer sure she was right. She knows exactly what Erian's fourth document says, because she helped Erian hide it in the first place. She is the reason it survived for 2847 years. She put it where Dena Croft would eventually find it. She has been waiting for the Threshold Configuration to appear. She has now identified Kairo Voss. She is deciding whether to act or to continue watching. She has been deciding for six months.",
+      "_writer_note": "The Unnamed One should not appear in the story until the audience has fully felt the weight of what has been withheld. When she speaks for the first time, it should be devastating — not because of what she says, but because of how long she has known it."
+    }
+  },
+
+  "the_three_known_documents": {
+    "_note": "Their contents are known to Tobias Greel and fragments are held by Mirrors. Their physical locations are known only to Tobias.",
+    "document_one": {
+      "title": "On the Properties of the Luminal Core — a Technical Survey",
+      "author": "Unknown — probably a Founding Age engineer in Varos's circle",
+      "content_summary": "A technical description of the Core's design, maintenance requirements, and output. Describes it as 'the primary interface between individual Resonant capacity and the Fracture's structural layer.' Contains passages that make clear the Core was not built as a power source — it was built as a communication device. Who it was communicating with is not specified.",
+      "why_it_contradicts_official_history": "The official narrative describes the Luminal Core as a power amplifier that 'overloaded and caused the Fracture.' This document makes clear the Core's design could not produce an overload under any operating condition. The Fracture was not an accident."
+    },
+    "document_two": {
+      "title": "Year 312 — Incident Logs, Central Archive",
+      "author": "Unknown — a Founding Age archivist or administrator",
+      "content_summary": "Day-by-day administrative records covering the six weeks surrounding the Fracture. Describes 'the Opening Protocol' as a deliberately authorized action, signed by 'the Primary and Secondary'  — Varos and Erian. Lists casualties. Lists the immediate aftermath. Lists a meeting three days after the Fracture where decisions were made about 'the maintenance of acceptable public understanding.'",
+      "why_it_contradicts_official_history": "The meeting. The phrase 'acceptable public understanding' is three days after the Fracture. The suppression layer was not built as protection — it was built as part of a knowledge management operation. The Shadow Centuries were manufactured."
+    },
+    "document_three": {
+      "title": "A Correspondence (incomplete)",
+      "author": "Partial — believed to be between Erian and a third party whose responses do not survive",
+      "content_summary": "Fourteen letters from Erian, written over approximately 60 years, addressed to someone whose replies were apparently destroyed. The letters cover her growing doubt about what she and Varos did, her attempts to find ways to repair the Fracture without triggering another Opening, and increasingly, her conclusions that the suppression layer would eventually fail on its own timeline regardless of what anyone did.",
+      "why_it_contradicts_official_history": "In Letter 9, Erian writes: 'He tells me it was the only way. I have stopped believing him. I do not know if this is wisdom or grief.'",
+      "who_she_was_writing_to": "NOT REVEALED YET — long game hook. The correspondent is referenced by a single initial: V. This is not Varos — Varos was already gone, trapped in the Fracture, by the time these letters were written. A different V."
+    }
+  },
+
+  "the_fourth_document": {
+    "title": "What I Could Not Tell Him",
+    "author": "Erian — in her own hand, verified by three independent authentication methods",
+    "written": "Approximately Year 317 — five years after the Fracture, during the early Shadow Centuries",
+    "physical_status": "DESTROYED — Dena Croft had the only physical copy, which the Veilkeepers took when they took her. A partial copy of the key section (approximately 400 words) was made by a Veilkeeper deep-cover Listener three days before Dena was taken. Director Malec Thorne has this copy. He has read it eleven times.",
+    "living_copy": "Dena Croft carries the complete text in her memory. She is the only complete copy that exists. She has not told anyone this. Not even the network.",
+    "content": {
+      "part_one": {
+        "title": "What I Understood Too Late",
+        "summary": "Erian's personal account of the Great Opening — specifically, the gap between what Varos told her they were doing and what she came to understand they had done. She writes that she believed, at the time, that the Opening was the only way to prevent a worse fracture — a natural one, uncontrolled. She now believes Varos was correct that a natural fracture was coming, and incorrect about everything else. The Opening did not prevent the Fracture. It chose what kind of Fracture it would be — one with a controlled suppression layer rather than an open wound — and it chose who would control the layer. She writes: 'He saved the world the way a man saves a river by building a dam. The river is saved. The valley is drowned. He is still proud of the river.'"
+      },
+      "part_two": {
+        "title": "The Mechanism",
+        "summary": "A technical description of how the suppression layer works and what sustains it. Written by the person who built it. This section is the reason the Veilkeepers panicked — it is, functionally, a manual for disabling the suppression layer. Not intentionally. Erian wrote it as a record, not as instructions. But it contains enough specific technical detail that a sufficiently skilled Resonant could use it as a guide.",
+        "_note": "This section is what Director Malec has a copy of. He has shown it to two people — both of whom he then placed under permanent supervised restriction. He does not know what to do with it. He cannot destroy it because it exists in Dena Croft's memory. He cannot find Dena Croft. He has been looking for three years."
+      },
+      "part_three": {
+        "title": "The Threshold Configuration",
+        "summary": "This is the section that makes the document something other than historical record. Erian describes a specific pattern of Resonant ability that she predicts will emerge naturally from prolonged proximity to the Luminal Core site — defined as the outer districts of any city built over the original Caelum foundations. The Configuration: Echo Sight operating at the structural rather than surface level (perceiving temporal layers, not just object histories); involuntary perception of Fracture bleeds manifesting as visual intrusions of places and events outside the perceiver's experience; creative output reflecting perceived Fracture content without conscious intention. She writes: 'The person who matches this Configuration will not understand what they are. They will believe they are broken. They are not broken. They are the door.'",
+        "the_prediction": "Erian writes that she cannot determine when the Threshold Configuration will emerge — only that it will, and that proximity to the Core accelerates its development. She estimates, based on the suppression layer's decay rate, that the Configuration will appear in a person born to the site sometime in the range of year 2700 to year 3200 — likely in the outer districts, given the resonance concentration there.",
+        "what_happens_when_the_configuration_approaches_the_core": "Erian writes that the suppression layer will interpret the approach of a Threshold Configuration Resonant as a re-opening event and begin to structurally reorganize around them. Not because the person intends it. Because the Core was designed to respond to that Configuration. It is a recognition system. The Core is waiting for someone it can recognize.",
+        "erianfinal_line": "'I do not know if this is good. I know that it is inevitable. I know that I am the reason it will happen. I am sorry to whoever you are, and I am not sorry for what you will cause.'"
+      }
+    },
+    "what_the_veilkeepers_did_with_it": {
+      "immediate_response": "Within 72 hours of the document being found, a deep-cover Listener made a partial copy of Part Three (the Threshold Configuration) and Part Two (the mechanism section). Dena Croft was taken four days after that. The Veilkeepers believed they had contained the situation — they had the document, they had the archivist who found it, and they had eliminated the immediate threat.",
+      "what_they_missed": "They did not know Dena Croft has a photographic memory. They did not know she had read the entire document before she brought it to Tobias. They do not know she escaped. They believe she is dead — held in a facility that was involved in a fire fourteen months after her disappearance. The records from that facility were destroyed in the fire. Director Malec believes Dena Croft was in the building.",
+      "the_ongoing_search": "Director Malec has been quietly running an outer-districts incident search for three years — looking for Resonant ability matching Erian's Threshold Configuration profile. He has not found a match yet. He is getting methodical. He will find it. The incident report filed two years ago on Kairo Voss, flagged 'unstable and potentially hazardous,' is in a stack of files he has not yet reached."
+    }
+  },
+
+  "what_the_chroniclers_want_with_kairo": {
+    "tobias_greel": "Does not know Kairo exists. If he did, he would want to find him and warn him — and probably tell him everything, because Tobias believes in information as protection. He would be wrong about how much protection that would actually provide.",
+    "dena_croft": "Hasn't decided. She has been sitting 90 meters from him for two and a half years and she has not decided. She is not cowardly — she made a decision in a Veilkeeper facility and walked out an unlocked door. She is afraid of being the thing that destroys someone's ordinary life. She knows from the document that his ordinary life is already over. She hasn't accepted that the document is right.",
+    "the_unnamed_one": "Wants to give him the choice Varos never gave anyone. She has been building toward this for 847 years. She has prepared three things to give him when the moment comes: the location of the Undercity entrance, the first word of the door's inscription (which he will recognize from his drawings, without understanding why), and one fact that nobody else alive knows — what Varos actually said, in the moment before the Opening, that Erian did not write down. She will not tell him what to do. That is the whole point."
+  },
+
+  "current_situation": {
+    "tobias_greel": "67, healthy for his age but aware he is not going to live forever. Has begun very carefully considering which Listener might be trusted with one of the three document locations — not all three, just one, to reduce the single-point failure. Has not acted on this yet.",
+    "dena_croft": "Has seen an inner-city enforcement inspector in the outer districts twice in the past month. Knows something has changed in the Veilkeeper search pattern. Is preparing to approach Kairo. Does not know what she will say.",
+    "vesper": "Is selling books and does not know anything is happening. Will continue not knowing until the moment she is needed.",
+    "harro_feld": "Has begun printing pamphlet four. Expects to finish in approximately eight months. Is not aware of any urgency.",
+    "the_unnamed_one": "Has left a note for Dena Croft at a location only they share. The note contains four words: 'He is ready now.' Dena Croft has not yet collected it."
+  }
+}

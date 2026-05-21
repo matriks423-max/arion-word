@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
+
+export async function getStaticPaths() {
+  const path = join(process.cwd(), 'public/content/episodes.json');
+  if (!existsSync(path)) return [];
+  const data = JSON.parse(readFileSync(path, 'utf-8'));
+  const episodes: any[] = data.episodes ?? [];
+  const epNums = new Set(episodes.map((e: any) => e.episode_number));
+  return episodes.map((ep: any) => ({
+    params: { id: String(ep.episode_number) },
+    props: { ep, hasNext: epNums.has(ep.episode_number + 1) },
+  }));
+}
+
+const { ep, hasNext } = Astro.props;
+const epNum = ep.episode_number;
+
+// Load mysteries so we can show ones raised this episode
+const mysteriesPath = join(process.cwd(), 'public/content/mysteries.json');
+const mysteriesData = existsSync(mysteriesPath)
+  ? JSON.parse(readFileSync(mysteriesPath, 'utf-8'))
+  : { open: [], solved: [] };
+
+const raisedThisEp = [...mysteriesData.open, ...mysteriesData.solved].filter(
+  (m: any) => m.first_raised_episode === epNum
+);
+---
+
+<Layout
+  title={`Episode ${epNum}: ${ep.title}`}
+  description={ep.logline}
+>
+  <div class="max-w-3xl mx-auto px-6 py-24">
+
+    <!-- Back -->
+    <a href="/episodes" class="text-xs tracking-widest uppercase text-text-dim hover:text-gold transition-colors mb-12 inline-block">
+      ← All Episodes
+    </a>
+
+    <!-- Header -->
+    <div class="mb-12">
+      <p class="font-mono text-xs tracking-widest uppercase text-text-dim mb-3">
+        Episode {String(epNum).padStart(3, '0')}
+        {ep.major_death && <span class="ml-4 text-crimson-bright">⚠ Major Death</span>}
+      </p>
+      <h1 class="font-display text-4xl md:text-5xl text-gold tracking-wide mb-6 leading-tight">
+        {ep.title}
+      </h1>
+      <p class="text-text-muted text-xl italic leading-relaxed">{ep.logline}</p>
+    </div>
+
+    <div class="gold-rule mb-12"></div>
+
+    <!-- Watch -->
+    <div class="lore-card mb-12 text-center">
+      <p class="text-text-dim text-xs tracking-widest uppercase mb-4">Watch this episode</p>
+      <a
+        href={ep.youtube_url || "https://youtube.com/@ArionWorld"}
+        target="_blank"
+        rel="noopener"
+        class="inline-block px-8 py-3 bg-gold text-void font-display tracking-widest uppercase text-sm hover:bg-gold-bright transition-colors"
+      >
+        ▶ Watch on YouTube
+      </a>
+    </div>
+
+    <!-- Summary -->
+    {ep.summary && (
+      <section class="mb-12">
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-gold/70 mb-6">Summary</h2>
+        <p class="text-text-muted leading-relaxed text-lg">{ep.summary}</p>
+      </section>
+    )}
+
+    <!-- Cliffhanger -->
+    {ep.cliffhanger && (
+      <section class="mb-12 border-l-2 border-gold/30 pl-6">
+        <p class="text-text-dim text-xs tracking-widest uppercase mb-3">Cliffhanger</p>
+        <p class="text-text-primary italic text-lg">"{ep.cliffhanger}"</p>
+      </section>
+    )}
+
+    <!-- Mysteries raised -->
+    {raisedThisEp.length > 0 && (
+      <section class="mb-12">
+        <h2 class="font-display text-xs tracking-[0.4em] uppercase text-fracture mb-6">
+          Mysteries raised this episode
+        </h2>
+        <div class="space-y-3">
+          {raisedThisEp.map((m: any) => (
+            <div class="border border-fracture/20 bg-fracture/5 p-4">
+              <p class="text-text-primary text-sm">{m.question}</p>
+              {'resolved_episode' in m && (
+                <p class="text-gold/60 text-xs mt-2 italic">Answered in Episode {m.resolved_episode}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Nav -->
+    <div class="flex justify-between pt-12 border-t border-white/5">
+      {epNum > 1 && (
+        <a href={`/episodes/${epNum - 1}`} class="text-sm tracking-widest uppercase text-text-dim hover:text-gold transition-colors">
+          ← Episode {epNum - 1}
+        </a>
+      )}
+      <span class="flex-1"></span>
+      {hasNext && (
+        <a href={`/episodes/${epNum + 1}`} class="text-sm tracking-widest uppercase text-text-dim hover:text-gold transition-colors">
+          Episode {epNum + 1} →
+        </a>
+      )}
+    </div>
+
+  </div>
+</Layout>

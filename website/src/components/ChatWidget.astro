@@ -1,0 +1,249 @@
+---
+// ChatWidget.astro — floating FAQ chat widget for Arion World
+// Pure frontend, no external dependencies.
+// Contact email is read from CONTACT_EMAIL env var at build time;
+// falls back to a placeholder if not set.
+
+const contactEmail = import.meta.env.CONTACT_EMAIL || 'contact@arionworld.com';
+---
+
+<!-- Chat toggle button -->
+<button
+  id="chat-toggle"
+  aria-label="Open chat"
+  style="
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #D4AF37;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+    transition: background 0.2s, transform 0.2s;
+  "
+  onmouseover="this.style.background='#F0C93A';this.style.transform='scale(1.08)'"
+  onmouseout="this.style.background='#D4AF37';this.style.transform='scale(1)'"
+>
+  <svg id="chat-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D0D0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+  <svg id="chat-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D0D0F" stroke-width="2.5" stroke-linecap="round" style="display:none">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+</button>
+
+<!-- Chat panel -->
+<div
+  id="chat-panel"
+  role="dialog"
+  aria-label="Arion World FAQ"
+  style="
+    display: none;
+    position: fixed;
+    bottom: 92px;
+    right: 24px;
+    z-index: 9998;
+    width: 340px;
+    max-height: 520px;
+    background: #151518;
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+    flex-direction: column;
+  "
+>
+  <!-- Header -->
+  <div style="
+    background: linear-gradient(135deg, #1a1a1e, #0D0D0F);
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+    padding: 16px 20px;
+  ">
+    <p style="margin:0; color:#D4AF37; font-size:13px; letter-spacing:0.15em; text-transform:uppercase; font-weight:600">
+      Arion World
+    </p>
+    <p style="margin:4px 0 0; color:#6B6B75; font-size:12px">
+      Frequently asked questions
+    </p>
+  </div>
+
+  <!-- FAQ list -->
+  <div id="chat-faq-list" style="
+    overflow-y: auto;
+    padding: 12px;
+    flex: 1;
+    max-height: 340px;
+  ">
+    <!-- questions inserted by JS -->
+  </div>
+
+  <!-- Answer area -->
+  <div id="chat-answer" style="
+    display: none;
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: #0D0D0F;
+  ">
+    <button
+      id="chat-back"
+      style="
+        background: none;
+        border: none;
+        color: #6B6B75;
+        font-size: 12px;
+        cursor: pointer;
+        padding: 0;
+        margin-bottom: 10px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      "
+      onmouseover="this.style.color='#D4AF37'"
+      onmouseout="this.style.color='#6B6B75'"
+    >
+      ← Back
+    </button>
+    <p id="chat-answer-text" style="
+      margin: 0;
+      color: #C8C8D0;
+      font-size: 14px;
+      line-height: 1.6;
+    "></p>
+  </div>
+
+  <!-- Footer -->
+  <div style="
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    background: #0D0D0F;
+  ">
+    <p style="margin:0; color:#4A4A55; font-size:12px; text-align:center">
+      More questions?
+      <a
+        id="chat-mailto"
+        href={`mailto:${contactEmail}`}
+        style="color:#D4AF37; text-decoration:none"
+        onmouseover="this.style.color='#F0C93A'"
+        onmouseout="this.style.color='#D4AF37'"
+      >
+        Email us
+      </a>
+    </p>
+  </div>
+</div>
+
+<script define:vars={{ contactEmail }}>
+  const FAQS = [
+    {
+      q: "What is Arion World?",
+      a: "Arion World is an epic anime-style fantasy story series set in a universe where time is broken and every truth is a lie waiting to be remembered. New episodes drop every Monday.",
+    },
+    {
+      q: "When do episodes come out?",
+      a: "New episodes release every Monday. Subscribe on YouTube and follow on Instagram, TikTok, and Facebook so you never miss a clue hidden in each episode.",
+    },
+    {
+      q: "Where can I watch?",
+      a: "Full 1-hour episodes are on YouTube (@ArionWorld). 2-minute trailers and clips are on TikTok and Instagram @ArionWorld. New episode every Monday!",
+    },
+    {
+      q: "How do I buy merch?",
+      a: "Arion World merch — t-shirts, posters, and mugs featuring artwork from key episodes — is available on the Merch page. All products are print-on-demand with no upfront cost to you.",
+    },
+    {
+      q: "Business contact?",
+      a: `For business inquiries, collaboration proposals, sponsorships, or licensing, email us at ${contactEmail}. We typically respond within 48 hours.`,
+    },
+  ];
+
+  const panel = document.getElementById('chat-panel');
+  const toggleBtn = document.getElementById('chat-toggle');
+  const iconOpen = document.getElementById('chat-icon-open');
+  const iconClose = document.getElementById('chat-icon-close');
+  const faqList = document.getElementById('chat-faq-list');
+  const answerDiv = document.getElementById('chat-answer');
+  const answerText = document.getElementById('chat-answer-text');
+  const backBtn = document.getElementById('chat-back');
+
+  // Build FAQ buttons
+  FAQS.forEach(({ q, a }) => {
+    const btn = document.createElement('button');
+    btn.textContent = q;
+    btn.style.cssText = `
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 8px;
+      color: #C8C8D0;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      line-height: 1.4;
+    `;
+    btn.addEventListener('mouseover', () => {
+      btn.style.background = 'rgba(212,175,55,0.08)';
+      btn.style.borderColor = 'rgba(212,175,55,0.3)';
+      btn.style.color = '#F0F0F5';
+    });
+    btn.addEventListener('mouseout', () => {
+      btn.style.background = 'rgba(255,255,255,0.03)';
+      btn.style.borderColor = 'rgba(255,255,255,0.07)';
+      btn.style.color = '#C8C8D0';
+    });
+    btn.addEventListener('click', () => showAnswer(a));
+    faqList.appendChild(btn);
+  });
+
+  function showAnswer(text) {
+    answerText.textContent = text;
+    faqList.style.display = 'none';
+    answerDiv.style.display = 'block';
+  }
+
+  backBtn.addEventListener('click', () => {
+    answerDiv.style.display = 'none';
+    faqList.style.display = 'block';
+  });
+
+  function openPanel() {
+    panel.style.display = 'flex';
+    iconOpen.style.display = 'none';
+    iconClose.style.display = 'block';
+    // Reset state
+    answerDiv.style.display = 'none';
+    faqList.style.display = 'block';
+  }
+
+  function closePanel() {
+    panel.style.display = 'none';
+    iconOpen.style.display = 'block';
+    iconClose.style.display = 'none';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (panel.style.display === 'none' || panel.style.display === '') {
+      openPanel();
+    } else {
+      closePanel();
+    }
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!panel.contains(e.target) && e.target !== toggleBtn && !toggleBtn.contains(e.target)) {
+      closePanel();
+    }
+  });
+</script>

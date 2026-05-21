@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    background: #c9a84c33;
+    color: #f0c866;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060608;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a38;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply w-16 h-px bg-gold/40 mx-auto my-8;
+  }
+
+  .gold-rule {
+    @apply border-t border-gold/20;
+  }
+
+  .tag-status-alive {
+    @apply text-xs tracking-widest uppercase px-2 py-0.5 border border-gold/30 text-gold/70;
+  }
+
+  .tag-status-deceased {
+    @apply text-xs tracking-widest uppercase px-2 py-0.5 border border-crimson/40 text-crimson-bright/70 line-through;
+  }
+
+  .tag-status-unknown {
+    @apply text-xs tracking-widest uppercase px-2 py-0.5 border border-white/10 text-text-dim;
+  }
+
+  .lore-card {
+    @apply bg-ash border border-white/5 p-6 hover:border-gold/20 transition-colors;
+  }
+
+  .mystery-badge {
+    @apply inline-block text-xs tracking-widest uppercase px-3 py-1 bg-fracture/10 border border-fracture/30 text-fracture;
+  }
+}

@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  arion-bot:
+    build: .
+    restart: unless-stopped
+    environment:
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
+      DISCORD_ANNOUNCEMENT_CHANNEL_ID: ${DISCORD_ANNOUNCEMENT_CHANNEL_ID}
+      CONTACT_EMAIL: ${CONTACT_EMAIL:-contact@arionworld.com}
+      ARION_CONTENT_DIR: /content
+    volumes:
+      # Mount website content directory so bot can read live episode data
+      - ../website/public/content:/content:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

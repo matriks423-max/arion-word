@@ -1,0 +1,34 @@
+{
+  "_purpose": "Global visual art direction for Arion World. Every generated image uses these tokens. This is what makes the show look like ONE show across hundreds of episodes.",
+
+  "style_tokens": "dark fantasy anime illustration, masterpiece, best quality, highly detailed, sharp linework, cel shading, cinematic composition, professional anime key visual",
+
+  "tone_tokens": "dramatic lighting, deep shadow contrast, selective warm amber and gold highlights in cold dark environments, rich detailed backgrounds, atmospheric depth",
+
+  "anime_reference": "mature dark fantasy anime — the visual weight of Vinland Saga and Attack on Titan, not the brightness of shonen. Realistic proportions. Expressive but not exaggerated. Characters look lived-in.",
+
+  "color_palette": {
+    "primary_world": "deep blacks and dark greys — the outer districts of Caelum City are cold, industrial, underfunded",
+    "accent_warm": "amber, gold, and deep crimson — used for Resonance effects, open flames, rare moments of warmth",
+    "accent_cold": "pale blue-white and silver — used for Guild authority, Veilkeeper imagery, the clinical world of power",
+    "special_fracture": "fractured purple-white light — only for Fracture events, visions, and timeline tears"
+  },
+
+  "environment_notes": {
+    "outer_districts": "crumbling stone and recycled metal, dim gas-lit streets, laundry between buildings, broken resonance lamps, lived-in poverty with dignity",
+    "guild_buildings": "imposing stone architecture, high ceilings, grey and silver palette, order enforced through space itself",
+    "visions": "impossible geometry, cracked light, floating fragments, warm gold on absolute dark",
+    "natural": "wild and overgrown, nature reclaiming Founding Age ruins, moss on carved stone"
+  },
+
+  "composition_rules": [
+    "Establish the environment in wide shots — these characters exist in a specific world",
+    "Close-ups on faces should be earned — not every scene needs one",
+    "When action happens it is specific and consequential, not generic",
+    "Quiet scenes deserve careful framing — a conversation by a window matters as much as a fight"
+  ],
+
+  "negative_prompt": "blurry, low quality, watermark, text overlay, deformed, bad anatomy, extra limbs, missing fingers, bad hands, western cartoon style, chibi, super deformed, moe aesthetic, bright kawaii colours, inconsistent art style, photorealistic, 3D render, CGI, flat colours, simple background, ugly, duplicate characters, cloned faces",
+
+  "consistency_note": "Character visual profiles are defined in characters.json. The prompt_tags from each character's visual_profile must be injected into every scene featuring that character — in the same order, with the same terms. Do not describe characters in image_prompts — the injector handles that. Focus image_prompts on: environment, lighting, composition, mood, action, expressions only."
+}

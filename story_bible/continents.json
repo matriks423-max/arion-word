@@ -1,0 +1,88 @@
+{
+  "_note": "The world expands as the story earns it. Season 1 is set almost entirely on the Known Continent. Each new continent is revealed when the story naturally reaches it — never before. The audience should feel the world growing, not be handed a map.",
+
+  "map_reveal_philosophy": "In Episode 1 the Known Continent feels like the entire world. The first hint that something exists beyond comes through rumour, a traveller, a text — not exposition. The Scorched Expanse is mentioned in passing long before anyone goes there. The Eastern Reach is a trade partner people reference but Season 1 characters haven't visited. The Deep Ocean is a mystery sailors speak of. Layer by layer.",
+
+  "continents": {
+    "The Known Continent": {
+      "status": "primary_season_1_location",
+      "revealed_in_episode": 1,
+      "size": "Large — comparable to Europe. Season 1 explores a fraction of it.",
+      "primary_races": ["Humans", "Keth (underground)", "Valdri (scattered)"],
+      "regions": {
+        "Caelum Territory": {
+          "description": "The dominant political region. Caelum City is its capital and the de facto power centre of the known world.",
+          "guild_presence": "Heavy. The Resonant Guild has its headquarters in Caelum City.",
+          "terrain": "Coastal plains, river valleys, rolling hills. Temperate climate. Densely settled near the coast, sparser inland."
+        },
+        "The Outer Reaches": {
+          "description": "Territories beyond Caelum's direct control. Smaller city-states, towns, and rural communities that nominally follow Guild regulation but enforce it loosely.",
+          "guild_presence": "Moderate to low.",
+          "terrain": "More varied — forest, highland, wetland. Older Founding Age remnants appear more frequently here, less built-over."
+        },
+        "The Fractured Wastes": {
+          "description": "A vast eastern desert where time moves incorrectly. Official maps end here. Unofficial reports suggest the Wastes are larger than any map shows.",
+          "guild_presence": "None. The Guild has a standing advisory against entering.",
+          "terrain": "Desert. Dead zones where Resonance does not function. Echoes of past events visible as light phenomena at night.",
+          "what_is_beyond": "The Scorched Expanse — but nobody on the Known Continent believes it is reachable."
+        },
+        "The Northern Forests": {
+          "description": "Dense, old-growth forest north of Caelum. Lightly populated by humans. Valdri communities are more concentrated here than anywhere on the continent.",
+          "guild_presence": "Minimal.",
+          "terrain": "Old forest, cold rivers, occasional Founding Age stone structures so overgrown they look natural."
+        },
+        "The Undercity Network": {
+          "description": "Not a surface region — the intact Founding Age city beneath Caelum, connected by tunnels to at least three other buried sites across the continent.",
+          "guild_presence": "Officially sealed. Unofficial use ongoing.",
+          "known_by": "Keth (have known for 400 years, won't enter the deepest level), smugglers (use upper tunnels), Chroniclers (actively mapping)"
+        }
+      }
+    },
+
+    "The Eastern Reach": {
+      "status": "referenced_season_1_revealed_later",
+      "revealed_in_episode": "~30-50 (when story first reaches it)",
+      "size": "Comparable to the Known Continent. Mostly ancient forest.",
+      "primary_races": ["Aelindri (Elves)"],
+      "description": "A continent of ancient forest so dense that Resonance is visible as ambient light between the trees at night. Trade ships from Caelum reach the eastern coastal ports. The interior is Aelindri territory and humans who enter without invitation do not return — not because they are killed, but because the forest is larger inside than outside.",
+      "guild_relationship": "The Resonant Guild recognises Aelindri Resonance practitioners as peers but not members. There is an old agreement — neither side explains what it covers.",
+      "what_makes_it_different": "Resonance here is so dense and old that it has become environmental. Plants grow in patterns. Animals navigate by it. Standing in the deep forest and closing your eyes, you can feel the Fracture — not as damage but as a persistent vibration, like a bell struck 2847 years ago still ringing."
+    },
+
+    "The Iron Peaks": {
+      "status": "referenced_season_1_revealed_later",
+      "revealed_in_episode": "~40-60",
+      "size": "Chain of mountain ranges and deep valleys. Less total area than the Known Continent but almost entirely vertical.",
+      "primary_races": ["Vorath (Orcs)"],
+      "description": "A continent of mountains — ranges stacked behind ranges, valleys so deep they have their own weather systems. Each mountain range is a different Vorath clan territory. The passes between them are the most contested geography in the world.",
+      "guild_relationship": "None. The Guild attempted to establish a presence twice. Both times the Vorath clans disagreed with each other about everything except that the Guild should leave.",
+      "what_makes_it_different": "The physical record of the Fracture is visible here. The cracks in the mountain stone from Year 400 are still open. Vorath shamans maintain small shrines at the deepest cracks — not in reverence, in observation. Something in the cracks still moves."
+    },
+
+    "The Scorched Expanse": {
+      "status": "unknown_to_most_season_1",
+      "revealed_in_episode": "~60-80 (first contact), full reveal much later",
+      "size": "Larger than the Known Continent. Mostly desert and ancient stone.",
+      "primary_races": ["Ashborn"],
+      "description": "Beyond the Fractured Wastes. Most people on the Known Continent believe the Wastes are the edge of the habitable world. They are not. The Scorched Expanse is a continent of extreme heat, deep desert, and ruins that predate the Founding Age. The Ashborn have lived here for thousands of years — in the ruins, underground during the worst heat, and in a civilisation that has been watching the Known Continent for 200 years.",
+      "what_they_have": "Founding Age archives, preserved in dry heat, studied continuously for 2847 years. They can read the script on Caelum's foundation stones. They know what the Undercity door says. They have not yet decided whether to share this.",
+      "first_contact_moment": "The story's first indication that the Scorched Expanse is inhabited comes from a single Ashborn observer who has been living in Caelum City's outer district for three years. When they are eventually identified, the question of why they came and what they've reported back reshapes what the audience thought they understood about the story so far."
+    },
+
+    "The Deep Ocean — Tide Holds": {
+      "status": "rumour_only_season_1",
+      "revealed_in_episode": "~80-120",
+      "size": "The ocean covers more of the world than all land combined. The Tide-kin inhabit depths, shelf cities, and abyssal communities that land races have no concept of.",
+      "primary_races": ["Tide-kin"],
+      "description": "Not a continent — a world beneath the world. Sailors know something is in the deep water. They call it the undertow, the pull, the wrong current. The Tide-kin have been observing every land continent from below for 2847 years. Their cities exist at depths no surface ship can reach. Their knowledge of every coastline, every coastal settlement, every trade route is complete. They have simply never introduced themselves.",
+      "why_they_havent_appeared": "They are not hiding. They are waiting. For what, they have not collectively decided yet."
+    },
+
+    "The Echo Remnant": {
+      "status": "exists_but_inaccessible_normally",
+      "revealed_in_episode": "discovered gradually",
+      "description": "Not truly a continent — a geographic scar where a cluster of natural Fracture tears opened and closed over the Shadow Centuries. The land here exists slightly out of phase with the main timeline. Seren communities cluster near these sites. The terrain shifts — sometimes you walk through an area and return to find it different. Buildings from the Echo Timeline exist here as ghost impressions, visible at certain times, solid at others.",
+      "significance": "The door in the Undercity opens into this area. Lyra came from here."
+    }
+  }
+}

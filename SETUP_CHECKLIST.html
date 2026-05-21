@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arion World — What You Need to Do</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #06060a;
+      color: #e0d8c8;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      padding: 40px 20px 100px;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; }
+
+    /* Header */
+    .header { text-align: center; margin-bottom: 48px; }
+    h1 {
+      font-size: 2.2rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      color: #5a5248;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* Progress */
+    .progress-wrap {
+      background: #0e0e14;
+      border: 1px solid #1e1e2a;
+      padding: 22px 28px;
+      margin-bottom: 48px;
+      border-radius: 4px;
+    }
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .progress-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #5a5248;
+    }
+    .progress-count {
+      font-size: 1.4rem;
+      color: #c9a84c;
+      letter-spacing: 0.1em;
+    }
+    .progress-bar-bg {
+      background: #1a1a22;
+      height: 5px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #7a5a1a, #c9a84c);
+      border-radius: 3px;
+      transition: width 0.5s ease;
+      width: 0%;
+    }
+    .progress-note {
+      margin-top: 10px;
+      font-size: 0.72rem;
+      color: #3a3630;
+      letter-spacing: 0.1em;
+    }
+
+    /* Phase */
+    .phase { margin-bottom: 44px; }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .phase-num {
+      width: 28px;
+      height: 28px;
+      background: #1a1a22;
+      border: 1px solid #2a2a36;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: #c9a84c;
+      letter-spacing: 0;
+      flex-shrink: 0;
+    }
+    .phase-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #5a5248;
+    }
+    .phase-line {
+      flex: 1;
+      height: 1px;
+      background: #1a1a22;
+    }
+
+    /* Task card */
+    .task {
+      background: #0e0e14;
+      border: 1px solid #1a1a22;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .task:hover { border-color: #2a2a36; }
+    .task.done { border-color: #1a2a1a; background: #0a0f0a; }
+    .task.done .task-title { color: #4a6a4a; text-decoration: line-through; text-decoration-color: #2a4a2a; }
+    .task.done .task-badge { background: #1a2a1a; color: #4a6a4a; border-color: #2a3a2a; }
+    .task.optional { opacity: 0.7; }
+
+    .task-main {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .task-check {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #2a2a36;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #4a6a4a;
+      transition: all 0.15s;
+    }
+    .task.done .task-check {
+      background: #1a2a1a;
+      border-color: #2a4a2a;
+      color: #6aaa6a;
+    }
+
+    .task-body { flex: 1; min-width: 0; }
+    .task-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .task-title {
+      font-size: 0.92rem;
+      color: #c0b8a8;
+      transition: color 0.2s;
+    }
+    .task-badge {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 2px;
+      border: 1px solid;
+    }
+    .badge-critical { background: #1a0a0a; color: #c05040; border-color: #3a1a1a; }
+    .badge-secret   { background: #0a0a1a; color: #5070c0; border-color: #1a1a3a; }
+    .badge-oauth    { background: #1a100a; color: #c07030; border-color: #3a2a1a; }
+    .badge-optional { background: #101018; color: #5a5468; border-color: #1e1e28; }
+    .badge-free     { background: #0a1a0a; color: #4a8a4a; border-color: #1a2a1a; }
+
+    .task-desc {
+      font-size: 0.78rem;
+      color: #5a5248;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .task-expand {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #3a3630;
+      margin-top: 6px;
+      transition: color 0.2s;
+    }
+    .task-main:hover .task-expand { color: #6a6258; }
+    .task.open .task-expand { color: #c9a84c; }
+
+    /* Steps drawer */
+    .task-steps {
+      display: none;
+      padding: 0 18px 18px 50px;
+      border-top: 1px solid #1a1a22;
+      margin-top: 2px;
+    }
+    .task.open .task-steps { display: block; }
+
+    .step {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #14141e;
+      border: 1px solid #2a2a36;
+      font-size: 0.65rem;
+      color: #c9a84c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text {
+      font-size: 0.82rem;
+      color: #7a7060;
+      line-height: 1.55;
+    }
+    .step-text a {
+      color: #c9a84c;
+      text-decoration: none;
+      border-bottom: 1px solid #5a4a1a;
+    }
+    .step-text a:hover { color: #e0c070; border-color: #c9a84c; }
+
+    code {
+      font-family: 'Consolas', 'Courier New', monospace;
+      background: #14141e;
+      border: 1px solid #2a2a36;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 0.78rem;
+      color: #a0c8a0;
+    }
+
+    .secret-tag {
+      display: inline-block;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.72rem;
+      background: #0a0a1a;
+      border: 1px solid #2a2a4a;
+      color: #7090d0;
+      padding: 1px 7px;
+      border-radius: 3px;
+      margin: 1px 2px;
+    }
+
+    .step-note {
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #0a0a10;
+      border-left: 2px solid #2a2a3a;
+      font-size: 0.77rem;
+      color: #5a5460;
+      line-height: 1.5;
+    }
+
+    /* Reset button */
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .reset-btn {
+      background: transparent;
+      border: 1px solid #2a2a36;
+      color: #4a4540;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .reset-btn:hover { border-color: #c9a84c; color: #c9a84c; }
+
+    /* Separator */
+    .sep {
+      height: 1px;
+      background: #1a1a22;
+      margin: 32px 0;
+    }
+
+    /* All done */
+    .all-done {
+      display: none;
+      text-align: center;
+      padding: 28px;
+      border: 1px solid #2a4a2a;
+      background: #0a120a;
+      border-radius: 4px;
+      margin-bottom: 40px;
+    }
+    .all-done.visible { display: block; }
+    .all-done h2 {
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #6aaa6a;
+      margin-bottom: 8px;
+    }
+    .all-done p {
+      font-size: 0.82rem;
+      color: #4a6a4a;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Arion World</h1>
+    <div class="subtitle">Your Setup Checklist — What You Need to Do</div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="progress-wrap">
+    <div class="progress-header">
+      <span class="progress-label">Tasks Completed</span>
+      <span class="progress-count" id="prog-count">0 / 0</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="prog-bar"></div>
+    </div>
+    <div class="progress-note">Check items off as you complete them. Progress is saved in this browser.</div>
+  </div>
+
+  <!-- All done banner -->
+  <div class="all-done" id="all-done">
+    <h2>Everything is set up</h2>
+    <p>Trigger the weekly-publish workflow manually to do a first test run. The story starts Monday.</p>
+  </div>
+
+
+  <!-- ──────────────────────────────────────────────────
+       PHASE 1 — Create Accounts
+  ─────────────────────────────────────────────────── -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">1</div>
+      <div class="phase-title">Create Accounts &amp; Channels</div>
+      <div class="phase-line"></div>
+    </div>
+
+    <div class="task" id="t-yt-channel" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create YouTube channel @ArionWorld</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">The main publishing destination — full 1-hour episodes every Monday.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://youtube.com" target="_blank">youtube.com</a> → click your profile → <strong>Create a channel</strong></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Set handle to <code>@ArionWorld</code>, name "Arion World"</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Upload a banner and profile picture in the Arion World gold-on-black style</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">In YouTube Studio → Settings → Channel → Advanced → <strong>Enable monetisation eligibility</strong> (gets you 1000 sub goal)</div></div>
+        <div class="step-note">Note: You'll need to do an OAuth flow later (Phase 3) to get the upload token.</div>
+      </div>
+    </div>
+
+    <div class="task" id="t-ig-account" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create Instagram account @ArionWorld</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">2-minute trailer Reels posted here after each episode.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Create Instagram account with username <code>arionworld</code> (or closest available)</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text"><strong>Switch to Professional / Creator account</strong> — Settings → Account → Switch to Professional. This is required for the API.</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Link to a Facebook Page (created next) — required for Instagram Graph API access</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Note your <strong>Instagram Account ID</strong> — you'll need it for the secret <span class="secret-tag">INSTAGRAM_ACCOUNT_ID</span></div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-fb-page" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create Facebook Page "Arion World"</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">Full episode videos posted here. Also required to unlock Instagram API.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://facebook.com/pages/create" target="_blank">facebook.com/pages/create</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Category: <strong>Art</strong> or <strong>Entertainment</strong>, name "Arion World"</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Note your <strong>Page ID</strong> from the page URL — needed for <span class="secret-tag">FACEBOOK_PAGE_ID</span></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Connect your Instagram account to this page: Page Settings → Instagram → Connect account</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-tiktok-account" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create TikTok account @ArionWorld</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">2-minute trailers posted as TikTok videos after each episode.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Create TikTok account <code>@arionworld</code></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Switch to a <strong>Business account</strong> — Profile → Manage Account → Switch to Business. Required for Content Posting API.</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">You'll do an OAuth flow later (Phase 3) to get upload tokens.</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-discord-server" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create Discord server + bot</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">Community server for episode announcements, theories, fan art. Bot auto-posts new episode alerts.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text"><strong>Server:</strong> Discord app → + → Create My Own → For a community → Name "Arion World"</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Create channels: <code>#announcements</code>, <code>#episodes</code>, <code>#theories</code>, <code>#fan-art</code>, <code>#general</code></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Enable Community: Server Settings → Community → Enable. Set #announcements as system channel.</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text"><strong>Bot:</strong> Go to <a href="https://discord.com/developers/applications" target="_blank">discord.com/developers/applications</a> → New Application → "Arion World Bot"</div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Bot tab → Add Bot → copy the <strong>Token</strong> → this is <span class="secret-tag">DISCORD_BOT_TOKEN</span></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-text">OAuth2 → URL Generator → Scope: <code>bot</code> → Permissions: Send Messages, Embed Links, Read Message History → Open the URL → invite bot to your server</div></div>
+        <div class="step"><div class="step-num">7</div><div class="step-text">Right-click <code>#announcements</code> → Copy Channel ID → this is <span class="secret-tag">DISCORD_ANNOUNCEMENT_CHANNEL_ID</span></div></div>
+        <div class="step"><div class="step-num">8</div><div class="step-text"><strong>Webhook (easier than bot hosting):</strong> #announcements → Edit Channel → Integrations → Webhooks → New Webhook → Copy URL → this is <span class="secret-tag">DISCORD_WEBHOOK_URL</span></div></div>
+        <div class="step-note">Using the webhook is enough for episode announcements. Only set up full bot hosting (Railway/Fly.io) if you want the !episode, !lore, !mystery commands.</div>
+      </div>
+    </div>
+
+    <div class="task" id="t-email" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create contact email address</span>
+            <span class="task-badge badge-critical">Critical</span>
+          </div>
+          <div class="task-desc">Shown on the website contact page and Discord !contact command.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Create a Gmail: <code>arionworld.contact@gmail.com</code> (or use a custom domain later)</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">This email address will be added as GitHub Secret <span class="secret-tag">CONTACT_EMAIL</span> in Phase 2</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-printful" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create Printful account + get API key</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free account</span>
+          </div>
+          <div class="task-desc">Auto-creates t-shirt, poster, and mug products from each episode's art.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Create free account at <a href="https://printful.com" target="_blank">printful.com</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Settings → API → <strong>Generate API key</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Copy the key — it goes in <span class="secret-tag">PRINTFUL_API_KEY</span></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Connect a store in Printful dashboard. Choose "Manual order platform" → name it "Arion World"</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-formspree" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Create Formspree form for website contact</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">Powers the contact form on the Arion World website. Free tier: 50 submissions/month.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Create free account at <a href="https://formspree.io" target="_blank">formspree.io</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">New Form → name "Arion World Contact" → set email to your contact email</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Copy the <strong>Form ID</strong> (from the form URL, e.g. <code>xpwzabcd</code>) → this is <span class="secret-tag">FORMSPREE_FORM_ID</span></div></div>
+      </div>
+    </div>
+
+  </div><!-- /phase 1 -->
+
+
+  <!-- ──────────────────────────────────────────────────
+       PHASE 2 — API Developer Apps
+  ─────────────────────────────────────────────────── -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">2</div>
+      <div class="phase-title">Create API Developer Apps</div>
+      <div class="phase-line"></div>
+    </div>
+
+    <div class="task" id="t-anthropic" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Anthropic API key (Claude — story generator)</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-secret">~€3/episode</span>
+          </div>
+          <div class="task-desc">Claude Opus writes the full 1-hour episode script every week.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> → API Keys → Create key</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Add credit to your account (€20 covers ~6 episodes)</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">GitHub Secret: <span class="secret-tag">ANTHROPIC_API_KEY</span></div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-elevenlabs" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">ElevenLabs API key + voice ID (narration)</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-secret">~€4/episode</span>
+          </div>
+          <div class="task-desc">Generates the AI voice narration for the full 1-hour episode audio.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Sign up at <a href="https://elevenlabs.io" target="_blank">elevenlabs.io</a> → Creator plan (€22/mo) gives enough characters for 1hr/week</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Profile → API Key → copy → <span class="secret-tag">ELEVENLABS_API_KEY</span></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Go to Voices → pick a dramatic narrator voice (e.g. "Liam" or clone your own) → copy the Voice ID → <span class="secret-tag">ELEVENLABS_VOICE_ID</span></div></div>
+        <div class="step-note">Voice ID is in the URL when you click a voice: elevenlabs.io/voice-library/[voice-id]</div>
+      </div>
+    </div>
+
+    <div class="task" id="t-replicate" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Replicate API token (AI image generation)</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-secret">~€3.50/episode</span>
+          </div>
+          <div class="task-desc">Generates ~200 anime-style scene images per episode using SDXL.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Sign up at <a href="https://replicate.com" target="_blank">replicate.com</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Account Settings → API Tokens → Create token</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Add payment method (pay-per-use, ~€3.50/episode)</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">GitHub Secret: <span class="secret-tag">REPLICATE_API_TOKEN</span></div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-meta-app" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Meta Developer App (Facebook + Instagram API)</span>
+            <span class="task-badge badge-oauth">OAuth needed</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">One app covers both Facebook video uploads and Instagram Reels publishing.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://developers.facebook.com" target="_blank">developers.facebook.com</a> → My Apps → Create App</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Choose <strong>Business</strong> type → name it "Arion World Publishing"</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">App Dashboard → Settings → Basic → copy <strong>App ID</strong> → <span class="secret-tag">FACEBOOK_APP_ID</span></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Copy <strong>App Secret</strong> (click Show) → <span class="secret-tag">FACEBOOK_APP_SECRET</span></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Add products: <strong>Facebook Login</strong>, <strong>Instagram Graph API</strong></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-text">You'll get the access tokens in Phase 3 (OAuth flow)</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-tiktok-app" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">TikTok Developer App (Content Posting API)</span>
+            <span class="task-badge badge-oauth">OAuth needed</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">Needed to auto-post the 2-minute trailer to TikTok every week.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://developers.tiktok.com" target="_blank">developers.tiktok.com</a> → Manage Apps → Create App</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Name: "Arion World", Category: Entertainment, Platform: Web</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Add product: <strong>Content Posting API</strong> with scope <code>video.upload</code></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">App detail → copy <strong>Client Key</strong> → <span class="secret-tag">TIKTOK_CLIENT_KEY</span></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Copy <strong>Client Secret</strong> → <span class="secret-tag">TIKTOK_CLIENT_SECRET</span></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-text">You'll get the access/refresh tokens in Phase 3 (OAuth flow)</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-google-console" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Google Cloud Console — YouTube Data API v3</span>
+            <span class="task-badge badge-oauth">OAuth needed</span>
+            <span class="task-badge badge-free">Free quota</span>
+          </div>
+          <div class="task-desc">Required for uploading videos and subtitle tracks to YouTube programmatically.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a> → New Project → "Arion World"</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">APIs &amp; Services → Enable APIs → search and enable <strong>YouTube Data API v3</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Credentials → Create Credentials → <strong>OAuth 2.0 Client ID</strong> → Application type: <strong>Desktop app</strong></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Download the JSON → open it → copy <code>client_id</code> → <span class="secret-tag">YOUTUBE_CLIENT_ID</span></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Copy <code>client_secret</code> → <span class="secret-tag">YOUTUBE_CLIENT_SECRET</span></div></div>
+        <div class="step"><div class="step-num">6</div><div class="step-text">OAuth Consent Screen → set to <strong>External</strong>, add your YouTube account as a Test User</div></div>
+        <div class="step"><div class="step-num">7</div><div class="step-text">You'll get <span class="secret-tag">YOUTUBE_REFRESH_TOKEN</span> in Phase 3 (one-time OAuth flow)</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-deepl" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">DeepL API key (subtitle translations)</span>
+            <span class="task-badge badge-optional">Optional</span>
+            <span class="task-badge badge-free">Free tier</span>
+          </div>
+          <div class="task-desc">Auto-translates subtitles to ES, PT, FR, DE, JP. English subtitles always generated without this. Free tier: 500k chars/month (1 episode ≈ 50k).</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Sign up free at <a href="https://deepl.com" target="_blank">deepl.com</a> → API tab</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Account → Authentication Key → copy → <span class="secret-tag">DEEPL_API_KEY</span></div></div>
+        <div class="step-note">If skipped, only English subtitles will be generated. No other impact on the pipeline.</div>
+      </div>
+    </div>
+
+  </div><!-- /phase 2 -->
+
+
+  <!-- ──────────────────────────────────────────────────
+       PHASE 3 — OAuth Flows (get tokens)
+  ─────────────────────────────────────────────────── -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">3</div>
+      <div class="phase-title">OAuth Token Flows (one-time)</div>
+      <div class="phase-line"></div>
+    </div>
+
+    <div class="task" id="t-yt-oauth" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Get YouTube refresh token</span>
+            <span class="task-badge badge-oauth">One-time OAuth</span>
+          </div>
+          <div class="task-desc">Run this once locally — gives the pipeline a long-lived token to upload videos.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Clone the repo locally and run:<br><code>cd story-publisher && pip install google-auth-oauthlib</code></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Run <code>python src/youtube_auth.py</code> — it opens a browser, sign in with the YouTube account</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">After authorising, the script prints a <strong>refresh_token</strong> — copy it → <span class="secret-tag">YOUTUBE_REFRESH_TOKEN</span></div></div>
+        <div class="step-note">This token doesn't expire unless you revoke it. The pipeline uses it to get fresh access tokens automatically.</div>
+      </div>
+    </div>
+
+    <div class="task" id="t-fb-oauth" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Get Facebook Page long-lived access token</span>
+            <span class="task-badge badge-oauth">One-time OAuth</span>
+          </div>
+          <div class="task-desc">Facebook page tokens last 60 days — the monthly-token-refresh workflow renews them automatically.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://developers.facebook.com/tools/explorer/" target="_blank">Meta Graph API Explorer</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Select your app → Generate User Access Token → Permissions: <code>pages_manage_posts</code>, <code>pages_read_engagement</code>, <code>instagram_basic</code>, <code>instagram_content_publish</code></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Exchange for long-lived token: <code>GET /oauth/access_token?grant_type=fb_exchange_token&client_id=APP_ID&client_secret=APP_SECRET&fb_exchange_token=SHORT_TOKEN</code></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Then get Page token: <code>GET /me/accounts</code> — find your page → copy <code>access_token</code> → <span class="secret-tag">FACEBOOK_ACCESS_TOKEN</span></div></div>
+        <div class="step"><div class="step-num">5</div><div class="step-text">Get <span class="secret-tag">INSTAGRAM_ACCOUNT_ID</span>: <code>GET /me?fields=instagram_business_account</code></div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-tiktok-oauth" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Get TikTok access + refresh token</span>
+            <span class="task-badge badge-oauth">One-time OAuth</span>
+          </div>
+          <div class="task-desc">TikTok tokens refresh monthly — the monthly-token-refresh workflow handles renewal.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">In TikTok Developer Portal, go to your app → Auth → generate the OAuth URL with your <code>client_key</code> and scope <code>video.upload</code></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Open the URL in a browser, log in as your TikTok account, authorise</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Copy the <code>code</code> from the redirect URL, exchange it: <code>POST /v2/oauth/token/</code></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Response gives <code>access_token</code> → <span class="secret-tag">TIKTOK_ACCESS_TOKEN</span> and <code>refresh_token</code> → <span class="secret-tag">TIKTOK_REFRESH_TOKEN</span></div></div>
+      </div>
+    </div>
+
+  </div><!-- /phase 3 -->
+
+
+  <!-- ──────────────────────────────────────────────────
+       PHASE 4 — Add GitHub Secrets
+  ─────────────────────────────────────────────────── -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">4</div>
+      <div class="phase-title">Add All Secrets to GitHub</div>
+      <div class="phase-line"></div>
+    </div>
+
+    <div class="task" id="t-gh-secrets" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Add all secrets to GitHub repository</span>
+            <span class="task-badge badge-critical">Critical</span>
+          </div>
+          <div class="task-desc">All 20 secrets must be set before the first automated run on Monday.</div>
+          <div class="task-expand">▸ Full secrets list</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to: <a href="https://github.com/matriks423-max/jobsy-lv/settings/secrets/actions" target="_blank">github.com/matriks423-max/jobsy-lv → Settings → Secrets → Actions</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Add each secret below:
+          <br><br>
+          <strong>AI / Generation</strong><br>
+          <span class="secret-tag">ANTHROPIC_API_KEY</span>
+          <span class="secret-tag">ELEVENLABS_API_KEY</span>
+          <span class="secret-tag">ELEVENLABS_VOICE_ID</span>
+          <span class="secret-tag">REPLICATE_API_TOKEN</span>
+          <span class="secret-tag">DEEPL_API_KEY</span> (optional)<br><br>
+          <strong>YouTube</strong><br>
+          <span class="secret-tag">YOUTUBE_CLIENT_ID</span>
+          <span class="secret-tag">YOUTUBE_CLIENT_SECRET</span>
+          <span class="secret-tag">YOUTUBE_REFRESH_TOKEN</span><br><br>
+          <strong>Facebook + Instagram</strong><br>
+          <span class="secret-tag">FACEBOOK_PAGE_ID</span>
+          <span class="secret-tag">FACEBOOK_ACCESS_TOKEN</span>
+          <span class="secret-tag">FACEBOOK_APP_ID</span>
+          <span class="secret-tag">FACEBOOK_APP_SECRET</span>
+          <span class="secret-tag">INSTAGRAM_ACCOUNT_ID</span><br><br>
+          <strong>TikTok</strong><br>
+          <span class="secret-tag">TIKTOK_ACCESS_TOKEN</span>
+          <span class="secret-tag">TIKTOK_REFRESH_TOKEN</span>
+          <span class="secret-tag">TIKTOK_CLIENT_KEY</span>
+          <span class="secret-tag">TIKTOK_CLIENT_SECRET</span><br><br>
+          <strong>Discord</strong><br>
+          <span class="secret-tag">DISCORD_BOT_TOKEN</span>
+          <span class="secret-tag">DISCORD_ANNOUNCEMENT_CHANNEL_ID</span>
+          <span class="secret-tag">DISCORD_WEBHOOK_URL</span> (optional — use this OR the bot)<br><br>
+          <strong>Merch + Site</strong><br>
+          <span class="secret-tag">PRINTFUL_API_KEY</span>
+          <span class="secret-tag">CONTACT_EMAIL</span>
+          <span class="secret-tag">FORMSPREE_FORM_ID</span>
+          <span class="secret-tag">ARION_WEBSITE_URL</span> (add after domain setup)
+        </div></div>
+      </div>
+    </div>
+
+  </div><!-- /phase 4 -->
+
+
+  <!-- ──────────────────────────────────────────────────
+       PHASE 5 — Enable GitHub Pages + Test Run
+  ─────────────────────────────────────────────────── -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">5</div>
+      <div class="phase-title">Enable Website + First Test Run</div>
+      <div class="phase-line"></div>
+    </div>
+
+    <div class="task" id="t-ghpages" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Enable GitHub Pages for the website</span>
+            <span class="task-badge badge-critical">Critical</span>
+            <span class="task-badge badge-free">Free</span>
+          </div>
+          <div class="task-desc">Hosts the Arion World website at matriks423-max.github.io/jobsy-lv (or custom domain).</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to: <a href="https://github.com/matriks423-max/jobsy-lv/settings/pages" target="_blank">repo Settings → Pages</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Source: <strong>GitHub Actions</strong> (not "Deploy from branch")</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Go to the PR branch → Actions → "Arion World — Deploy Website" → Run workflow (or merge the PR to main to trigger it)</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">After deploy succeeds, your site is live at the URL shown in Pages settings</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-dry-run" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">First dry run — test story generation</span>
+            <span class="task-badge badge-critical">Critical</span>
+          </div>
+          <div class="task-desc">Verify Claude generates an episode correctly before the live Monday run. Costs ~€3 in Claude API calls, no publishing.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to: <a href="https://github.com/matriks423-max/jobsy-lv/actions/workflows/weekly-publish.yml" target="_blank">Actions → Arion World — Weekly Episode</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Click <strong>Run workflow</strong> → toggle <strong>Dry run = true</strong> → Run</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Watch the logs — after ~10 min you should see: "Episode generated: [Title]" with scene count and cliffhanger</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">If this passes, the pipeline is ready. Real run (with publishing) happens automatically next Monday at 9am UTC.</div></div>
+      </div>
+    </div>
+
+    <div class="task" id="t-merge-pr" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Merge the PR to main</span>
+            <span class="task-badge badge-critical">Critical</span>
+          </div>
+          <div class="task-desc">All the pipeline code is on a branch. Once you're happy with the dry run, merge it so cron workflows run from main.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to: <a href="https://github.com/matriks423-max/jobsy-lv/pull/1" target="_blank">Pull Request #1</a></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Review the changes, click <strong>Merge pull request</strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">The deploy-website workflow will trigger automatically and publish the site</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">The weekly-publish cron now runs from main every Monday at 9am UTC</div></div>
+      </div>
+    </div>
+
+  </div><!-- /phase 5 -->
+
+
+  <!-- ──────────────────────────────────────────────────
+       PHASE 6 — Nice to Have
+  ─────────────────────────────────────────────────── -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">6</div>
+      <div class="phase-title">After Launch — Nice to Have</div>
+      <div class="phase-line"></div>
+    </div>
+
+    <div class="task optional" id="t-domain" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Custom domain — arionworld.com</span>
+            <span class="task-badge badge-optional">Optional</span>
+          </div>
+          <div class="task-desc">Professional URL instead of github.io. ~€10/year from Namecheap or similar.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Buy <code>arionworld.com</code> at Namecheap/Cloudflare (~€10/year)</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Add CNAME record: <code>www</code> → <code>matriks423-max.github.io</code></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">In repo Pages settings → Custom domain → enter <code>arionworld.com</code> → Save</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Add GitHub Secret <span class="secret-tag">ARION_WEBSITE_URL</span> = <code>https://arionworld.com</code></div></div>
+      </div>
+    </div>
+
+    <div class="task optional" id="t-discord-bot-host" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Host Discord bot on Railway.app</span>
+            <span class="task-badge badge-optional">Optional</span>
+            <span class="task-badge badge-free">Free tier</span>
+          </div>
+          <div class="task-desc">Enables the !episode, !mystery, !lore, !characters interactive commands. Not needed if you only want episode announcement webhooks.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Go to <a href="https://railway.app" target="_blank">railway.app</a> → sign in with GitHub → New Project → Deploy from GitHub Repo → select <code>matriks423-max/jobsy-lv</code></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Set Root Directory to <code>discord_bot</code></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Add environment variables: <code>DISCORD_BOT_TOKEN</code>, <code>DISCORD_ANNOUNCEMENT_CHANNEL_ID</code>, <code>CONTACT_EMAIL</code>, <code>ARION_WEBSITE_URL</code></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Deploy — free tier gives $5/month credit (enough for this lightweight bot)</div></div>
+      </div>
+    </div>
+
+    <div class="task optional" id="t-channel-art" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Upload channel art to YouTube + social platforms</span>
+            <span class="task-badge badge-optional">Optional</span>
+          </div>
+          <div class="task-desc">Banner and profile picture in Arion World gold-on-void aesthetic.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">Create a banner (2560×1440px) with "ARION WORLD" in gold on dark background, tagline "Every truth is a lie waiting to be remembered"</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Profile picture: the gold "A" logo SVG (already in <code>website/public/favicon.svg</code>) — export at 800×800px</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Upload to YouTube Studio → Customisation → Branding</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-text">Upload same images to Instagram, TikTok, Facebook Page</div></div>
+      </div>
+    </div>
+
+    <div class="task optional" id="t-printful-store" onclick="toggleTask(this)">
+      <div class="task-main">
+        <div class="task-check">✓</div>
+        <div class="task-body">
+          <div class="task-top">
+            <span class="task-title">Connect Printful store to website</span>
+            <span class="task-badge badge-optional">Optional</span>
+          </div>
+          <div class="task-desc">Once you have merch products created, link your Printful store URL so website links go to the right place.</div>
+          <div class="task-expand">▸ Steps</div>
+        </div>
+      </div>
+      <div class="task-steps">
+        <div class="step"><div class="step-num">1</div><div class="step-text">In Printful dashboard, set up your store storefront URL</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-text">Update <code>website/public/content/merch.json</code> → set <code>store_url</code> to your Printful store link</div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-text">Commit and push — website will rebuild and show the "View Full Store" button</div></div>
+      </div>
+    </div>
+
+  </div><!-- /phase 6 -->
+
+
+  <div class="footer">
+    <button class="reset-btn" onclick="resetAll()">Reset All Checkboxes</button>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+  const STORAGE_KEY = 'arion-setup-v1';
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
+  }
+
+  function saveState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function toggleTask(el) {
+    // Don't toggle done if clicking inside a step link
+    if (event.target.tagName === 'A') return;
+
+    // Toggle open/closed for steps
+    const isExpand = event.target.classList.contains('task-expand') || event.target.closest('.task-expand');
+    if (isExpand || event.target === el.querySelector('.task-expand')) {
+      el.classList.toggle('open');
+      return;
+    }
+
+    // Clicking check or title toggles done
+    if (event.target.classList.contains('task-check') || event.target.classList.contains('task-title') || event.target === el.querySelector('.task-main')) {
+      toggleDone(el);
+      return;
+    }
+
+    // Clicking anywhere on main (but not steps) → toggle open
+    if (!event.target.closest('.task-steps')) {
+      el.classList.toggle('open');
+    }
+  }
+
+  function toggleDone(el) {
+    el.classList.toggle('done');
+    const state = getState();
+    state[el.id] = el.classList.contains('done');
+    saveState(state);
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const tasks = document.querySelectorAll('.task');
+    const total = tasks.length;
+    const done = document.querySelectorAll('.task.done').length;
+    document.getElementById('prog-count').textContent = `${done} / ${total}`;
+    const pct = total > 0 ? (done / total * 100).toFixed(1) : 0;
+    document.getElementById('prog-bar').style.width = pct + '%';
+    document.getElementById('all-done').classList.toggle('visible', done === total);
+  }
+
+  function resetAll() {
+    if (!confirm('Reset all checkboxes?')) return;
+    document.querySelectorAll('.task.done').forEach(t => t.classList.remove('done'));
+    saveState({});
+    updateProgress();
+  }
+
+  // Restore state on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const state = getState();
+    document.querySelectorAll('.task').forEach(el => {
+      if (state[el.id]) el.classList.add('done');
+    });
+    updateProgress();
+
+    // Make check + title click toggle done, expand arrow toggle steps
+    document.querySelectorAll('.task').forEach(el => {
+      el.querySelector('.task-check')?.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleDone(el);
+      });
+      el.querySelector('.task-title')?.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleDone(el);
+      });
+      el.querySelector('.task-expand')?.addEventListener('click', e => {
+        e.stopPropagation();
+        el.classList.toggle('open');
+      });
+      el.querySelector('.task-main')?.addEventListener('click', e => {
+        if (!e.target.closest('.task-check') && !e.target.closest('.task-title') && !e.target.closest('.task-expand')) {
+          el.classList.toggle('open');
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
