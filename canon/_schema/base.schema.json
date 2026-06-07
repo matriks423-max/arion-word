@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "base.schema.json",
+  "type": "object",
+  "required": ["id", "type", "name", "provenance"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "type": { "type": "string", "enum": ["character", "hook", "technique", "world_doc"] },
+    "name": { "type": "string", "minLength": 1 },
+    "provenance": {
+      "type": "object",
+      "required": ["introduced_episode", "last_changed_episode", "source_run"],
+      "properties": {
+        "introduced_episode": { "type": ["integer", "string"] },
+        "last_changed_episode": { "type": ["integer", "string"] },
+        "source_run": { "type": "string" }
+      }
+    },
+    "relationships": { "type": "object" }
+  }
+}

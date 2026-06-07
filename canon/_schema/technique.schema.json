@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "technique.schema.json",
+  "allOf": [{ "$ref": "base.schema.json" }],
+  "properties": {
+    "type": { "const": "technique" },
+    "branch": { "type": "string" },
+    "tier": { "type": ["integer", "string"] },
+    "description": { "type": "string" },
+    "cost": { "type": "string" },
+    "game_mechanic_concept": { "type": "string" }
+  },
+  "required": ["branch", "description"]
+}

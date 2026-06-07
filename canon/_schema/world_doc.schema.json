@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world_doc.schema.json",
+  "allOf": [{ "$ref": "base.schema.json" }],
+  "properties": {
+    "type": { "const": "world_doc" },
+    "data": { "type": "object" }
+  },
+  "required": ["data"]
+}

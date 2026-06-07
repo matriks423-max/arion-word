@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hook.schema.json",
+  "allOf": [{ "$ref": "base.schema.json" }],
+  "properties": {
+    "type": { "const": "hook" },
+    "description": { "type": "string" },
+    "planted_episode": { "type": ["integer", "string"] },
+    "payoff_episode": { "type": ["integer", "string"] },
+    "payoff_description": { "type": "string" },
+    "category": { "type": "string" },
+    "revealed": { "type": "boolean" }
+  },
+  "required": ["planted_episode", "payoff_episode", "category", "revealed"]
+}
