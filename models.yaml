@@ -1,0 +1,17 @@
+writer:
+  provider: anthropic
+  model: claude-opus-4-8
+  max_tokens: 16000
+editor:
+  provider: anthropic
+  model: claude-opus-4-8
+  max_tokens: 16000
+critic:
+  provider: nvidia
+  voters:
+    - meta/llama-3.3-70b-instruct
+    - mistralai/mistral-nemotron
+    - nvidia/llama-3.3-nemotron-super-49b-v1
+embeddings:
+  provider: nvidia
+  model: baai/bge-m3
