@@ -70,6 +70,15 @@ def cmd_episode(args) -> int:
     return 0 if result["status"] == "committed" else 2
 
 
+def cmd_render(args) -> int:
+    from render.export import export_site
+    store = CanonStore(Path(args.canon))
+    counts = export_site(store, Path(args.out))
+    for bucket, n in counts.items():
+        print(f"{bucket}: {n}")
+    return 0
+
+
 def main(argv=None) -> int:
     parent = argparse.ArgumentParser(add_help=False)
     parent.add_argument("--canon", default=str(DEFAULT_CANON))
@@ -84,11 +93,13 @@ def main(argv=None) -> int:
     ep = sub.add_parser("episode", parents=[parent])
     ep.add_argument("--models", default="models.yaml")
     ep.add_argument("--reindex", action="store_true")
+    r = sub.add_parser("render", parents=[parent])
+    r.add_argument("--out", default="website/src/data")
 
     args = parser.parse_args(argv)
     return {
         "validate": cmd_validate, "index": cmd_index,
-        "migrate": cmd_migrate, "episode": cmd_episode,
+        "migrate": cmd_migrate, "episode": cmd_episode, "render": cmd_render,
     }[args.command](args)
 
 

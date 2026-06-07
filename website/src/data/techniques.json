@@ -1,0 +1,106 @@
+[
+  {
+    "id": "tech-echo-sight-basic",
+    "type": "technique",
+    "name": "Echo Sight (Basic)",
+    "branch": "Resonance Arts",
+    "description": "Passive perception of emotional and event residue left on objects and places. The practitioner feels impressions — not full visions, not complete information. Like reading a room that remembers what happened in it.",
+    "game_mechanic_concept": "Passive ability: when player examines an object or enters a location, receives fragmented impressions of past events. Higher proficiency = clearer impressions, longer history accessible."
+  },
+  {
+    "id": "tech-essence-distillation",
+    "type": "technique",
+    "name": "Essence Distillation",
+    "branch": "Craft Arts — Alchemy",
+    "description": "Extracting the defining essence of a substance, experience, or quality into concentrated form. From inert materials: the active compound at many times its natural concentration. From living sources (with consent and presence): the experiential core of a specific quality — courage at the moment of demonstration, calm in the middle of crisis, the last perception of a dying person. The product is a small volume of condensed essence that can be administered to transfer something of the original quality to the recipient. Imperfect transfer — the recipient experiences 'something like' the original, not a perfect copy. Genuinely controversial. Technically legal in grey areas the Guild has never fully resolved.",
+    "game_mechanic_concept": "Crafting ability: produce single-use consumable vials with specific quality effects. Material distillation produces medicine, poisons, reagents. Experiential distillation produces consumables that temporarily grant a specific quality (courage, focus, calm, heightened perception). Quality of output scales with intensity of source material/moment. Using the vial grants temporary effect for 1-4 hours depending on distillation quality."
+  },
+  {
+    "id": "tech-grain-weave",
+    "type": "technique",
+    "name": "Grain Weave",
+    "branch": "Craft Arts — True Smithing",
+    "description": "The foundation of True Smithing — working metal while maintaining continuous Resonance awareness through the material, feeling the grain structure through Open Path perception and guiding the physical work to align it optimally. A blade worked with Grain Weave has material consistency that conventional metallurgy cannot replicate: the grain runs without interruption through the length, the stress distribution is perfect, the edge geometry is precise in ways that appear almost mathematical. Standard smithing is external — you work the surface and infer the interior. Grain Weave is internal — you feel the interior and work from it. Brix's family calls this 'keeping company with the metal.' The Guild curriculum calls it 'resonance-assisted quality monitoring.' Both descriptions are accurate and both miss the point.",
+    "game_mechanic_concept": "Passive technique: active throughout all True Smithing work. Improves finished object's base physical properties (durability, edge geometry, structural integrity, weight distribution) significantly above standard smithing equivalents. Requires sustained Resonance attention — distraction or fatigue causes quality degradation. Available to any practitioner with Open Path access and smithing skill, even without formal True Smithing training."
+  },
+  {
+    "id": "tech-material-transmutation",
+    "type": "technique",
+    "name": "Material Transmutation",
+    "branch": "Craft Arts — Alchemy",
+    "description": "The foundational alchemical act — declare input, mass, and desired output clearly, then channel Open Path energy to facilitate the structural conversion. The matter restructures at the particle level, releasing or absorbing energy proportional to the complexity of the conversion. Cannot create from nothing. Cannot increase total mass. Simple conversions (iron to steel) take seconds; complex conversions (coal to diamond) take sustained hours. The practitioner must understand both source and target material at a deep level — transmuting what you don't understand produces results you didn't intend.",
+    "game_mechanic_concept": "Core alchemy ability: transmute one inorganic material into another of equal mass. Base ability unlocks all alchemy techniques. Complexity rating of target material determines time and Resonance energy cost. Failure on high-complexity transmutations produces unexpected substances — typically inert but occasionally hazardous."
+  },
+  {
+    "id": "tech-precision-water-compression",
+    "type": "technique",
+    "name": "Precision Water Compression",
+    "branch": "Resonance Arts",
+    "description": "Rather than generating large-scale water manipulation, the practitioner compresses a small volume of water to extreme density and accelerates it to high velocity. The result: a projectile the size of a coin that hits with more force than a thrown boulder. Uses a fraction of the energy of conventional water magic. Near-invisible in flight.",
+    "game_mechanic_concept": "Precision ranged attack: low energy cost, high damage, minimal visual telegraph. Requires significant Resonance Arts investment to unlock but is far more efficient than equivalent-damage conventional techniques."
+  },
+  {
+    "id": "tech-resonance-clone",
+    "type": "technique",
+    "name": "Resonance Clone",
+    "branch": "Mind Arts",
+    "description": "Creates a physical copy of the practitioner capable of independent action. The clone shares the practitioner's knowledge at moment of creation. As the clone acts and experiences, it accumulates new experience. On dissolution, the practitioner may attempt to recover what the clone learned — this recovery is imperfect and requires training.",
+    "game_mechanic_concept": "Utility ability: create a temporary duplicate for combat, exploration, or parallel tasks. Advanced versions allow partial knowledge recovery on dissolution. Clone has a health pool separate from practitioner."
+  },
+  {
+    "id": "tech-resonance-deep-read",
+    "type": "technique",
+    "name": "Resonance Deep Read",
+    "branch": "Craft Arts — Alchemy",
+    "description": "Perceiving the complete material and resonance composition of a substance or object — not just what happened to it (Echo Sight) but what it is made of at every structural level, including accumulated Resonance residue layers, embedded inscriptions, True Smith bindings, and Founding Age material signatures. Requires Resonance Alchemy training rather than standard Resonance Arts — the perception is oriented toward material structure rather than event history. Practitioners use this as a diagnostic tool before any complex alchemical work. A Deep Read on a True Smithed object reveals the maker's signature — a fact that most True Smiths do not know.",
+    "game_mechanic_concept": "Diagnostic ability: reveals full material composition, structural resonance properties, historical modification layers, and any embedded alchemy or True Smithing modifications. Passive application when examining objects. High skill level reveals curse-binding modifications, maker signatures on True Smithed items, and Founding Age construction techniques. Overexposure to high-complexity objects causes temporary perceptual overload."
+  },
+  {
+    "id": "tech-resonance-inscription",
+    "type": "technique",
+    "name": "Resonance Inscription",
+    "branch": "Craft Arts — Alchemy",
+    "description": "Encoding a conditional transformation instruction into an object by writing it in resonance energy — the instruction is embedded in the material structure, invisible to ordinary sight, readable by any practitioner with Resonance perception. The object performs the inscribed transformation when specified conditions are met. The inscription must be complete and internally consistent — incomplete inscriptions produce incomplete transformations, which means unpredictable transformations. The technique produces items that function without any Resonance ability in the user.",
+    "game_mechanic_concept": "Crafting ability: create items with conditional alchemical effects. Specify trigger condition and transformation effect at crafting time. Item activates transformation when condition is met, usable repeatedly until inscription degrades. Complexity of inscription determines crafting time and Resonance cost. Advanced: multi-conditional inscriptions that respond to sequences rather than single triggers."
+  },
+  {
+    "id": "tech-shamanic-resonance-reading",
+    "type": "technique",
+    "name": "Shamanic Resonance Reading",
+    "branch": "Perception Arts + Mind Arts",
+    "description": "The Vorath shamanic tradition for communicating with the Shattered — people who exist partially across multiple timelines. Requires placing the practitioner's perception partially out of normal timeline phase, creating a shared perceptual space where Shattered individuals can communicate without the cognitive overload of full timeline-crossing.",
+    "game_mechanic_concept": "Communication ability: allows conversation with Shattered NPCs/characters who cannot otherwise communicate coherently. Also provides brief timeline-adjacent perception — flickers of other timelines' versions of the current location."
+  },
+  {
+    "id": "tech-signature-lock-forging",
+    "type": "technique",
+    "name": "Signature Lock Forging",
+    "branch": "Craft Arts — True Smithing",
+    "description": "Binding a specific person's Open Path signature into an object as a functional requirement — the object's True Smithed properties activate only for the person whose signature was matched at forging. Requires the bonded individual present during the final sealing phase, their resonance in direct contact with the metal as the binding closes. The signature becomes part of the object's material identity. A signature-locked blade is not simply reluctant in the hands of another — it is genuinely different: the bonded properties are inert, the edge still present but the resonance integration dormant. For locks, only the bonded individual can open them — the mechanism is not locked to anyone else, it simply does not function as a lock for the bonded person, as if the locking condition was never met.",
+    "game_mechanic_concept": "Crafting ability: produce an object with properties active only for one specific individual. Non-bonded users receive no benefit from bound properties (item still functions as its base material, but True Smithed enhancement is absent). For locks: impassable to all non-bonded individuals. Bonding is permanent and non-transferable. Requires bonded individual present at final phase of crafting."
+  },
+  {
+    "id": "tech-the-long-work",
+    "type": "technique",
+    "name": "The Long Work",
+    "branch": "Craft Arts — True Smithing",
+    "description": "Multi-day True Smithing technique — maintaining a continuous Resonance channel to an object across the full duration of the project, sleeping near it, returning across multiple sessions, building the property integration layer by layer over days or weeks. Each day of sustained work adds depth to the integration — the property becomes more fully part of the material, stronger, more stable, more precise. Objects produced through the Long Work have a character to them that single-session work cannot produce: the resonance is deeper, the properties more consistent, the overall quality carrying something that experienced practitioners call 'intention fully realized.' Brix's grandfather called it 'sitting time.' It is also the only way to produce multi-property objects — each property layer must be built separately, with adequate time between layers for the previous layer to fully integrate.",
+    "game_mechanic_concept": "Extended crafting mode: minimum 7 in-story days. Each additional day of sustained work adds one integration layer (maximum 5). Each layer multiplies property strength and stability. Single-session smithing caps at 1 layer. Long Work can achieve up to 5 layers with mastery. Multi-property objects require one full Long Work session per property. The Resonance channel must not be broken during the project — significant physical incapacitation, extended separation, or major emotional disruption severs the channel and the work must restart."
+  },
+  {
+    "id": "tech-thread-weaving-basic",
+    "type": "technique",
+    "name": "Thread Weaving (Basic)",
+    "branch": "Resonance Arts",
+    "description": "Active manipulation of Resonance energy — shaping light, heat, minor force. The Guild's curriculum covers this and calls it mastery. It is not mastery. It is the first floor of a very tall building.",
+    "game_mechanic_concept": "Active ability tree: light manipulation (illumination, blinding), heat manipulation (warming, minor ignition), force application (push/pull on small objects). Costs Resonance energy per use."
+  },
+  {
+    "id": "tech-true-forge-bind",
+    "type": "technique",
+    "name": "True Forge Bind",
+    "branch": "Craft Arts — True Smithing",
+    "description": "The core act of True Smithing — integrating a specific resonance property into metal during the forging process. The smith maintains conscious Resonance awareness through the material while physically working it, holds the intended property as a lived experience (not an abstract concept), and channels that state into the metal through the sustained connection. The property becomes part of the material's grain structure — not deposited on it, not enchanted after the fact. It is the thing itself. Cannot be removed without destroying the object. The property in the finished object reflects the clarity and intensity of what the smith experienced while binding it.",
+    "game_mechanic_concept": "Core smithing enchantment: during active forging, choose one property to permanently bind into the object being crafted. Available base properties: edge retention, structural durability, resonance resistance (minor), signature lock (see tech_011), material sensing. Property strength scales with smith's skill and mental state quality during binding. Multi-property objects require Long Work (tech_013). Bound properties cannot be removed post-fabrication."
+  }
+]

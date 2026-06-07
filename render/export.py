@@ -8,6 +8,27 @@ from engine.canon.store import CanonStore
 # entity types that are safe to ship to readers (hooks are internal-only)
 _PUBLIC_TYPES = {"character", "technique", "world_doc", "episode"}
 
+# v1 world-docs have no public/canon split, so their `data` blob mixes public lore with
+# gradual-reveal spoilers. Any key whose name contains one of these tokens is a payoff the
+# audience must NOT see yet. Redacted recursively at the export chokepoint.
+# (Phase 1 replaces this heuristic with explicit per-entity public layers.)
+_SPOILER_TOKENS = ("secret", "hidden", "truth", "suppress", "nobody", "unrevealed",
+                   "spoiler", "real_identity", "_reveal", "future_")
+
+
+def _is_spoiler_key(key: str) -> bool:
+    k = key.lower()
+    return any(tok in k for tok in _SPOILER_TOKENS)
+
+
+def _redact(value):
+    """Recursively drop spoiler-bearing keys from nested world-doc data."""
+    if isinstance(value, dict):
+        return {k: _redact(v) for k, v in value.items() if not _is_spoiler_key(k)}
+    if isinstance(value, list):
+        return [_redact(v) for v in value]
+    return value
+
 
 def _public_view(entity: dict) -> dict:
     """Strip to audience-safe fields. NEVER includes the `canon` (secret) layer."""
@@ -20,7 +41,7 @@ def _public_view(entity: dict) -> dict:
             if k in entity:
                 base[k] = entity[k]
     if entity["type"] == "world_doc":
-        base["data"] = entity.get("data", {})
+        base["data"] = _redact(entity.get("data", {}))
     if entity["type"] == "episode":
         for k in ("number", "logline", "summary", "cliffhanger", "scenes"):
             if k in entity:

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "char-director-malec-thorne",
+    "type": "character",
+    "name": "Director Malec Thorne",
+    "description": "Head of Enforcement for the Resonant Guild. Calm, measured, politically untouchable. Has never raised his voice in a professional setting. Has done genuinely terrible things and sleeps without difficulty.",
+    "age": 58,
+    "role": "antagonist — but not a villain in his own story",
+    "power_tier": 3
+  },
+  {
+    "id": "char-kairo-voss",
+    "type": "character",
+    "name": "Kairo Voss",
+    "description": "A self-taught street-level Resonant from the outer districts of Caelum City. Labelled unstable and dangerous by the Resonant Guild after reporting visions of other worlds. Has no formal training. Works odd jobs to survive. Sketches obsessively.",
+    "age": 19,
+    "role": "protagonist",
+    "power_tier": 1
+  },
+  {
+    "id": "char-ren",
+    "type": "character",
+    "name": "Ren",
+    "description": "No Resonance ability. Runs a repair shop in the outer district. Talks too much. Always knows what time it is. Collects broken clocks.",
+    "age": 17,
+    "role": "Kairo's closest friend — comic relief on the surface, something much deeper underneath",
+    "power_tier": 0
+  },
+  {
+    "id": "char-serin-alda",
+    "type": "character",
+    "name": "Serin Alda",
+    "description": "A Tier 2 Resonant and junior investigator for the Resonant Guild. Assigned to monitor Kairo. Trained, disciplined, genuinely wants to do good work. Believes the system she works inside is fundamentally just.",
+    "age": 23,
+    "role": "deuteragonist",
+    "power_tier": 2
+  },
+  {
+    "id": "char-the-voice",
+    "type": "character",
+    "name": "The Voice",
+    "description": "Speaks to Kairo during visions. Knows things it shouldn't. Shows genuine care for Kairo. Never explains itself fully. Sometimes warns of danger seconds before it arrives.",
+    "age": "2847 years trapped",
+    "role": "presence in Kairo's visions — guide, warning, something that grieves",
+    "power_tier": 4
+  }
+]
