@@ -1,0 +1,3 @@
+{ "verdict": "issues", "issues": [
+  { "severity": "blocking", "kind": "dead_character_reuse", "detail": "Serin died in ep 3 but speaks here." }
+] }
