@@ -63,3 +63,23 @@ def test_always_failing_is_quarantined_not_committed(tmp_canon):
     assert result["status"] == "quarantined"
     assert not store.exists("ep-001")
     assert (tmp_canon.parent / "pending" / "episodes" / "ep-001.json").exists()
+    assert not (tmp_canon / "_state.json").exists()        # counter NOT advanced on quarantine
+
+
+def test_state_counter_advances_on_commit(tmp_canon):
+    import json
+    store, pipe = _pipeline(tmp_canon, _Writer([_episode()]), _Critic([_V(True)]))
+    pipe.run(episode_number=1)
+    assert json.loads((tmp_canon / "_state.json").read_text())["next_episode"] == 2
+
+
+def test_bad_patch_op_quarantines_not_corrupts(tmp_canon):
+    # critic-clean episode whose writer-emitted patch references a missing entity must
+    # quarantine, never leave a half-committed orphan or crash.
+    ep = _episode()
+    ep["patch_ops"] = [{"op": "set_field", "id": "char-ghost", "path": "public.role", "value": "x"}]
+    store, pipe = _pipeline(tmp_canon, _Writer([ep]), _Critic([_V(True)]))
+    result = pipe.run(episode_number=1)
+    assert result["status"] == "quarantined"
+    assert not store.exists("ep-001")                      # no orphan episode entity
+    assert not (tmp_canon / "_state.json").exists()        # counter NOT advanced

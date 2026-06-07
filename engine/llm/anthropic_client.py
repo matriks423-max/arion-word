@@ -22,9 +22,14 @@ class AnthropicChat:
         def call():
             try:
                 return self.sdk.messages.create(model=self.model, **kwargs)
-            except Exception as exc:  # map SDK errors into retryable LLMError
+            except Exception as exc:
                 status = getattr(exc, "status_code", None)
-                raise LLMError(str(exc), status=status if status else 500)
+                if status is not None:                       # genuine API status error
+                    raise LLMError(str(exc), status=status)
+                name = type(exc).__name__.lower()
+                transient = any(t in name for t in ("connection", "timeout"))
+                # Programming/serialization errors (no status, not transient) must NOT be retried.
+                raise LLMError(str(exc), status=503 if transient else 400)
         return with_retry(call)
 
     def complete(self, system: str, user: str, *, max_tokens: int = 4096) -> str:

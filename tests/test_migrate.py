@@ -22,6 +22,18 @@ def test_migrate_characters(tmp_canon, tmp_path):
     assert k["canon"]["secret_flag"] == "is Shattered"   # full original kept in canon layer
 
 
+def test_migrate_characters_dedups_colliding_ids(tmp_canon, tmp_path):
+    src = tmp_path / "characters.json"
+    src.write_text(json.dumps({
+        "main_cast": {"Kael": {"role": "a"}},
+        "side_cast": {"Kael": {"role": "b"}},   # same slug -> would clobber without dedup
+    }), encoding="utf-8")
+    store = CanonStore(tmp_canon)
+    ids = migrate_characters(src, store)
+    assert len(ids) == 2 and len(set(ids)) == 2   # both preserved with distinct ids
+    assert store.exists("char-kael") and store.exists("char-kael-2")
+
+
 def test_migrate_hooks(tmp_canon, tmp_path):
     src = tmp_path / "future_hooks.json"
     src.write_text(json.dumps({"hooks": [

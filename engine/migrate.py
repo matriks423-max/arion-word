@@ -22,16 +22,28 @@ def _prov(ep=1):
     return {"introduced_episode": ep, "last_changed_episode": ep, "source_run": SOURCE_RUN}
 
 
+def _dedup_id(store: CanonStore, base_id: str, seen: set) -> str:
+    """Avoid silent clobbering when two source names slugify to the same id."""
+    cid = base_id
+    n = 2
+    while cid in seen or store.exists(cid):
+        cid = f"{base_id}-{n}"
+        n += 1
+    seen.add(cid)
+    return cid
+
+
 def migrate_characters(src: Path, store: CanonStore) -> list[str]:
     data = json.loads(src.read_text(encoding="utf-8"))
     ids: list[str] = []
+    seen: set = set()
     for group, members in data.items():
         if group.startswith("_") or not isinstance(members, dict):
             continue
         for name, original in members.items():
             if not isinstance(original, dict):
                 continue
-            cid = entity_id("character", name)
+            cid = _dedup_id(store, entity_id("character", name), seen)
             public = {k: original[k] for k in _PUBLIC_KEYS if k in original}
             if "role" not in public:
                 public["role"] = group
@@ -68,9 +80,10 @@ def migrate_hooks(src: Path, store: CanonStore) -> list[str]:
 def migrate_techniques(src: Path, store: CanonStore) -> list[str]:
     data = json.loads(src.read_text(encoding="utf-8"))
     ids: list[str] = []
+    seen: set = set()
     for tech in data.get("techniques", []):
         name = tech.get("name") or str(tech.get("id"))
-        tid = entity_id("technique", name)
+        tid = _dedup_id(store, entity_id("technique", name), seen)
         entity = {
             "id": tid, "type": "technique", "name": name,
             "provenance": _prov(),

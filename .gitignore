@@ -7,3 +7,10 @@ node_modules/
 dist/
 .astro/
 .claude/launch.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+token.json
+*credentials*.json

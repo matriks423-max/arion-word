@@ -1,3 +1,4 @@
+import pytest
 from engine.canon.store import CanonStore
 from engine.llm.fakes import FakeEmbeddings
 from engine.retrieval_embed import EmbeddingRetriever
@@ -29,3 +30,18 @@ def test_build_is_idempotent(tmp_canon):
     r.build()
     r.build()
     assert (tmp_canon / "_index" / "embeddings.jsonl").exists()
+
+
+def test_relevant_raises_when_index_missing_but_canon_nonempty(tmp_canon):
+    # non-empty canon + no embeddings index = writer/critic would run blind -> fail loud
+    store = CanonStore(tmp_canon)
+    store.save(_char("char-ren", "Ren", "clockmaker"))
+    r = EmbeddingRetriever(store, FakeEmbeddings(dim=8))   # never built
+    with pytest.raises(RuntimeError):
+        r.relevant("anything", k=1)
+
+
+def test_relevant_returns_empty_when_store_empty(tmp_canon):
+    store = CanonStore(tmp_canon)                          # no entities, no index
+    r = EmbeddingRetriever(store, FakeEmbeddings(dim=8))
+    assert r.relevant("anything", k=1) == []

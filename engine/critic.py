@@ -45,14 +45,26 @@ class Critic:
         for voter in self.voters:
             try:
                 results.append(voter.complete_json(SYSTEM, user, schema=_VERDICT_SCHEMA))
-            except Exception as exc:  # a voter erroring counts as an abstain, logged
+            except Exception as exc:  # a voter erroring abstains (dropped from the denominator)
                 results.append({"verdict": "error", "issues": [], "_error": str(exc)})
 
+        # FAIL CLOSED. Errored voters do NOT count toward "clean" — they abstain. We require a
+        # quorum of voters to actually respond before we'll trust a clean verdict, and judge the
+        # majority only among responders. A degraded or fully-down panel can never pass an episode.
+        total = len(self.voters)
+        responded = [r for r in results if r.get("verdict") != "error"]
+        quorum = math.ceil(total / 2)
+        all_issues = [i for r in results for i in r.get("issues", [])]
+
+        if len(responded) < quorum:
+            # not enough functioning critics to trust a pass
+            note = {"severity": "blocking", "kind": "critic_panel_degraded",
+                    "detail": f"only {len(responded)}/{total} critics responded; quorum {quorum} not met"}
+            return Verdict(clean=False, issues=all_issues + [note], raw=results)
+
         blocking_votes = sum(
-            1 for r in results
+            1 for r in responded
             if any(i.get("severity") == "blocking" for i in r.get("issues", []))
         )
-        majority = math.ceil(len(self.voters) / 2)
-        clean = blocking_votes < majority
-        all_issues = [i for r in results for i in r.get("issues", [])]
+        clean = blocking_votes < math.ceil(len(responded) / 2)
         return Verdict(clean=clean, issues=all_issues, raw=results)

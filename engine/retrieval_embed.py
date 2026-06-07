@@ -49,6 +49,14 @@ class EmbeddingRetriever:
         return [json.loads(line) for line in self.path.read_text(encoding="utf-8").splitlines() if line]
 
     def relevant(self, query: str, k: int = 8) -> list[str]:
+        if not self.path.exists():
+            # Distinguish "no entities" from "index never built": a non-empty canon with no
+            # embeddings means the writer/critic would run blind. Fail loud instead.
+            if any(True for _ in self.store.list_ids()):
+                raise RuntimeError(
+                    "embeddings index missing while canon is non-empty; run with --reindex "
+                    "(or EmbeddingRetriever.build()) before retrieval")
+            return []
         rows = self._load()
         if not rows:
             return []

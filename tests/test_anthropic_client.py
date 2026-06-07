@@ -38,3 +38,26 @@ def test_complete_json_returns_tool_input():
     client = AnthropicChat(sdk=sdk, model="claude-opus-4-8")
     out = client.complete_json("sys", "user", schema={"type": "object"})
     assert out == {"title": "Ep1", "ok": True}
+
+
+class _RaisingMessages:
+    def __init__(self):
+        self.calls = 0
+
+    def create(self, **kwargs):
+        self.calls += 1
+        raise ValueError("malformed kwargs")   # no status_code -> a programming error
+
+
+class _RaisingSDK:
+    def __init__(self):
+        self.messages = _RaisingMessages()
+
+
+def test_non_api_error_fails_fast_not_retried():
+    sdk = _RaisingSDK()
+    client = AnthropicChat(sdk=sdk, model="claude-opus-4-8")
+    with pytest.raises(LLMError) as e:
+        client.complete("s", "u")
+    assert e.value.status == 400           # non-retryable
+    assert sdk.messages.calls == 1         # NOT retried 4x as a fake 500

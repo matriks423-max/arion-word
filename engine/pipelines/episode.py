@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import json
 
-from engine.canon.store import CanonStore
-from engine.canon.patch import CanonPatch
+from engine.canon.store import CanonStore, ValidationFailed
+from engine.canon.patch import CanonPatch, PatchError
 from engine.canon.index import build_index
 
 
@@ -39,6 +39,9 @@ class EpisodePipeline:
         return {"status": "quarantined", "path": str(path), "issues": issues}
 
     def _commit(self, episode_number: int, episode: dict) -> dict:
+        """Atomic: validate the episode entity and apply the canon patch BEFORE persisting the
+        episode file / bumping state. A bad writer-emitted patch raises and is caught by run(),
+        which routes to quarantine — never a half-committed orphan."""
         eid = _slug_number(episode_number)
         entity = {
             "id": eid, "type": "episode", "name": episode.get("title", eid),
@@ -50,16 +53,21 @@ class EpisodePipeline:
             "cliffhanger": episode.get("cliffhanger", ""),
             "scenes": episode.get("scenes", []),
         }
-        self.store.save(entity)
+        # Fail fast on a malformed episode entity, before anything is written to disk.
+        self.store.validate(entity)
 
+        # Apply the writer's canon mutations first. CanonPatch.apply is transactional and
+        # self-rolls-back its touched entities on any error, so a bad op leaves canon untouched.
         patch = CanonPatch(source_run=eid)
         patch.ops = list(episode.get("patch_ops", []))
         if patch.ops:
             patch.apply(self.store)
 
+        # Both validated/applied -> now persist the episode and advance state + index.
+        self.store.save(entity)
         state_path = self.store.root / "_state.json"
-        state = {"next_episode": episode_number + 1}
-        state_path.write_text(json.dumps(state, indent=2), encoding="utf-8")
+        state_path.write_text(json.dumps({"next_episode": episode_number + 1}, indent=2),
+                              encoding="utf-8")
         build_index(self.store)
         return {"status": "committed", "id": eid}
 
@@ -79,4 +87,10 @@ class EpisodePipeline:
             return self._quarantine(episode_number, episode, verdict.issues)
 
         episode = self.editor.polish(episode, canon_context=context)
-        return self._commit(episode_number, episode)
+        try:
+            return self._commit(episode_number, episode)
+        except (PatchError, ValidationFailed) as exc:
+            # A critic-clean episode whose writer-emitted patch is malformed must quarantine,
+            # never corrupt canon or crash the run.
+            issue = {"severity": "blocking", "kind": "bad_patch_or_entity", "detail": str(exc)}
+            return self._quarantine(episode_number, episode, [issue])

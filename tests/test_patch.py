@@ -62,3 +62,16 @@ def test_apply_is_atomic_on_failure(tmp_canon):
     with pytest.raises(PatchError):
         patch.apply(store)
     assert store.load("char-ren")["public"]["role"] == "supporting"   # rolled back
+
+
+def test_rollback_unlinks_newly_created_on_later_op_failure(tmp_canon):
+    """A create that succeeds, then a later op that fails, must delete the created file."""
+    store = CanonStore(tmp_canon)
+    store.save(_char("char-ren", "Ren"))
+    patch = (CanonPatch(source_run="ep002")
+             .create_entity(_char("char-new", "New"))            # writes the file
+             .add_relationship("char-new", "knows", "char-ghost"))  # ghost missing -> fails
+    with pytest.raises(PatchError):
+        patch.apply(store)
+    assert not store.exists("char-new")                          # created file unlinked
+    assert store.load("char-ren")["public"]["role"] == "supporting"  # pre-existing untouched
