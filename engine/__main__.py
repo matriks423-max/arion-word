@@ -43,6 +43,33 @@ def cmd_migrate(args) -> int:
     return 0
 
 
+def cmd_episode(args) -> int:
+    import json as _json
+    from engine.llm.config import (load_config, build_chat, build_critic_voters, build_embeddings)
+    from engine.retrieval_embed import EmbeddingRetriever
+    from engine.critic import Critic
+    from engine.writer import Writer, Editor
+    from engine.pipelines.episode import EpisodePipeline
+
+    store = CanonStore(Path(args.canon))
+    cfg = load_config(Path(args.models))
+    retriever = EmbeddingRetriever(store, build_embeddings(cfg["embeddings"]))
+    if args.reindex:
+        retriever.build()
+    pipe = EpisodePipeline(
+        store=store,
+        writer=Writer(build_chat(cfg["writer"])),
+        critic=Critic(build_critic_voters(cfg["critic"])),
+        editor=Editor(build_chat(cfg["editor"])),
+        retriever=retriever,
+    )
+    state = store.root / "_state.json"
+    number = _json.loads(state.read_text())["next_episode"] if state.exists() else 1
+    result = pipe.run(episode_number=number)
+    print(_json.dumps(result, indent=2))
+    return 0 if result["status"] == "committed" else 2
+
+
 def main(argv=None) -> int:
     parent = argparse.ArgumentParser(add_help=False)
     parent.add_argument("--canon", default=str(DEFAULT_CANON))
@@ -54,9 +81,15 @@ def main(argv=None) -> int:
     sub.add_parser("index", parents=[parent])
     m = sub.add_parser("migrate", parents=[parent])
     m.add_argument("--src", default="story_bible")
+    ep = sub.add_parser("episode", parents=[parent])
+    ep.add_argument("--models", default="models.yaml")
+    ep.add_argument("--reindex", action="store_true")
 
     args = parser.parse_args(argv)
-    return {"validate": cmd_validate, "index": cmd_index, "migrate": cmd_migrate}[args.command](args)
+    return {
+        "validate": cmd_validate, "index": cmd_index,
+        "migrate": cmd_migrate, "episode": cmd_episode,
+    }[args.command](args)
 
 
 if __name__ == "__main__":
