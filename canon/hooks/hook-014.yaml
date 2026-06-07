@@ -1,0 +1,21 @@
+id: hook-014
+type: hook
+name: hook-014
+provenance:
+  introduced_episode: 8
+  last_changed_episode: 8
+  source_run: migration-v1
+description: 'The Voice, in its first two appearances, speaks to Kairo in full sentences.
+  In its third appearance it begins a sentence, stops, and says instead: ''Not yet.''
+  The interruption is treated as a moment of cryptic restraint. Kairo accepts it.'
+planted_episode: 8
+payoff_episode: 165
+payoff_description: 'The Voice cannot directly tell Kairo he is Varos — the moment
+  Kairo consciously knows, the Veilkeepers'' containment protocol triggers. The Voice
+  did not stop itself out of mystery. It stopped because it started to say his name
+  — Varos — and caught it before the word formed. In Episode 165, when the memory
+  finally surfaces and Kairo understands what he is, the Voice says: ''I have been
+  trying to tell you that for a very long time.'' The ''not yet'' in Episode 8 was
+  not patience. It was anguish.'
+category: long_game_prophecy
+revealed: false

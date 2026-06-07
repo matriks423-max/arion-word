@@ -1,0 +1,40 @@
+id: tech-thread-weaving-basic
+type: technique
+name: Thread Weaving (Basic)
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Resonance Arts
+tier: 2
+description: Active manipulation of Resonance energy — shaping light, heat, minor
+  force. The Guild's curriculum covers this and calls it mastery. It is not mastery.
+  It is the first floor of a very tall building.
+cost: Moderate Resonance energy. Sustainable for trained practitioners in short bursts.
+game_mechanic_concept: 'Active ability tree: light manipulation (illumination, blinding),
+  heat manipulation (warming, minor ignition), force application (push/pull on small
+  objects). Costs Resonance energy per use.'
+canon:
+  id: tech_002
+  name: Thread Weaving (Basic)
+  branch: Resonance Arts
+  tier: 2
+  introduced_episode: pre-story
+  first_demonstrated_by: Serin Alda
+  description: Active manipulation of Resonance energy — shaping light, heat, minor
+    force. The Guild's curriculum covers this and calls it mastery. It is not mastery.
+    It is the first floor of a very tall building.
+  game_mechanic_concept: 'Active ability tree: light manipulation (illumination, blinding),
+    heat manipulation (warming, minor ignition), force application (push/pull on small
+    objects). Costs Resonance energy per use.'
+  cost: Moderate Resonance energy. Sustainable for trained practitioners in short
+    bursts.
+  how_to_learn: Guild curriculum — available to anyone who passes Guild entry assessment.
+    Also self-teachable given the right starting point.
+  variations_known:
+  - Precision weaving — smaller effect, much lower cost, much harder (the water ball
+    principle)
+  - Combined weaving — two effects simultaneously, exponentially harder
+  visual_effect_tags: shimmering threads of resonance light being shaped by hands,
+    glowing light strands woven between fingers, visible energy manipulation, soft
+    white-gold luminescence

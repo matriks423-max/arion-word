@@ -1,0 +1,20 @@
+id: hook-012
+type: hook
+name: hook-012
+provenance:
+  introduced_episode: 3
+  last_changed_episode: 3
+  source_run: migration-v1
+description: Serin's Guild personnel file, glimpsed briefly in Episode 3 as she flips
+  past it to another document, lists her place of birth as 'unknown — outer district
+  registration.' A clerk detail. Unremarkable.
+planted_episode: 3
+payoff_episode: 140
+payoff_description: Serin's mother is a high-ranking Veilkeeper. The 'outer district
+  registration' entry was deliberately falsified when Serin was placed in the Guild
+  as a long-term intelligence asset — her true birthplace is a Veilkeeper estate outside
+  the city. Her entire origin story is a constructed document. The file she skimmed
+  past in Episode 3 is the paper architecture of a false identity she has lived inside
+  her whole life without knowing it existed.
+category: character_secret
+revealed: false

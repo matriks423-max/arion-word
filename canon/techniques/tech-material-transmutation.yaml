@@ -1,0 +1,58 @@
+id: tech-material-transmutation
+type: technique
+name: Material Transmutation
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — Alchemy
+tier: 2
+description: The foundational alchemical act — declare input, mass, and desired output
+  clearly, then channel Open Path energy to facilitate the structural conversion.
+  The matter restructures at the particle level, releasing or absorbing energy proportional
+  to the complexity of the conversion. Cannot create from nothing. Cannot increase
+  total mass. Simple conversions (iron to steel) take seconds; complex conversions
+  (coal to diamond) take sustained hours. The practitioner must understand both source
+  and target material at a deep level — transmuting what you don't understand produces
+  results you didn't intend.
+cost: Low to moderate Resonance energy. Scales steeply with conversion complexity.
+game_mechanic_concept: 'Core alchemy ability: transmute one inorganic material into
+  another of equal mass. Base ability unlocks all alchemy techniques. Complexity rating
+  of target material determines time and Resonance energy cost. Failure on high-complexity
+  transmutations produces unexpected substances — typically inert but occasionally
+  hazardous.'
+canon:
+  id: tech_006
+  name: Material Transmutation
+  branch: Craft Arts — Alchemy
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Corvel Ash (anticipated)
+  description: The foundational alchemical act — declare input, mass, and desired
+    output clearly, then channel Open Path energy to facilitate the structural conversion.
+    The matter restructures at the particle level, releasing or absorbing energy proportional
+    to the complexity of the conversion. Cannot create from nothing. Cannot increase
+    total mass. Simple conversions (iron to steel) take seconds; complex conversions
+    (coal to diamond) take sustained hours. The practitioner must understand both
+    source and target material at a deep level — transmuting what you don't understand
+    produces results you didn't intend.
+  game_mechanic_concept: 'Core alchemy ability: transmute one inorganic material into
+    another of equal mass. Base ability unlocks all alchemy techniques. Complexity
+    rating of target material determines time and Resonance energy cost. Failure on
+    high-complexity transmutations produces unexpected substances — typically inert
+    but occasionally hazardous.'
+  cost: Low to moderate Resonance energy. Scales steeply with conversion complexity.
+  how_to_learn: Requires alchemy training — either Guild curriculum (limited) or direct
+    practitioner instruction. Self-teaching possible with access to Founding Age texts
+    but extremely slow.
+  variations_known:
+  - Accelerated transmutation (higher energy cost, faster completion)
+  - Precision transmutation (converts only a portion of available mass with surgical
+    accuracy)
+  - Cascade transmutation (converts material A to B in contact with C, triggering
+    C-to-D — chain reactions of limited scope)
+  visual_effect_tags: hands glowing amber-gold with alchemical light, matter visibly
+    restructuring between practitioner's hands, particles lifting and resettling in
+    new geometric configuration, soft chemical smoke at transformation interface,
+    substance glowing at conversion peak, transformation geometry visible as lattice
+    lines

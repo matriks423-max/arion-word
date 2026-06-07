@@ -1,0 +1,20 @@
+id: hook-015
+type: hook
+name: hook-015
+provenance:
+  introduced_episode: 4
+  last_changed_episode: 4
+  source_run: migration-v1
+description: In Episode 4, Kairo walks past a seamstress's shop near his building
+  block. There is a woman through the window doing alterations. She does not look
+  up. He does not look in. The shop sign reads 'E. Marsh — Repairs.'
+planted_episode: 4
+payoff_episode: 22
+payoff_description: Elara Marsh is Dena Croft. The woman through the window is the
+  only person alive who has read all of Erian's fourth document and can explain to
+  Kairo what he is. She has been 90 metres from him for two and a half years. He has
+  walked past her shop at least a hundred times. When Dena finally approaches him
+  in Episode 22, the audience will understand that she was never a stranger — she
+  was a recurring background detail they stopped seeing because she was always there.
+category: character_secret
+revealed: false

@@ -1,0 +1,61 @@
+id: tech-resonance-deep-read
+type: technique
+name: Resonance Deep Read
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — Alchemy
+tier: 2
+description: Perceiving the complete material and resonance composition of a substance
+  or object — not just what happened to it (Echo Sight) but what it is made of at
+  every structural level, including accumulated Resonance residue layers, embedded
+  inscriptions, True Smith bindings, and Founding Age material signatures. Requires
+  Resonance Alchemy training rather than standard Resonance Arts — the perception
+  is oriented toward material structure rather than event history. Practitioners use
+  this as a diagnostic tool before any complex alchemical work. A Deep Read on a True
+  Smithed object reveals the maker's signature — a fact that most True Smiths do not
+  know.
+cost: Low for simple objects. Scaling for objects with complex histories or dense
+  resonance modification layers. High-residue objects risk perceptual overwhelm.
+game_mechanic_concept: 'Diagnostic ability: reveals full material composition, structural
+  resonance properties, historical modification layers, and any embedded alchemy or
+  True Smithing modifications. Passive application when examining objects. High skill
+  level reveals curse-binding modifications, maker signatures on True Smithed items,
+  and Founding Age construction techniques. Overexposure to high-complexity objects
+  causes temporary perceptual overload.'
+canon:
+  id: tech_009
+  name: Resonance Deep Read
+  branch: Craft Arts — Alchemy
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Corvel Ash
+  description: Perceiving the complete material and resonance composition of a substance
+    or object — not just what happened to it (Echo Sight) but what it is made of at
+    every structural level, including accumulated Resonance residue layers, embedded
+    inscriptions, True Smith bindings, and Founding Age material signatures. Requires
+    Resonance Alchemy training rather than standard Resonance Arts — the perception
+    is oriented toward material structure rather than event history. Practitioners
+    use this as a diagnostic tool before any complex alchemical work. A Deep Read
+    on a True Smithed object reveals the maker's signature — a fact that most True
+    Smiths do not know.
+  game_mechanic_concept: 'Diagnostic ability: reveals full material composition, structural
+    resonance properties, historical modification layers, and any embedded alchemy
+    or True Smithing modifications. Passive application when examining objects. High
+    skill level reveals curse-binding modifications, maker signatures on True Smithed
+    items, and Founding Age construction techniques. Overexposure to high-complexity
+    objects causes temporary perceptual overload.'
+  cost: Low for simple objects. Scaling for objects with complex histories or dense
+    resonance modification layers. High-residue objects risk perceptual overwhelm.
+  how_to_learn: Specialized Resonance Alchemy development — not in Guild curriculum.
+    Requires alchemy training combined with Resonance perception development.
+  variations_known:
+  - Surface read (quick, reveals top layer only — available to any trained alchemist)
+  - Deep read (full structural analysis — requires Resonance Alchemy specialization)
+  - Historical read (traces modification history layer by layer, from oldest to most
+    recent — rare, very slow, very revealing)
+  visual_effect_tags: practitioner's eyes shifting to deep amber alchemical sight,
+    faint chemical structural lines overlaid on object surface, resonance residue
+    visible as colored depth strata, practitioner's expression focused and still,
+    quiet diagnostic intensity

@@ -1,0 +1,16 @@
+id: hook-004
+type: hook
+name: hook-004
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+description: Serin has a habit of touching her left temple when she is about to make
+  a decision. She thinks it is a nervous tic.
+planted_episode: 1
+payoff_episode: 67
+payoff_description: The compulsion chip implanted during her Guild training is located
+  at her left temple. When the trigger command is spoken she physically cannot act
+  against the Guild — and she finally understands what her gesture meant.
+category: character_secret
+revealed: false

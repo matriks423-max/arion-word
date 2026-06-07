@@ -1,0 +1,22 @@
+id: hook-009
+type: hook
+name: hook-009
+provenance:
+  introduced_episode: 6
+  last_changed_episode: 6
+  source_run: migration-v1
+description: Corvel Ash's practice has a small carved stone on the reception desk
+  — dark grey, smooth, about the size of a fist. It is never referenced in dialogue.
+  In the background of two early scenes it is simply there, unremarkable.
+planted_episode: 6
+payoff_episode: 95
+payoff_description: The stone is a Founding Age resonance marker — one of the objects
+  Kairo read for Hedda two years before Episode 1 that left him non-functional for
+  the rest of the day. Kairo handled it briefly, under a false name, during a single
+  visit to Corvel's practice. Corvel kept it because the resonance residue Kairo left
+  on it is the only identifying trace he has of his unnamed patient. When Kairo enters
+  Corvel's practice for the first time on screen, he clocks the stone instantly. The
+  audience realises simultaneously that Kairo has been there before and that Corvel
+  has been hunting him using the ghost Kairo left on that object.
+category: character_secret
+revealed: false

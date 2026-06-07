@@ -1,0 +1,43 @@
+id: tech-precision-water-compression
+type: technique
+name: Precision Water Compression
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Resonance Arts
+tier: 2
+description: 'Rather than generating large-scale water manipulation, the practitioner
+  compresses a small volume of water to extreme density and accelerates it to high
+  velocity. The result: a projectile the size of a coin that hits with more force
+  than a thrown boulder. Uses a fraction of the energy of conventional water magic.
+  Near-invisible in flight.'
+cost: Low Resonance energy — the efficiency is the point.
+game_mechanic_concept: 'Precision ranged attack: low energy cost, high damage, minimal
+  visual telegraph. Requires significant Resonance Arts investment to unlock but is
+  far more efficient than equivalent-damage conventional techniques.'
+canon:
+  id: tech_003
+  name: Precision Water Compression
+  branch: Resonance Arts
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: unknown — theoretical until demonstrated
+  description: 'Rather than generating large-scale water manipulation, the practitioner
+    compresses a small volume of water to extreme density and accelerates it to high
+    velocity. The result: a projectile the size of a coin that hits with more force
+    than a thrown boulder. Uses a fraction of the energy of conventional water magic.
+    Near-invisible in flight.'
+  game_mechanic_concept: 'Precision ranged attack: low energy cost, high damage, minimal
+    visual telegraph. Requires significant Resonance Arts investment to unlock but
+    is far more efficient than equivalent-damage conventional techniques.'
+  cost: Low Resonance energy — the efficiency is the point.
+  how_to_learn: Cannot be learned through Guild curriculum. Requires understanding
+    of pressure physics and Resonance interaction with liquids at a mechanical level.
+    Self-discovery or a very specific teacher.
+  why_it_matters: 'This technique exemplifies the core philosophy: understanding beats
+    power. A Tier 1 practitioner who discovers this can threaten a Tier 3 practitioner
+    who relies on brute Resonance output.'
+  visual_effect_tags: coin-sized compressed water sphere with intense light refraction
+    halo, near-invisible high-velocity water projectile, subtle shimmer trail in flight
+    path, no visible energy buildup until release

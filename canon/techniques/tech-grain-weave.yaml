@@ -1,0 +1,68 @@
+id: tech-grain-weave
+type: technique
+name: Grain Weave
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — True Smithing
+tier: 1
+description: 'The foundation of True Smithing — working metal while maintaining continuous
+  Resonance awareness through the material, feeling the grain structure through Open
+  Path perception and guiding the physical work to align it optimally. A blade worked
+  with Grain Weave has material consistency that conventional metallurgy cannot replicate:
+  the grain runs without interruption through the length, the stress distribution
+  is perfect, the edge geometry is precise in ways that appear almost mathematical.
+  Standard smithing is external — you work the surface and infer the interior. Grain
+  Weave is internal — you feel the interior and work from it. Brix''s family calls
+  this ''keeping company with the metal.'' The Guild curriculum calls it ''resonance-assisted
+  quality monitoring.'' Both descriptions are accurate and both miss the point.'
+cost: Moderate Resonance energy sustained over the full working period. Available
+  to lower-tier practitioners than full True Forge Bind.
+game_mechanic_concept: 'Passive technique: active throughout all True Smithing work.
+  Improves finished object''s base physical properties (durability, edge geometry,
+  structural integrity, weight distribution) significantly above standard smithing
+  equivalents. Requires sustained Resonance attention — distraction or fatigue causes
+  quality degradation. Available to any practitioner with Open Path access and smithing
+  skill, even without formal True Smithing training.'
+canon:
+  id: tech_012
+  name: Grain Weave
+  branch: Craft Arts — True Smithing
+  tier: 1
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Brix (anticipated)
+  description: 'The foundation of True Smithing — working metal while maintaining
+    continuous Resonance awareness through the material, feeling the grain structure
+    through Open Path perception and guiding the physical work to align it optimally.
+    A blade worked with Grain Weave has material consistency that conventional metallurgy
+    cannot replicate: the grain runs without interruption through the length, the
+    stress distribution is perfect, the edge geometry is precise in ways that appear
+    almost mathematical. Standard smithing is external — you work the surface and
+    infer the interior. Grain Weave is internal — you feel the interior and work from
+    it. Brix''s family calls this ''keeping company with the metal.'' The Guild curriculum
+    calls it ''resonance-assisted quality monitoring.'' Both descriptions are accurate
+    and both miss the point.'
+  game_mechanic_concept: 'Passive technique: active throughout all True Smithing work.
+    Improves finished object''s base physical properties (durability, edge geometry,
+    structural integrity, weight distribution) significantly above standard smithing
+    equivalents. Requires sustained Resonance attention — distraction or fatigue causes
+    quality degradation. Available to any practitioner with Open Path access and smithing
+    skill, even without formal True Smithing training.'
+  cost: Moderate Resonance energy sustained over the full working period. Available
+    to lower-tier practitioners than full True Forge Bind.
+  how_to_learn: Teachable without formal curriculum — any practitioner with Open Path
+    awareness who learns smithing can develop this intuitively. It is the most commonly
+    practiced True Smithing technique and the one most likely to be independently
+    discovered.
+  variations_known:
+  - Passive grain reading (sensing without directing — diagnostic use)
+  - Active grain direction (guiding grain structure during working — standard Grain
+    Weave)
+  - Deep structure influence (influencing material properties at the crystalline level
+    — requires Tier 3 or higher, produces extraordinary results in appropriate materials)
+  visual_effect_tags: smith's hands showing faint amber resonance glow where they
+    contact metal, hammer work producing light-trails at impact points, heated metal
+    showing internal structural patterns briefly visible during working, smith's eyes
+    slightly unfocused as attention is divided between physical and resonance perception,
+    work environment quiet and focused

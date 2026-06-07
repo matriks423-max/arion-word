@@ -1,0 +1,59 @@
+id: char-kairo-voss
+type: character
+name: Kairo Voss
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+public:
+  description: A self-taught street-level Resonant from the outer districts of Caelum
+    City. Labelled unstable and dangerous by the Resonant Guild after reporting visions
+    of other worlds. Has no formal training. Works odd jobs to survive. Sketches obsessively.
+  age: 19
+  role: protagonist
+  power_tier: 1
+canon:
+  role: protagonist
+  age: 19
+  description: A self-taught street-level Resonant from the outer districts of Caelum
+    City. Labelled unstable and dangerous by the Resonant Guild after reporting visions
+    of other worlds. Has no formal training. Works odd jobs to survive. Sketches obsessively.
+  power_tier: 1
+  visual_profile:
+    hair: short messy dark brown hair, unkempt locks falling over forehead
+    eyes: amber-brown eyes, intense gaze, perpetually slightly tired
+    face: lean angular face, defined jaw, small scar above left eyebrow
+    build: lean wiry build, average height, 19-year-old male
+    clothing: worn dark navy jacket with patched elbows, charcoal grey fitted shirt,
+      dark trousers, worn ankle boots
+    distinctive: ink-stained right hand from constant sketching, always slightly dishevelled
+    prompt_tags: young male, 19 years old, short messy dark brown hair, amber-brown
+      eyes, angular jaw, lean wiry build, worn dark navy jacket, charcoal shirt, ink-stained
+      right hand, small scar above left eyebrow
+  who_he_is:
+    values:
+    - loyalty above all else — to the few people he lets close
+    - truth even when it costs him
+    - protecting people who can't protect themselves
+    fears:
+    - being the reason someone he loves gets hurt
+    - that his visions are real and he caused something terrible
+    - becoming something he doesn't recognise
+    contradictions:
+    - fiercely protective but makes decisions alone without telling people
+    - claims not to care what others think but is deeply wounded by rejection
+    - hates authority but desperately wants someone to tell him he's not broken
+    fatal_flaw: He acts on loyalty before logic. He will burn everything down for
+      one person. This will cost him.
+  secrets_the_world_does_not_know:
+  - He is the reincarnation of Varos — the god who caused the Arion Fracture
+  - His drawings are subconsciously accurate maps of the Echo Timeline
+  - His visions are not hallucinations — he is a natural Fracture Walker, the first
+    in 2000 years
+  current_relationships:
+    Serin Alda: reluctant alliance — he doesn't trust her yet but respects that she
+      hasn't lied to his face
+    Ren: his only real friend — the one person Kairo would die for without thinking
+    Director Malec: authority figure he instinctively distrusts — doesn't know Malec
+      knows what he is
+    The Voice: a presence in his visions he calls the Voice — it knows things it shouldn't

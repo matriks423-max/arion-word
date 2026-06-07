@@ -1,0 +1,16 @@
+id: hook-002
+type: hook
+name: hook-002
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+description: Kairo's sketchbook drawings are described as 'weird abstract city maps'.
+  In Episode 1 he draws a city with a strange spiral tower that doesn't exist in Caelum
+  City.
+planted_episode: 1
+payoff_episode: 45
+payoff_description: The spiral tower is a landmark in the Echo Timeline version of
+  Caelum City. Lyra recognises it instantly when she arrives.
+category: world_lore
+revealed: false

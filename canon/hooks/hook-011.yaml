@@ -1,0 +1,22 @@
+id: hook-011
+type: hook
+name: hook-011
+provenance:
+  introduced_episode: 2
+  last_changed_episode: 2
+  source_run: migration-v1
+description: In Episode 2, Malec is seen standing at his office window for a long
+  silent moment before his first scene begins. On the street below, just visible at
+  the frame's edge, a woman in a brown coat is walking away from the building. The
+  camera does not follow her. The scene proceeds.
+planted_episode: 2
+payoff_episode: 130
+payoff_description: 'The woman is Dena Croft. She had come to within forty metres
+  of Malec''s building — close enough that his perimeter Listeners would have flagged
+  her presence — and then turned back. She has been doing this periodically for three
+  years: approaching the Veilkeeper infrastructure and retreating. Malec does not
+  know. When this moment is revisited in Episode 130, the audience understands she
+  was making the decision that Episode 130 finally forces her to complete. She has
+  been standing at the edge of this for years.'
+category: villain_secret
+revealed: false

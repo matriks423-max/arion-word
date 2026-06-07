@@ -1,0 +1,15 @@
+id: hook-003
+type: hook
+name: hook-003
+provenance:
+  introduced_episode: 2
+  last_changed_episode: 2
+  source_run: migration-v1
+description: Director Malec's office has a large antique clock on the wall. It has
+  13 hour marks instead of 12. Never commented on.
+planted_episode: 2
+payoff_episode: 120
+payoff_description: The 13-hour clock is a Veilkeeper symbol — 13 representing the
+  13 original members of the order that caused the Fracture. Malec's ancestry is revealed.
+category: villain_secret
+revealed: false

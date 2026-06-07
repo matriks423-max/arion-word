@@ -1,0 +1,79 @@
+id: tech-the-long-work
+type: technique
+name: The Long Work
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — True Smithing
+tier: 3
+description: 'Multi-day True Smithing technique — maintaining a continuous Resonance
+  channel to an object across the full duration of the project, sleeping near it,
+  returning across multiple sessions, building the property integration layer by layer
+  over days or weeks. Each day of sustained work adds depth to the integration — the
+  property becomes more fully part of the material, stronger, more stable, more precise.
+  Objects produced through the Long Work have a character to them that single-session
+  work cannot produce: the resonance is deeper, the properties more consistent, the
+  overall quality carrying something that experienced practitioners call ''intention
+  fully realized.'' Brix''s grandfather called it ''sitting time.'' It is also the
+  only way to produce multi-property objects — each property layer must be built separately,
+  with adequate time between layers for the previous layer to fully integrate.'
+cost: Daily Resonance investment across the full project period. Smith cannot perform
+  other significant resonance work during active Long Work. The ongoing channel creates
+  a kind of relationship between smith and object — practitioners often describe Long
+  Work projects as emotionally significant in a way single-session work is not.
+game_mechanic_concept: 'Extended crafting mode: minimum 7 in-story days. Each additional
+  day of sustained work adds one integration layer (maximum 5). Each layer multiplies
+  property strength and stability. Single-session smithing caps at 1 layer. Long Work
+  can achieve up to 5 layers with mastery. Multi-property objects require one full
+  Long Work session per property. The Resonance channel must not be broken during
+  the project — significant physical incapacitation, extended separation, or major
+  emotional disruption severs the channel and the work must restart.'
+canon:
+  id: tech_013
+  name: The Long Work
+  branch: Craft Arts — True Smithing
+  tier: 3
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Brix (anticipated — she practices this without the formal
+    name)
+  description: 'Multi-day True Smithing technique — maintaining a continuous Resonance
+    channel to an object across the full duration of the project, sleeping near it,
+    returning across multiple sessions, building the property integration layer by
+    layer over days or weeks. Each day of sustained work adds depth to the integration
+    — the property becomes more fully part of the material, stronger, more stable,
+    more precise. Objects produced through the Long Work have a character to them
+    that single-session work cannot produce: the resonance is deeper, the properties
+    more consistent, the overall quality carrying something that experienced practitioners
+    call ''intention fully realized.'' Brix''s grandfather called it ''sitting time.''
+    It is also the only way to produce multi-property objects — each property layer
+    must be built separately, with adequate time between layers for the previous layer
+    to fully integrate.'
+  game_mechanic_concept: 'Extended crafting mode: minimum 7 in-story days. Each additional
+    day of sustained work adds one integration layer (maximum 5). Each layer multiplies
+    property strength and stability. Single-session smithing caps at 1 layer. Long
+    Work can achieve up to 5 layers with mastery. Multi-property objects require one
+    full Long Work session per property. The Resonance channel must not be broken
+    during the project — significant physical incapacitation, extended separation,
+    or major emotional disruption severs the channel and the work must restart.'
+  cost: Daily Resonance investment across the full project period. Smith cannot perform
+    other significant resonance work during active Long Work. The ongoing channel
+    creates a kind of relationship between smith and object — practitioners often
+    describe Long Work projects as emotionally significant in a way single-session
+    work is not.
+  how_to_learn: Traditional smithing lineages teach this intuitively — 'the sitting
+    time.' Guild curriculum does not formally cover Long Work above 3-day projects.
+    Full 7-day-plus Long Work is either traditional lineage knowledge or very advanced
+    Guild-licensed training.
+  variations_known:
+  - Standard Long Work (7-14 days, 3-4 layers, most common advanced use)
+  - Deep Long Work (21+ days, 5 layers, very rare — the two objects Brix has produced
+    this way are the best True Smithed items currently in use in Caelum City without
+    anyone knowing it)
+  - Collaborative Long Work (theoretical — two smiths maintaining the channel simultaneously
+    to produce an object neither could produce alone; no confirmed modern examples)
+  visual_effect_tags: time-passage visual of smith returning to same partially-completed
+    object across multiple days, each session showing the object's inner glow deepening
+    in intensity and color richness, accumulated resonance depth visible as warm amber
+    layers within the metal, finished object carrying visible internal luminance compared
+    to single-session work, profound quiet surrounding the completed piece

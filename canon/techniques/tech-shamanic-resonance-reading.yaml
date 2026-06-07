@@ -1,0 +1,44 @@
+id: tech-shamanic-resonance-reading
+type: technique
+name: Shamanic Resonance Reading
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Perception Arts + Mind Arts
+tier: 2
+description: The Vorath shamanic tradition for communicating with the Shattered —
+  people who exist partially across multiple timelines. Requires placing the practitioner's
+  perception partially out of normal timeline phase, creating a shared perceptual
+  space where Shattered individuals can communicate without the cognitive overload
+  of full timeline-crossing.
+cost: Moderate. Disorienting. Prolonged use causes temporary timeline-anchor loosening
+  (practitioner briefly becomes partially Shattered themselves).
+game_mechanic_concept: 'Communication ability: allows conversation with Shattered
+  NPCs/characters who cannot otherwise communicate coherently. Also provides brief
+  timeline-adjacent perception — flickers of other timelines'' versions of the current
+  location.'
+canon:
+  id: tech_005
+  name: Shamanic Resonance Reading
+  branch: Perception Arts + Mind Arts
+  tier: 2
+  introduced_episode: to be assigned
+  first_demonstrated_by: Vorath tradition
+  description: The Vorath shamanic tradition for communicating with the Shattered
+    — people who exist partially across multiple timelines. Requires placing the practitioner's
+    perception partially out of normal timeline phase, creating a shared perceptual
+    space where Shattered individuals can communicate without the cognitive overload
+    of full timeline-crossing.
+  game_mechanic_concept: 'Communication ability: allows conversation with Shattered
+    NPCs/characters who cannot otherwise communicate coherently. Also provides brief
+    timeline-adjacent perception — flickers of other timelines'' versions of the current
+    location.'
+  cost: Moderate. Disorienting. Prolonged use causes temporary timeline-anchor loosening
+    (practitioner briefly becomes partially Shattered themselves).
+  how_to_learn: Vorath shamanic lineage primarily. Theory teachable; practice requires
+    a Shattered individual willing to attempt contact.
+  visual_effect_tags: practitioner with slight chromatic aberration aura, partial
+    timeline desync effect, shattered individual visible as overlapping fractured
+    translucent images, out-of-sync visual distortion around both figures, fractured
+    purple-white light

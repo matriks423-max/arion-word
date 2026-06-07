@@ -1,0 +1,15 @@
+id: hook-006
+type: hook
+name: hook-006
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+description: There is graffiti on a wall in the outer district that reads 'ARION REMEMBERS'.
+  Nobody in the story comments on it.
+planted_episode: 1
+payoff_episode: 150
+payoff_description: The Shattered use this phrase as a coded signal to each other.
+  The graffiti means there is a Shattered living in that building — it is Ren's building.
+category: world_lore
+revealed: false

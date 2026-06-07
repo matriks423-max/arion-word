@@ -1,0 +1,438 @@
+{
+  "count": 47,
+  "entities": [
+    {
+      "id": "char-director-malec-thorne",
+      "type": "character",
+      "name": "Director Malec Thorne",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "char-kairo-voss",
+      "type": "character",
+      "name": "Kairo Voss",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "char-ren",
+      "type": "character",
+      "name": "Ren",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "char-serin-alda",
+      "type": "character",
+      "name": "Serin Alda",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "char-the-voice",
+      "type": "character",
+      "name": "The Voice",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-001",
+      "type": "hook",
+      "name": "hook-001",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-002",
+      "type": "hook",
+      "name": "hook-002",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-003",
+      "type": "hook",
+      "name": "hook-003",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 2
+    },
+    {
+      "id": "hook-004",
+      "type": "hook",
+      "name": "hook-004",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-005",
+      "type": "hook",
+      "name": "hook-005",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-006",
+      "type": "hook",
+      "name": "hook-006",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-007",
+      "type": "hook",
+      "name": "hook-007",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 3
+    },
+    {
+      "id": "hook-008",
+      "type": "hook",
+      "name": "hook-008",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 4
+    },
+    {
+      "id": "hook-009",
+      "type": "hook",
+      "name": "hook-009",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 6
+    },
+    {
+      "id": "hook-010",
+      "type": "hook",
+      "name": "hook-010",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 5
+    },
+    {
+      "id": "hook-011",
+      "type": "hook",
+      "name": "hook-011",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 2
+    },
+    {
+      "id": "hook-012",
+      "type": "hook",
+      "name": "hook-012",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 3
+    },
+    {
+      "id": "hook-013",
+      "type": "hook",
+      "name": "hook-013",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 7
+    },
+    {
+      "id": "hook-014",
+      "type": "hook",
+      "name": "hook-014",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 8
+    },
+    {
+      "id": "hook-015",
+      "type": "hook",
+      "name": "hook-015",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 4
+    },
+    {
+      "id": "hook-016",
+      "type": "hook",
+      "name": "hook-016",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 9
+    },
+    {
+      "id": "hook-017",
+      "type": "hook",
+      "name": "hook-017",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "hook-018",
+      "type": "hook",
+      "name": "hook-018",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 10
+    },
+    {
+      "id": "tech-echo-sight-basic",
+      "type": "technique",
+      "name": "Echo Sight (Basic)",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-essence-distillation",
+      "type": "technique",
+      "name": "Essence Distillation",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-grain-weave",
+      "type": "technique",
+      "name": "Grain Weave",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-material-transmutation",
+      "type": "technique",
+      "name": "Material Transmutation",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-precision-water-compression",
+      "type": "technique",
+      "name": "Precision Water Compression",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-resonance-clone",
+      "type": "technique",
+      "name": "Resonance Clone",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-resonance-deep-read",
+      "type": "technique",
+      "name": "Resonance Deep Read",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-resonance-inscription",
+      "type": "technique",
+      "name": "Resonance Inscription",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-shamanic-resonance-reading",
+      "type": "technique",
+      "name": "Shamanic Resonance Reading",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-signature-lock-forging",
+      "type": "technique",
+      "name": "Signature Lock Forging",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-the-long-work",
+      "type": "technique",
+      "name": "The Long Work",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-thread-weaving-basic",
+      "type": "technique",
+      "name": "Thread Weaving (Basic)",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "tech-true-forge-bind",
+      "type": "technique",
+      "name": "True Forge Bind",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-caelum-city",
+      "type": "world_doc",
+      "name": "Caelum City",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-character-visual-state",
+      "type": "world_doc",
+      "name": "Character Visual State",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-chroniclers",
+      "type": "world_doc",
+      "name": "Chroniclers",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-continents",
+      "type": "world_doc",
+      "name": "Continents",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-crafting-arts",
+      "type": "world_doc",
+      "name": "Crafting Arts",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-curses",
+      "type": "world_doc",
+      "name": "Curses",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-races",
+      "type": "world_doc",
+      "name": "Races",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-season1-soil",
+      "type": "world_doc",
+      "name": "Season1 Soil",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-story-philosophy",
+      "type": "world_doc",
+      "name": "Story Philosophy",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-universe",
+      "type": "world_doc",
+      "name": "Arion World",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    },
+    {
+      "id": "world-visual-style",
+      "type": "world_doc",
+      "name": "Visual Style",
+      "tags": [],
+      "relationships": {},
+      "last_changed_episode": 1
+    }
+  ],
+  "by_type": {
+    "character": [
+      "char-director-malec-thorne",
+      "char-kairo-voss",
+      "char-ren",
+      "char-serin-alda",
+      "char-the-voice"
+    ],
+    "hook": [
+      "hook-001",
+      "hook-002",
+      "hook-003",
+      "hook-004",
+      "hook-005",
+      "hook-006",
+      "hook-007",
+      "hook-008",
+      "hook-009",
+      "hook-010",
+      "hook-011",
+      "hook-012",
+      "hook-013",
+      "hook-014",
+      "hook-015",
+      "hook-016",
+      "hook-017",
+      "hook-018"
+    ],
+    "technique": [
+      "tech-echo-sight-basic",
+      "tech-essence-distillation",
+      "tech-grain-weave",
+      "tech-material-transmutation",
+      "tech-precision-water-compression",
+      "tech-resonance-clone",
+      "tech-resonance-deep-read",
+      "tech-resonance-inscription",
+      "tech-shamanic-resonance-reading",
+      "tech-signature-lock-forging",
+      "tech-the-long-work",
+      "tech-thread-weaving-basic",
+      "tech-true-forge-bind"
+    ],
+    "world_doc": [
+      "world-caelum-city",
+      "world-character-visual-state",
+      "world-chroniclers",
+      "world-continents",
+      "world-crafting-arts",
+      "world-curses",
+      "world-races",
+      "world-season1-soil",
+      "world-story-philosophy",
+      "world-universe",
+      "world-visual-style"
+    ]
+  }
+}

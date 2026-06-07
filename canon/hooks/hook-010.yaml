@@ -1,0 +1,22 @@
+id: hook-010
+type: hook
+name: hook-010
+provenance:
+  introduced_episode: 5
+  last_changed_episode: 5
+  source_run: migration-v1
+description: Harro Feld's pamphlets are sold at the Dusk Market for two coins each.
+  In Episode 5, Ren buys one — not for any story reason, just because he likes the
+  cover, a drawing of a ruined tower. He tucks it in his jacket pocket and it is never
+  mentioned again.
+planted_episode: 5
+payoff_episode: 82
+payoff_description: The pamphlet is one of Harro Feld's four serialised Chronicler
+  publications. The ruined tower on the cover is an accurate rendering of the primary
+  Founding Age structure above the Undercity entrance — drawn from a document none
+  of Ren's acquaintances should have access to. When the Undercity is finally found,
+  Ren pulls the pamphlet from wherever he filed it and shows Kairo the cover in silence.
+  The tower on the cover and the tower in front of them are identical. He bought the
+  map four episodes before anyone knew there was a map.
+category: world_lore
+revealed: false

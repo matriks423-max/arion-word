@@ -1,0 +1,22 @@
+id: hook-017
+type: hook
+name: hook-017
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+description: Serin's silver ring — which she unconsciously touches when stressed —
+  is shown in Episode 1 to have a faint inscription on the inside of the band. The
+  inscription is never read on screen. It is in a script that appears in Founding
+  Age ruins as decorative stonework.
+planted_episode: 1
+payoff_episode: 98
+payoff_description: The inscription is in the Founding Age administrative script —
+  the same one carved into every foundation stone in Caelum, which modern scholars
+  declared decorative because they cannot read it. The ring was given to Serin by
+  her mother before her mother 'died' — it is a Veilkeeper signal object, and it carries
+  her mother's name in the old language. When the script is finally translated, Serin
+  reads her own ring and learns her mother is alive, has always been alive, and put
+  her name on the inside of something she gave her daughter to carry every day.
+category: character_secret
+revealed: false

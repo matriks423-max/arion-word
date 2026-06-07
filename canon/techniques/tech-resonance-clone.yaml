@@ -1,0 +1,47 @@
+id: tech-resonance-clone
+type: technique
+name: Resonance Clone
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Mind Arts
+tier: 2
+description: Creates a physical copy of the practitioner capable of independent action.
+  The clone shares the practitioner's knowledge at moment of creation. As the clone
+  acts and experiences, it accumulates new experience. On dissolution, the practitioner
+  may attempt to recover what the clone learned — this recovery is imperfect and requires
+  training.
+cost: High initial cost. Clone maintenance is ongoing. Knowledge recovery is its own
+  ability with its own cost.
+game_mechanic_concept: 'Utility ability: create a temporary duplicate for combat,
+  exploration, or parallel tasks. Advanced versions allow partial knowledge recovery
+  on dissolution. Clone has a health pool separate from practitioner.'
+canon:
+  id: tech_004
+  name: Resonance Clone
+  branch: Mind Arts
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: unknown
+  description: Creates a physical copy of the practitioner capable of independent
+    action. The clone shares the practitioner's knowledge at moment of creation. As
+    the clone acts and experiences, it accumulates new experience. On dissolution,
+    the practitioner may attempt to recover what the clone learned — this recovery
+    is imperfect and requires training.
+  game_mechanic_concept: 'Utility ability: create a temporary duplicate for combat,
+    exploration, or parallel tasks. Advanced versions allow partial knowledge recovery
+    on dissolution. Clone has a health pool separate from practitioner.'
+  cost: High initial cost. Clone maintenance is ongoing. Knowledge recovery is its
+    own ability with its own cost.
+  how_to_learn: Aethon tradition primarily. Not impossible to discover independently
+    but extremely rare. The Guild does not teach it.
+  variations_known:
+  - Combat clone (standard — clone fights, takes damage, dissolves)
+  - Study clone (Aethon innovation — clone sent to learn a specific thing, optimised
+    for knowledge recovery on dissolution)
+  - Persistence clone (theoretical — clone that survives longer than standard by being
+    given independent Resonance sustaining — nobody has confirmed this works)
+  visual_effect_tags: translucent duplicate figure with faint pale blue-white resonance
+    outline, same appearance as original but slightly less solid, subtle chromatic
+    fringe at clone edges, two versions of the same person in frame

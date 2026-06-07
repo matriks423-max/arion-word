@@ -1,0 +1,60 @@
+id: char-serin-alda
+type: character
+name: Serin Alda
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+public:
+  description: A Tier 2 Resonant and junior investigator for the Resonant Guild. Assigned
+    to monitor Kairo. Trained, disciplined, genuinely wants to do good work. Believes
+    the system she works inside is fundamentally just.
+  age: 23
+  role: deuteragonist
+  power_tier: 2
+canon:
+  role: deuteragonist
+  age: 23
+  description: A Tier 2 Resonant and junior investigator for the Resonant Guild. Assigned
+    to monitor Kairo. Trained, disciplined, genuinely wants to do good work. Believes
+    the system she works inside is fundamentally just.
+  power_tier: 2
+  visual_profile:
+    hair: dark auburn hair, tight high bun when on duty, loose when off-duty
+    eyes: sharp grey-green eyes, very observant, controlled expression
+    face: high cheekbones, defined features, rarely reveals what she is thinking
+    build: medium height, slender but clearly athletic, 23-year-old woman
+    clothing_duty: structured slate-grey Guild jacket with minimal silver trim at
+      collar and cuffs, immaculate fit
+    clothing_offduty: simple dark civilian clothes, plain and practical
+    distinctive: unconsciously touches a silver ring on her right hand when stressed,
+      perfect posture
+    prompt_tags: young woman, 23 years old, dark auburn hair in tight high bun, grey-green
+      eyes, high cheekbones, slender athletic build, structured slate-grey jacket
+      with silver trim, controlled composed expression
+  who_she_is:
+    values:
+    - order and process — she believes systems exist for a reason
+    - honesty, even when uncomfortable
+    - doing the job correctly even when no one is watching
+    fears:
+    - finding out the institution she gave her life to is built on something rotten
+    - that her instincts have been compromised and she can't trust her own judgement
+    - her mother
+    contradictions:
+    - enforces rules rigidly but has privately broken protocol twice when she was
+      certain it was right
+    - presents as cold and professional but remembers the name of every person she's
+      ever arrested
+    - loyal to the Guild but the Guild has never once asked how she is
+    fatal_flaw: She trusts structures more than people. When the structure betrays
+      her, she won't know who she is without it.
+  secrets_the_world_does_not_know:
+  - Her mother is a high-ranking Veilkeeper — alive, not dead as Serin believes
+  - She was placed inside the Guild as an unknowing long-term intelligence asset
+  - A loyalty compulsion was embedded during her Guild training — she has never triggered
+    it but it exists
+  current_relationships:
+    Kairo Voss: assigned target becoming something more complicated
+    Director Malec: superior she trusts completely — this trust is misplaced
+    Her Mother: believes dead since age 9

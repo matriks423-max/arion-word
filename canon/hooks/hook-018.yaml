@@ -1,0 +1,23 @@
+id: hook-018
+type: hook
+name: hook-018
+provenance:
+  introduced_episode: 10
+  last_changed_episode: 10
+  source_run: migration-v1
+description: In Episode 10, during a scene set at the morning market, one of the anonymous
+  market vendors in the background is an older woman, silver-haired, described in
+  the stage direction only as 'watching.' She appears in the background of three separate
+  outdoor scenes in the first twelve episodes, always watching, never interacting.
+  She is never named or addressed.
+planted_episode: 10
+payoff_episode: 200
+payoff_description: She is Fael — the Unnamed One — 847 years old, the last living
+  person who knew Erian personally, who has been waiting for the Threshold Configuration
+  to emerge for centuries. She has been watching Kairo since before Dena Croft moved
+  to the outer district. She does not intervene because she has been deciding whether
+  to for eight hundred years. When she finally speaks in Episode 200, the audience
+  will have seen her in the background of dozens of scenes. She was never absent.
+  Nobody looked.
+category: long_game_prophecy
+revealed: false

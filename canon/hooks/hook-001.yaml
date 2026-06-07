@@ -1,0 +1,15 @@
+id: hook-001
+type: hook
+name: hook-001
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+description: In Episode 1, Ren mentions his oldest clock stopped at '3:12'. This is
+  the exact year (Year 312) the Great Betrayal occurred in the Founding Age.
+planted_episode: 1
+payoff_episode: 88
+payoff_description: Ren realises all his clocks correspond to Fracture timeline events
+  and confronts the truth that he is Shattered
+category: character_secret
+revealed: false

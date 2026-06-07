@@ -1,0 +1,16 @@
+id: hook-005
+type: hook
+name: hook-005
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+description: 'The Voice tells Kairo in Episode 1: ''You have already made this choice.
+  You will make it again. The third time you get it right.'''
+planted_episode: 1
+payoff_episode: 200
+payoff_description: Kairo faces the exact same moral choice three times across three
+  timelines. The first two times he fails. The third time — in the final arc — he
+  succeeds, fulfilling this prophecy.
+category: long_game_prophecy
+revealed: false

@@ -1,0 +1,59 @@
+id: tech-resonance-inscription
+type: technique
+name: Resonance Inscription
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — Alchemy
+tier: 2
+description: Encoding a conditional transformation instruction into an object by writing
+  it in resonance energy — the instruction is embedded in the material structure,
+  invisible to ordinary sight, readable by any practitioner with Resonance perception.
+  The object performs the inscribed transformation when specified conditions are met.
+  The inscription must be complete and internally consistent — incomplete inscriptions
+  produce incomplete transformations, which means unpredictable transformations. The
+  technique produces items that function without any Resonance ability in the user.
+cost: High, scaling with inscription complexity and desired activation count. Inscription
+  errors produce misconfigured items — failure mode discovered only at activation.
+game_mechanic_concept: 'Crafting ability: create items with conditional alchemical
+  effects. Specify trigger condition and transformation effect at crafting time. Item
+  activates transformation when condition is met, usable repeatedly until inscription
+  degrades. Complexity of inscription determines crafting time and Resonance cost.
+  Advanced: multi-conditional inscriptions that respond to sequences rather than single
+  triggers.'
+canon:
+  id: tech_007
+  name: Resonance Inscription
+  branch: Craft Arts — Alchemy
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Mirela Voss (anticipated)
+  description: Encoding a conditional transformation instruction into an object by
+    writing it in resonance energy — the instruction is embedded in the material structure,
+    invisible to ordinary sight, readable by any practitioner with Resonance perception.
+    The object performs the inscribed transformation when specified conditions are
+    met. The inscription must be complete and internally consistent — incomplete inscriptions
+    produce incomplete transformations, which means unpredictable transformations.
+    The technique produces items that function without any Resonance ability in the
+    user.
+  game_mechanic_concept: 'Crafting ability: create items with conditional alchemical
+    effects. Specify trigger condition and transformation effect at crafting time.
+    Item activates transformation when condition is met, usable repeatedly until inscription
+    degrades. Complexity of inscription determines crafting time and Resonance cost.
+    Advanced: multi-conditional inscriptions that respond to sequences rather than
+    single triggers.'
+  cost: High, scaling with inscription complexity and desired activation count. Inscription
+    errors produce misconfigured items — failure mode discovered only at activation.
+  how_to_learn: Specialized Inscription Alchemy study. Not in standard Guild curriculum
+    — available through advanced licensed training or direct practitioner instruction.
+  variations_known:
+  - Physical inscription (resonance script carved into surface — more stable, visible
+    to Resonance perception)
+  - Pure resonance inscription (no physical component — completely invisible, more
+    complex to produce, less stable over time)
+  visual_effect_tags: glowing amber-gold script and geometric formulae being traced
+    into object surface, inscription burning into material then fading to invisible,
+    faint resonance shimmer persisting on inscribed surface, practitioner's finger
+    trailing light as it writes, completed object with subtle warm inner glow, script
+    visible briefly in resonance perception

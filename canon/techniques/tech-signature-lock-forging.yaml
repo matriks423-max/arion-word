@@ -1,0 +1,67 @@
+id: tech-signature-lock-forging
+type: technique
+name: Signature Lock Forging
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — True Smithing
+tier: 2
+description: 'Binding a specific person''s Open Path signature into an object as a
+  functional requirement — the object''s True Smithed properties activate only for
+  the person whose signature was matched at forging. Requires the bonded individual
+  present during the final sealing phase, their resonance in direct contact with the
+  metal as the binding closes. The signature becomes part of the object''s material
+  identity. A signature-locked blade is not simply reluctant in the hands of another
+  — it is genuinely different: the bonded properties are inert, the edge still present
+  but the resonance integration dormant. For locks, only the bonded individual can
+  open them — the mechanism is not locked to anyone else, it simply does not function
+  as a lock for the bonded person, as if the locking condition was never met.'
+cost: High. Both smith and bonded subject expend Resonance energy at the sealing.
+  Bonded individual experiences brief fatigue. If the bonded individual's resonance
+  is not clear and stable at the sealing moment, the binding may seat incorrectly
+  — producing a signature match that is imprecise and therefore less reliable.
+game_mechanic_concept: 'Crafting ability: produce an object with properties active
+  only for one specific individual. Non-bonded users receive no benefit from bound
+  properties (item still functions as its base material, but True Smithed enhancement
+  is absent). For locks: impassable to all non-bonded individuals. Bonding is permanent
+  and non-transferable. Requires bonded individual present at final phase of crafting.'
+canon:
+  id: tech_011
+  name: Signature Lock Forging
+  branch: Craft Arts — True Smithing
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Harven Soldt (anticipated)
+  description: 'Binding a specific person''s Open Path signature into an object as
+    a functional requirement — the object''s True Smithed properties activate only
+    for the person whose signature was matched at forging. Requires the bonded individual
+    present during the final sealing phase, their resonance in direct contact with
+    the metal as the binding closes. The signature becomes part of the object''s material
+    identity. A signature-locked blade is not simply reluctant in the hands of another
+    — it is genuinely different: the bonded properties are inert, the edge still present
+    but the resonance integration dormant. For locks, only the bonded individual can
+    open them — the mechanism is not locked to anyone else, it simply does not function
+    as a lock for the bonded person, as if the locking condition was never met.'
+  game_mechanic_concept: 'Crafting ability: produce an object with properties active
+    only for one specific individual. Non-bonded users receive no benefit from bound
+    properties (item still functions as its base material, but True Smithed enhancement
+    is absent). For locks: impassable to all non-bonded individuals. Bonding is permanent
+    and non-transferable. Requires bonded individual present at final phase of crafting.'
+  cost: High. Both smith and bonded subject expend Resonance energy at the sealing.
+    Bonded individual experiences brief fatigue. If the bonded individual's resonance
+    is not clear and stable at the sealing moment, the binding may seat incorrectly
+    — producing a signature match that is imprecise and therefore less reliable.
+  how_to_learn: Advanced True Smithing — Guild curriculum covers basic version. Traditional
+    lineage instruction covers full technique.
+  variations_known:
+  - Single-signature lock (standard — one person only)
+  - Dual-signature lock (extremely rare — two people, both must be present at forging
+    — requires advanced skill and significantly higher Resonance cost)
+  - Time-conditional lock (signature match required AND specific environmental conditions
+    — the most complex lock work currently practiced)
+  visual_effect_tags: bonded person's hand flat on cooling metal, smith's hand over
+    theirs completing the seal, gold-amber resonance light flowing from subject's
+    palm into metal, unique pattern impression forming on metal surface, brief intense
+    resonance flare that subsides to persistent warm glow, both participants showing
+    visible effort

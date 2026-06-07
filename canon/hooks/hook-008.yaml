@@ -1,0 +1,20 @@
+id: hook-008
+type: hook
+name: hook-008
+provenance:
+  introduced_episode: 4
+  last_changed_episode: 4
+  source_run: migration-v1
+description: 'In the Dusk Market, Vesper''s book stall has a handwritten sign above
+  it that reads: ''Every word survives somewhere.'' Kairo reads it in passing and
+  makes a small joke to Ren about it. They walk on.'
+planted_episode: 4
+payoff_episode: 78
+payoff_description: Vesper is a Mirror who has memorised the second Founding Age document
+  in full. The sign she wrote is not a bookseller's motto — it is the final line of
+  that document, which she absorbed so completely she no longer knows it came from
+  somewhere. When Kairo eventually needs the passage she carries, the sign will play
+  back and the audience will understand she has been holding it in plain sight from
+  the beginning.
+category: world_lore
+revealed: false

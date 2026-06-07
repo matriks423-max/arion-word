@@ -1,0 +1,39 @@
+id: tech-echo-sight-basic
+type: technique
+name: Echo Sight (Basic)
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Resonance Arts
+tier: 1
+description: Passive perception of emotional and event residue left on objects and
+  places. The practitioner feels impressions — not full visions, not complete information.
+  Like reading a room that remembers what happened in it.
+cost: No active cost. Passive. Overwhelming in high-residue environments.
+game_mechanic_concept: 'Passive ability: when player examines an object or enters
+  a location, receives fragmented impressions of past events. Higher proficiency =
+  clearer impressions, longer history accessible.'
+canon:
+  id: tech_001
+  name: Echo Sight (Basic)
+  branch: Resonance Arts
+  tier: 1
+  introduced_episode: pre-story
+  first_demonstrated_by: Kairo Voss
+  description: Passive perception of emotional and event residue left on objects and
+    places. The practitioner feels impressions — not full visions, not complete information.
+    Like reading a room that remembers what happened in it.
+  game_mechanic_concept: 'Passive ability: when player examines an object or enters
+    a location, receives fragmented impressions of past events. Higher proficiency
+    = clearer impressions, longer history accessible.'
+  cost: No active cost. Passive. Overwhelming in high-residue environments.
+  how_to_learn: Most people with any Resonance awareness develop this unconsciously.
+    Conscious control requires a teacher or significant self-directed practice.
+  variations_known:
+  - Can be suppressed — important for Resonants who find high-residue environments
+    painful
+  - Can be focused on a specific time period with training
+  visual_effect_tags: character eyes glowing faint amber, ghostly transparent impressions
+    overlaid on the scene, echo residue visible as golden haze, soft amber light at
+    vision edges

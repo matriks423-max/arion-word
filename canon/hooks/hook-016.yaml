@@ -1,0 +1,21 @@
+id: hook-016
+type: hook
+name: hook-016
+provenance:
+  introduced_episode: 9
+  last_changed_episode: 9
+  source_run: migration-v1
+description: The three surviving Founding Age documents are described in passing by
+  Tobias Greel in Episode 9 as 'the only things the Veilkeepers couldn't burn.' He
+  uses the phrase once, casually, and moves on to other business.
+planted_episode: 9
+payoff_episode: 180
+payoff_description: 'The Unnamed One — Fael — personally preserved all three documents
+  across 2847 years. She was in Caelum City when the Veilkeepers tried to destroy
+  the historical record. She hid the documents. She placed them where they would eventually
+  be found by the right people. When Fael is finally revealed in Episode 180, Tobias''s
+  phrase replays with devastating weight: he was right that the Veilkeepers couldn''t
+  burn them. He didn''t know there was a person whose entire life for eight centuries
+  had been refusing to let them.'
+category: long_game_prophecy
+revealed: false

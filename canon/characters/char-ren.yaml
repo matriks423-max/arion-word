@@ -1,0 +1,63 @@
+id: char-ren
+type: character
+name: Ren
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+public:
+  description: No Resonance ability. Runs a repair shop in the outer district. Talks
+    too much. Always knows what time it is. Collects broken clocks.
+  age: 17
+  role: Kairo's closest friend — comic relief on the surface, something much deeper
+    underneath
+  power_tier: 0
+canon:
+  role: Kairo's closest friend — comic relief on the surface, something much deeper
+    underneath
+  age: 17
+  description: No Resonance ability. Runs a repair shop in the outer district. Talks
+    too much. Always knows what time it is. Collects broken clocks.
+  power_tier: 0
+  visual_profile:
+    hair: curly sandy-brown hair, slightly overgrown, often has a streak of grease
+      or oil in it
+    eyes: warm brown eyes, always looks slightly amused, friendly until he isn't
+    face: round open face, shorter than Kairo, compact stocky build, 17-year-old male
+    build: compact stocky build, shorter than Kairo by a head, looks like someone
+      who lifts heavy things all day
+    clothing: practical work clothes — rolled-up sleeves, worn cargo trousers, leather
+      tool apron in the shop, faded jacket off-duty
+    distinctive: always wearing a mechanical watch on his left wrist — always. It
+      is never removed. Never right.
+    prompt_tags: young male, 17 years old, curly sandy-brown hair, warm brown eyes,
+      round friendly face, compact stocky build, rolled-up sleeves, worn cargo trousers,
+      mechanical watch on left wrist, relaxed posture
+  who_he_is:
+    values:
+    - people over everything — not causes, not justice, not truth. The specific people
+      in front of him
+    - showing up — he is always there, always on time, always the one who stayed
+    - finding what is funny about terrible situations without pretending they aren't
+      terrible
+    fears:
+    - that Kairo will go somewhere Ren cannot follow
+    - being ordinary when ordinary isn't enough
+    - time — in a way he cannot articulate
+    contradictions:
+    - appears to have no ambition but has quietly learned seven different repair trades
+    - treats everything lightly but has never once broken a promise
+    - says he doesn't worry but always knows exactly where Kairo is
+    fatal_flaw: He will not ask for help. He will carry things alone until they break
+      him rather than burden the people he loves.
+  secrets_the_world_does_not_know:
+  - He is Shattered — he exists partially across three timelines simultaneously. This
+    manifests as his perfect time sense and his clock obsession
+  - His clock collection is a subconscious record of every moment the Fracture damaged
+    the timeline
+  - In the Echo Timeline, Ren died at age 17 preventing a catastrophe. This version
+    of him exists partly because of that sacrifice echoing forward
+  - He knows something is wrong with him. He has never told anyone.
+  current_relationships:
+    Kairo Voss: his best friend — Ren is more protective of Kairo than Kairo knows
+      or deserves

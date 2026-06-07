@@ -1,0 +1,66 @@
+id: tech-essence-distillation
+type: technique
+name: Essence Distillation
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — Alchemy
+tier: 3
+description: 'Extracting the defining essence of a substance, experience, or quality
+  into concentrated form. From inert materials: the active compound at many times
+  its natural concentration. From living sources (with consent and presence): the
+  experiential core of a specific quality — courage at the moment of demonstration,
+  calm in the middle of crisis, the last perception of a dying person. The product
+  is a small volume of condensed essence that can be administered to transfer something
+  of the original quality to the recipient. Imperfect transfer — the recipient experiences
+  ''something like'' the original, not a perfect copy. Genuinely controversial. Technically
+  legal in grey areas the Guild has never fully resolved.'
+cost: Moderate to high. Living-source distillation requires the source's cooperation
+  and temporarily depletes the extracted quality from the source — recovering within
+  24-72 hours.
+game_mechanic_concept: 'Crafting ability: produce single-use consumable vials with
+  specific quality effects. Material distillation produces medicine, poisons, reagents.
+  Experiential distillation produces consumables that temporarily grant a specific
+  quality (courage, focus, calm, heightened perception). Quality of output scales
+  with intensity of source material/moment. Using the vial grants temporary effect
+  for 1-4 hours depending on distillation quality.'
+canon:
+  id: tech_008
+  name: Essence Distillation
+  branch: Craft Arts — Alchemy
+  tier: 3
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Corvel Ash (anticipated)
+  description: 'Extracting the defining essence of a substance, experience, or quality
+    into concentrated form. From inert materials: the active compound at many times
+    its natural concentration. From living sources (with consent and presence): the
+    experiential core of a specific quality — courage at the moment of demonstration,
+    calm in the middle of crisis, the last perception of a dying person. The product
+    is a small volume of condensed essence that can be administered to transfer something
+    of the original quality to the recipient. Imperfect transfer — the recipient experiences
+    ''something like'' the original, not a perfect copy. Genuinely controversial.
+    Technically legal in grey areas the Guild has never fully resolved.'
+  game_mechanic_concept: 'Crafting ability: produce single-use consumable vials with
+    specific quality effects. Material distillation produces medicine, poisons, reagents.
+    Experiential distillation produces consumables that temporarily grant a specific
+    quality (courage, focus, calm, heightened perception). Quality of output scales
+    with intensity of source material/moment. Using the vial grants temporary effect
+    for 1-4 hours depending on distillation quality.'
+  cost: Moderate to high. Living-source distillation requires the source's cooperation
+    and temporarily depletes the extracted quality from the source — recovering within
+    24-72 hours.
+  how_to_learn: Advanced alchemy study. Material distillation in Guild curriculum
+    at limited scope. Experiential distillation explicitly outside standard curriculum
+    — requires specialized instruction.
+  variations_known:
+  - Material distillation (inert source, stable, commercially practiced)
+  - Experiential distillation (living source, controversial, requires consent)
+  - Residue distillation (extracting from historical resonance residue — no living
+    source required, extremely rare, produces weaker but more historically interesting
+    effects)
+  visual_effect_tags: thin thread of golden light drawing upward from source material
+    or person into practitioner's cupped hands, source material dimming slightly as
+    essence lifts free, concentrate forming as glowing liquid drop between palms,
+    warm amber concentration point with everything else slightly dimmed, finished
+    vial containing swirling golden-amber light

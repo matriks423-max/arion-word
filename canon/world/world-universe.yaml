@@ -1,0 +1,512 @@
+id: world-universe
+type: world_doc
+name: Arion World
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+data:
+  _copyright: © Arion World. All rights reserved. All story, lore, characters, world-building,
+    and systems are original intellectual property. Unauthorised reproduction or commercial
+    use is prohibited.
+  world_name: Arion World
+  rating: 16+ — blood, death, romance, moral complexity. No outcome is protected.
+  tagline: Where every truth is a lie waiting to be remembered
+  overview: Arion World is a vast pre-electricity world where magic is used like technology
+    — practically, daily, without being understood. The Founding Age left ruins so
+    advanced that modern civilisation built on top of them without knowing what they
+    are. The world appears small at first. It is not. New continents, civilisations,
+    and power scales keep being revealed as the story grows. At the heart of everything
+    lies the Arion Fracture — a shattering of time itself whose consequences are still
+    unfolding 2847 years later.
+  world_setting:
+    technology_level: Pre-electricity. Candles, forges, horses, ships. Manual craftsmanship.
+      No engines, no grid, no machines — except for Founding Age remnants that still
+      function and that nobody understands.
+    magic_in_daily_life: Magic is used the way modern people use phones — practically
+      and constantly, with almost no understanding of how it works. A baker's bread
+      always rises. A sailor feels storms before they form. A blacksmith's metal folds
+      better under his hands than any other smith's. Nobody calls this magic. It is
+      simply life. The people who study and understand the underlying mechanics become
+      vastly more capable — but most people live and die as users, never engineers.
+    founding_age_remnants:
+      description: The Founding Age civilisation left structures and mechanisms 2847
+        years ago that modern people have absorbed into daily life without understanding.
+        These remnants are everywhere in Caelum City and beyond.
+      examples:
+      - Walls built from a stone nobody can quarry or replicate — after 2847 years
+        they have not cracked
+      - A gate in the city centre that opens at dawn and closes at dusk on its own
+        — market stalls route around it, people leave small offerings, it has a shrine
+        now
+      - A well in the outer district that has never run dry including during the three-year
+        drought sixty years ago — people call it god-touched
+      - Script carved into every foundation stone in the city — scholars declared
+        it decorative because they cannot read it
+      - Roads so perfectly level that water runs off them in straight lines — laid
+        before anyone alive was born, still used daily
+      - Dead zones scattered across the known world where Resonance does not work
+        — avoided, considered cursed, never explained
+      the_undercity: Directly beneath Caelum City lies the intact original Founding
+        Age city — sealed, forgotten, and containing archives that would rewrite everything
+        the Guild teaches. The door in the deepest level is written in the same script
+        as the foundation stones. Nobody has opened it.
+    map_philosophy: The world expands as the story earns it. Season 1 takes place
+      in and around Caelum City — it feels like the complete world. It is not. Beyond
+      the Fractured Wastes is an entire civilisation that has been watching Caelum
+      for centuries. Beyond that are continents. The audience will not see the full
+      map for years — each expansion must be earned by the story reaching it naturally.
+  skill_system:
+    name: The Open Path
+    core_philosophy: There are no locked classes, no birthright restrictions, no skill
+      trees with gates. Anyone can learn anything. The only limits are time, knowledge,
+      and understanding. A human lifespan is not long enough to master everything
+      — so every person is constantly choosing what to spend their years on. Those
+      choices define them.
+    the_phone_truth: Magic works the way phones work. Everyone can use it. Almost
+      nobody understands it. The people who figure out how it actually works — even
+      partially — become exponentially more capable than those who only know how to
+      press the buttons. The Founding Age people understood the source code. Modern
+      users are tapping screens without knowing what a processor is.
+    knowledge_scarcity: There are no complete guides. No manuals. No schools that
+      teach everything. Knowledge is fragmented — passed person to person with pieces
+      missing at every step. If a master dies without teaching their technique, that
+      technique may be gone forever. Finding someone who knows a rare method and convincing
+      them to teach you is worth more than a year of solo training. This is why other
+      races matter — they carry knowledge humans lost or never had.
+    raw_power_vs_precision:
+      description: Raw power used bluntly always loses to precision used intelligently
+        — eventually. This is the fundamental truth most powerful people learn too
+        late.
+      example_water_magic: A skilled water mage throwing walls of water looks powerful.
+        The person who spent ten years understanding pressure, velocity, and surface
+        tension fires a sphere the size of a coin at speeds that punch through castle
+        walls. Less energy. More destruction. Invisible until it hits. The second
+        person studied what the first person performed.
+      example_clone_technique: 'A fighter who learns to create a physical clone uses
+        it in battle — the clone takes hits and dies. A thinker who learns the same
+        technique uses the clone to study simultaneously: one body learning swordsmanship
+        while the other reads ancient texts. If they find a way to recover what the
+        clone learned before it dissolves, one lifetime becomes two. The skill is
+        identical. The application determines everything.'
+      the_guild_problem: The Resonant Guild teaches the obvious application of every
+        skill. Always. The obvious application is controllable, predictable, taxable.
+        The moment someone finds a non-obvious application — something the Guild did
+        not teach and did not anticipate — they become unpredictable. The Guild calls
+        this dangerous. What it actually is, is free.
+    branches:
+      note: These are not classes you choose. They are how scholars attempt to organise
+        what is actually a continuous field of knowledge. The boundaries between branches
+        are not real — the most powerful techniques always cross them.
+      Body Arts: Physical conditioning, combat technique, speed, endurance, pain tolerance,
+        muscle memory. No Resonance required. A warrior who has spent thirty years
+        on Body Arts alone is genuinely dangerous to careless Resonants. Physical
+        mastery can be combined with any other branch — a fighter who understands
+        both Body Arts and Resonance mechanics simultaneously moves in ways that look
+        impossible.
+      Resonance Arts: The study and application of Luminal Resonance — the energy
+        that permeates all living things and the world itself. Most Resonants learn
+        surface techniques. The deep mechanics — why Resonance works, what it connects
+        to, what it costs — are either unknown, suppressed by the Guild, or preserved
+        only in Founding Age archives.
+      Essence Arts: Manipulation of living things — healing, body modification, growth,
+        decay. Considered sacred by some cultures, forbidden by others. The Guild
+        teaches only basic healing. The full depth of Essence Arts includes things
+        the Guild has classified as illegal without public explanation.
+      Perception Arts: Sensing, reading, tracking, anticipating. Knowing what is about
+        to happen a half-second before it does. Reading a person's intent from their
+        breathing. Feeling a lie before it finishes. At deep levels, Perception Arts
+        begin to overlap with Resonance in ways that make the boundary meaningless.
+      Craft Arts: Making things — weapons, tools, structures, mechanisms. At surface
+        level this is blacksmithing and carpentry. At deep levels, Craft Arts practitioners
+        can embed techniques into objects, create tools that channel Resonance without
+        the user understanding it, or reverse-engineer Founding Age technology piece
+        by piece. The rarest and most hunted specialisation.
+      Craft Arts — Alchemy sub-branch: 'Transformation through equivalent exchange.
+        Alchemists transmute matter but cannot create from nothing — only convert.
+        The three practical streams are: Material Alchemy (transmuting one substance
+        into another of equal mass and energy), Inscription Alchemy (encoding transformative
+        instructions into objects that activate under conditions), and Distillation
+        (extracting the essence of a thing — courage from blood, memory from a dying
+        breath). A fourth stream exists that the Guild does not acknowledge: Resonance
+        Alchemy, which treats Resonance residue as physical matter that can be scooped,
+        shaped, and transmuted. Three practitioners in Caelum City work in this stream.
+        This is the stream that could interact directly with the rebuilt suppression
+        layer, which is why the Veilkeepers would find its existence extremely alarming.
+        Living transmutation has been attempted. The results are in the restricted
+        archives. No practitioner discusses it twice.'
+      Craft Arts — True Smithing sub-branch: 'Not ordinary metalwork — Resonance-integrated
+        smithing that produces objects with persistent bonded properties. Standard
+        smithing produces tools. True Smithing produces objects whose resonance is
+        part of their material structure: a blade that holds its edge because the
+        resonance integrated into the grain is part of what the edge is; armor forged
+        during a resonance storm that resists resonance effects; a lock that is physically
+        impossible to open except by the specific person whose signature was bound
+        into it during forging. Requirements: the smith must have at least basic Open
+        Path access, materials must be resonance-cleared before use, and the work
+        takes days to weeks of sustained effort and sustained Resonance attention
+        — not hours. The Guild licenses True Smithing tightly because they know its
+        potential. What they license covers approximately the first two tiers of what
+        a genuine practitioner can produce. The technique exists outside the Guild
+        licensing system in lineages that predate the Guild''s organization of the
+        field.'
+      Mind Arts: Memory, logic, strategy, mental resistance, knowledge organisation.
+        The clone technique lives here. So does the ability to compartmentalise under
+        torture, to hold complex plans without writing them down, to learn from observation
+        rather than practice. The most underestimated branch — and the one the Veilkeepers
+        quietly ensure gets the least teaching.
+      The Unnamed Branch: Techniques that do not fit any category. Usually discovered
+        by accident, or learned from races who do not share human frameworks for organising
+        knowledge. The Guild has no curriculum for it. The Veilkeepers actively suppress
+        documented instances of it. It keeps appearing anyway.
+    other_races_and_knowledge: Different races have preserved different fragments
+      of the complete picture. No race has everything. But each has things humans
+      do not — techniques developed over generations, passed through cultures that
+      share knowledge differently than humans do. A human who earns the trust of another
+      race and learns their methods does not just gain new skills — they gain a new
+      framework for understanding what they already knew. The world expanding on the
+      map is also the knowledge map expanding.
+  founding_age_truth:
+    _note: This is the real history. Not what is taught. Not what any faction believes
+      completely. The full picture is assembled by the story across hundreds of episodes
+      — no character ever knows all of this at once.
+    varos:
+      what_he_was: Not a god in any supernatural sense. The most advanced Resonance
+        practitioner alive in Year 312, born into a world that still remembered how
+        the Luminal Core worked. He understood the Open Path at a structural level
+        — not just how to use it, but why it existed and what it was for.
+      his_project: 'The Great Opening — a one-time ritual that would dissolve the
+        suppression layer the proto-Veilkeepers had built over the Open Path. Not
+        teaching. Not gifting power. Removing a lock that should never have been placed.
+        The intent: everyone alive already had access to the Open Path. The Opening
+        would make that access real and irrevocable instead of theoretical and blocked.'
+      what_he_felt: He and Erian had worked on the Opening for eleven years. She was
+        not his student, not his apprentice. She was the other architect. When the
+        proto-Veilkeepers had her killed to stop him, he completed the Opening anyway.
+        And then he did the second thing at the same time — the fold that was never
+        meant to be combined with the Opening.
+      fatal_choice: He knew folding the timeline to pull Erian back was dangerous.
+        He did it anyway. He was already at the peak of the Opening ritual when her
+        death reached him. He chose to do both. This is the choice The Voice has had
+        2847 years to think about. This is the choice Kairo will face again.
+    erian:
+      what_she_was: Co-architect of the Great Opening. Not a secondary figure — the
+        Opening was as much hers as Varos's. The proto-Veilkeepers targeted her first
+        because they understood she was not a tool he was using. She was half the
+        engine.
+      her_death: Ordered by the proto-Veilkeeper inner circle. Year 312. Executed
+        by someone who believed they were protecting civilisation from an unstable
+        experiment. That person was not wrong about the stakes. They were wrong about
+        the experiment.
+      what_happened_after: The timeline fold worked. Erian survived — but displaced.
+        Carried one step sideways out of the main timeline, into what would eventually
+        be called the Echo Timeline. She lived. She had children. They had children.
+        She never fully understood why time felt fractured around her, why her memories
+        sometimes slipped, why certain people in the main timeline looked through
+        her as though she wasn't entirely there.
+      the_consequence: Every Seren — every person who ever crossed from the Echo Timeline
+        into the main one — is a descendant of the woman Varos tried to save. The
+        entire Seren race exists because the fold worked. The world cracked and an
+        entire people were born from the crack.
+      what_she_never_knew: That Varos caused the Fracture trying to save her. That
+        he has been trapped watching the consequences for 2847 years. That the woman
+        now living in Caelum City who sometimes touches a ring on her right hand when
+        stressed carries, somewhere deep in her bloodline, the specific resonance
+        signature of Erian herself.
+    the_great_opening:
+      what_actually_happened: It worked. The Opening completed. In the moment of Year
+        312, every living person alive had their access to the Open Path made real
+        and direct. The suppression layer broke.
+      why_nobody_knows: Because the Fracture happened in the same instant. The world
+        convulsing under the combined force of the Opening and the timeline fold buried
+        the Opening's success in catastrophe. The proto-Veilkeepers — reorganised
+        and renamed in the aftermath — spent the next 2847 years building the story
+        that the Opening failed. That Varos broke the world trying to do something
+        forbidden. That the Open Path must be controlled because this is what happens
+        when it isn't.
+      the_actual_suppression: The Opening's success was real. The access it created
+        is still real. But the Veilkeepers rebuilt the suppression layer in the aftermath
+        — subtler this time, structural, built into the Guild's curriculum and into
+        the Resonance dead zones that 'appeared' after the Fracture. The access exists.
+        It is blocked. Anyone who reaches the real depth of their Resonance ability
+        runs into it and feels it as a ceiling that should not exist.
+      what_the_guild_ceiling_really_is: The Thread Weaving ceiling the Guild imposes
+        is not the limit of what humans can do. It is the rebuilt suppression layer.
+        Below it is the Open Path as Varos intended it — direct, complete, ungated.
+        The Guild knows this exists. They call it Tier 4 and list it as theoretical.
+        It is not theoretical.
+    the_fracture:
+      actual_cause: 'The combination of two things that each would have been survivable
+        alone: the Great Opening (which destabilised the Resonance field across the
+        entire world as it completed) and the timeline fold (which punctured the boundary
+        between timelines at its most vulnerable moment). Together they tore the timelines
+        apart. Reality did not break because Varos was reckless. It broke because
+        he tried to do two enormous things at once and one of them was in response
+        to a murder.'
+      varos_entrapment: He was embedded in the Fracture as its cause — not as punishment
+        by any external force. The Fracture formed around the point of its origin.
+        Varos, being that origin, became bound to it. He exists inside the break.
+        Not dead. Not free. Watching.
+      what_the_veilkeepers_believe: That they caused the Fracture deliberately to
+        trap Varos before he could destroy the world with a completed Opening. This
+        is their founding mythology — it gave them moral authority. The more honest
+        members of the inner circle know it is partly constructed. The Fracture happened.
+        They capitalised on it. The story of having planned it came later.
+      the_real_veilkeeper_secret: They know the Opening succeeded. They have always
+        known. The entire organisation exists to prevent anyone from figuring this
+        out and removing the rebuilt suppression layer. Not because they are purely
+        evil. Because they genuinely believe that an ungated Open Path is what caused
+        the Fracture the first time — and they are wrong about the cause, which means
+        they have been solving for the wrong problem for 2847 years.
+    the_seren_connection:
+      public_knowledge: The Seren are people from the Echo Timeline who crossed into
+        the main timeline. Their resonance signature is slightly different. They are
+        integrated into human society in Caelum and elsewhere.
+      what_nobody_knows: The Echo Timeline exists because Erian was displaced into
+        it by Varos's fold. She was its first permanent inhabitant. The Seren crossing
+        into the main timeline are, in a very real sense, Erian's descendants coming
+        home.
+      dramatic_implication: When Serin Alda crosses a threshold she cannot explain
+        — when she touches her ring, when she feels something she calls instinct but
+        isn't — she is occasionally brushing against the resonance of Erian. Not memory.
+        Not possession. Just the deep cellular echo of an ancestor whose life was
+        the reason the world cracked.
+    what_different_factions_know:
+      veilkeepers_inner_circle: Know the Opening succeeded. Know the suppression is
+        rebuilt. Believe freeing Varos would trigger another Fracture. Do not know
+        about the Erian/Seren connection. Believe the fold failed and Erian died.
+      vorath_shamans: Know through centuries of communication with the Shattered that
+        the Fracture was an accident, not a weapon. Have fragments suggesting the
+        cause was 'a choice made twice at once.' Do not have the full picture. Would
+        share it if asked by someone they trusted.
+      chroniclers: Have three surviving Founding Age texts that contradict the official
+        history. Know the Great Betrayal narrative is constructed. Know something
+        was suppressed after the Fracture. Three years ago their senior archivist
+        found a fourth document — the only surviving account written in Erian's hand.
+        The Veilkeepers had her disappeared within a week. The document was not recovered.
+      kairo_varos: Has nothing. Will have everything. The memory is in him — not accessible,
+        not processable yet. The Voice cannot give it to him. It has to surface on
+        its own or be triggered. When it does, it will not come as knowledge. It will
+        come as experience. He will not learn what Varos did. He will remember doing
+        it.
+      the_unnamed_court: UNREVEALED. They predate this entire history. They have been
+        watching all of it from a distance that makes the Veilkeepers look impatient.
+  timelines:
+    The Founding Age:
+      era: Year 0 - Year 400
+      description: The age when the original Arion civilisation rose and fell. They
+        were the engineers — they understood the source code of Luminal Resonance
+        completely. What modern Resonants do in an hour, they did in a second. The
+        Luminal Core was their greatest work and their undoing.
+      key_events:
+      - The Birth of the First Arion (Year 0)
+      - The Luminal Core Forging (Year 88)
+      - 'Year 301: Varos and Erian complete eleven years of work on the Great Opening
+        — the ritual to dissolve the suppression layer built over the Open Path'
+      - 'Year 312: The proto-Veilkeepers order Erian''s execution to stop the Opening.
+        Varos completes it anyway. In the same moment, he folds the timeline to save
+        Erian. The Opening succeeds. The fold does not close. The combination tears
+        the timelines apart.'
+      - 'Year 312: The Arion Fracture. Reality fractures into parallel timelines.
+        Varos becomes embedded in the Fracture as its point of origin.'
+      - 'Year 312-400: The proto-Veilkeepers rebuild the suppression layer over the
+        Open Path, reframe the Opening as a failure and catastrophe, and construct
+        the ''Great Betrayal'' narrative to establish moral authority.'
+      - 'Year 400: The Founding Age effectively ends. The new order — built on the
+        Veilkeepers'' version of events — begins.'
+      official_veilkeeper_history: Varos, mad with power, attempted to seize control
+        of the Open Path for himself. His partner Erian tried to stop him and was
+        killed for it — the Great Betrayal. The resulting cataclysm fractured reality.
+        The Veilkeepers formed to prevent this ever happening again.
+      status: shown_in_flashbacks_only
+    The Shadow Centuries:
+      era: Year 401 - Year 2000
+      description: The dark age. Civilisations rise and fall without understanding
+        why time feels fractured. The Founding Age knowledge scatters, fragments,
+        gets buried under new cities. Ancient orders form to hunt Core fragments —
+        some to use them, some to prevent their use.
+      status: referenced_in_legend
+    The Present Age:
+      era: Year 2847
+      description: The primary timeline. Caelum City feels like the centre of the
+        world. It is one city on one coast. The story begins here and grows outward.
+      status: main_story
+    The Echo Timeline:
+      era: Year 2847 (parallel)
+      description: The timeline where the Great Betrayal was prevented. Developed
+        completely differently — and is slowly being erased as timelines collapse
+        toward a single point. People from here carry knowledge that does not exist
+        in the main timeline.
+      status: revealed_later
+    The Far Future:
+      era: Year 5000+
+      description: Cryptic glimpses only. Technologically advanced, spiritually empty.
+        The Luminal Core was found and misused. These scenes appear as warnings that
+        the characters cannot yet interpret.
+      status: cryptic_glimpses_only
+  power_system:
+    name: Luminal Resonance
+    description: The energy left behind by the Luminal Core's creation. It permeates
+      all living things and the world itself. Most people use it unconsciously. Those
+      who study it gain access to its deeper capabilities. Nobody in Year 2847 understands
+      it fully — the Founding Age people did, and that knowledge is buried or suppressed.
+    tiers:
+    - tier: 1
+      name: Echo Sight
+      description: Conscious awareness of Resonance — perceiving emotional and event
+        residue left on objects and places. Most people have this without knowing
+        it.
+    - tier: 2
+      name: Thread Weaving
+      description: Active manipulation of Resonance — shaping light, heat, force,
+        perception. The level the Resonant Guild trains people to and considers 'mastery'.
+    - tier: 3
+      name: Fracture Walking
+      description: Perceiving and briefly stepping between timelines. Considered mythical.
+        The Guild has no record of it occurring in the last 500 years.
+    - tier: 4
+      name: Core Binding
+      description: Theoretical. What happens when the Luminal Core is reassembled
+        and fully understood. No living person has come close.
+    hidden_cost: Every use of Luminal Resonance at depth slowly anchors the user more
+      completely to a single timeline — making them more real here, more ghost-like
+      everywhere else. Resonants who push too far eventually cannot be perceived in
+      any timeline but their own. Then they cannot be perceived at all. The Guild
+      calls this 'Resonance Fade' and lists it as a known risk of overuse. They do
+      not explain why it happens.
+    the_guild_ceiling: The Resonant Guild teaches Thread Weaving as the pinnacle of
+      achievable power. This is not the ceiling. It is the ceiling they drew.
+  factions:
+    The Veilkeepers:
+      role: 'Ancient secret society that controls the rebuilt suppression layer over
+        the Open Path. Their mission, as they understand it: prevent the Luminal Core
+        from being reassembled, prevent anyone from approaching Fracture Walking level,
+        prevent Kairo specifically from recovering his memories.'
+      public_face: A philosophical order of scholars
+      founding_myth_they_tell_themselves: They caused the Fracture deliberately to
+        trap Varos before he could destroy the world. Their order was born from crisis
+        and has held the line ever since.
+      actual_origin: They ordered Erian's execution in Year 312 to stop the Opening.
+        The Opening succeeded anyway. The Fracture was an unintended consequence of
+        Varos trying to save her. The Veilkeepers capitalised on the aftermath — rebuilt
+        the suppression layer, constructed the Great Betrayal narrative, established
+        themselves as the world's protectors from a disaster they caused.
+      what_they_know: The inner circle of seven knows the Opening succeeded and the
+        suppression is rebuilt. They do not know the Erian/Seren connection. They
+        believe they prevented something worse. They have been wrong about the cause
+        for 2847 years, which means every solution they have built is solving the
+        wrong problem.
+      genuine_belief: Most Veilkeepers — including junior ranks and many in the inner
+        circle — genuinely believe what they do is necessary. The world fractured
+        once. They prevent it from fracturing again. The fact that their understanding
+        of why it fractured is wrong does not make their conviction less real.
+      internal_fracture: Director Malec knows more than most inner circle members.
+        He has private doubts about two of the seven — suspects they have reached
+        conclusions he has not and are acting on them. He is right. He does not yet
+        know about what the Chroniclers found in the fourth document.
+    The Resonant Guild:
+      role: Controls access to Resonance education. Trains, licenses, and regulates
+        Resonants across the known world.
+      public_face: Academy and peacekeeping force — they maintain order, resolve Resonance-related
+        incidents, protect citizens
+      true_nature: Upper leadership are Veilkeeper instruments. The Guild exists to
+        keep Resonance knowledge at Thread Weaving level and no deeper. Anyone developing
+        beyond that ceiling gets flagged, redirected, or disappears.
+      what_they_suppress: Any technique that approaches understanding WHY Resonance
+        works. Any discovery relating to the Founding Age. Any skill that could theoretically
+        interface with the Fracture itself.
+    The Chroniclers:
+      role: A faction dedicated to collecting, cataloguing, and eventually publishing
+        all knowledge — from every race, every tradition, every era. They believe
+        knowledge hoarding is the root of all power imbalance.
+      public_face: Travelling scholars and archivists — harmless eccentrics who trade
+        information
+      true_nature: The only faction actively working against knowledge scarcity. They
+        have fragments of Founding Age technique that they are slowly piecing together.
+        The Guild considers them a low-level threat. The Veilkeepers consider them
+        an existential one.
+      what_they_want: A complete, accessible record of everything that can be known.
+        No gates. No licenses. No secrets kept by institutions for power.
+    The Shattered:
+      role: People who partially lost their timeline anchor — they exist across multiple
+        timelines simultaneously.
+      public_face: Unstable, dangerous, timeline-touched wanderers. Avoided.
+      true_nature: The only people who can naturally perceive the full structure of
+        the Fracture. Their apparent instability is the sensation of existing in more
+        than one version of reality at once.
+      secret: They are not broken. They are the most complete people alive.
+    The Unnamed Court:
+      role: Unknown. Referenced in three surviving Founding Age texts in terms that
+        suggest they predate even the Arion civilisation.
+      public_face: Considered myth or misreading
+      true_nature: UNREVEALED — this is a long-game mystery. Do not resolve early.
+  locations:
+    known_world_year_2847:
+      Caelum City:
+        description: The capital. Feels like the centre of the world in Season 1.
+          Built on top of the original Founding Age city without the inhabitants knowing.
+          The streets follow Founding Age road layouts. The walls are Founding Age
+          stone. The gate opens at dawn without being touched.
+        hidden_truth: The city's foundations are the physical structure of the original
+          Luminal Core apparatus. Every building in Caelum City is built on top of
+          the most important site in the world.
+      The Outer Districts:
+        description: Where Kairo and Ren live. Poorer, less Guild-monitored, more
+          self-reliant. Ancient Founding Age structures here are used as storage,
+          sleeping quarters, market stalls — repurposed without understanding.
+        hidden_truth: The outer districts sit over the densest concentration of Founding
+          Age infrastructure. The people who live here are unconsciously affected
+          by it — slightly better intuition, slightly faster healing, slightly stronger
+          Resonance presence without training.
+      The Fractured Wastes:
+        description: A vast desert east of Caelum where time moves incorrectly. Clocks
+          stop. People report seeing events from other times playing out like echoes.
+          Avoided by everyone.
+        hidden_truth: The geographic epicentre of the Arion Fracture. The Wastes are
+          larger than any map shows — caravans that enter planning a three-day crossing
+          sometimes walk for three weeks. Something inside is still active.
+      The Undercity:
+        description: Tunnels beneath Caelum City, officially sealed. Unofficially
+          used by people who need to move without being seen.
+        hidden_truth: The intact Founding Age city. Archives. Mechanisms still running
+          after 2847 years. And a door at the deepest level with writing nobody alive
+          can read — that opens into the Echo Timeline.
+    beyond_the_known_world:
+      note: Exists but is not revealed in Season 1. The world is vastly larger than
+        Caelum and its surrounding territories. This expands as the story earns it.
+      hint: There is a civilisation beyond the Fractured Wastes that has been watching
+        Caelum City for two hundred years. They have Founding Age knowledge that the
+        Veilkeepers do not know survived.
+  active_mysteries:
+  - The Great Opening succeeded in Year 312 — the suppression over the Open Path is
+    rebuilt and artificial. Nobody alive in Year 2847 knows this. When does it surface
+    and who does it destroy first?
+  - Serin Alda is a descendant of Erian — the woman the Fracture was caused trying
+    to save. She does not know this. The Voice does. When Kairo eventually remembers
+    being Varos, what does he do with the knowledge of who she is?
+  - What is the Unnamed Court, and why do surviving Founding Age texts refer to them
+    as if they predated even the Arion civilisation?
+  - The fourth document — written in Erian's hand — was found by the Chroniclers'
+    senior archivist three years ago and then the Veilkeepers disappeared her. What
+    does it say? Where is it now?
+  - Kairo's memory of being Varos exists inside him intact. Something is preventing
+    it from surfacing. Is that something the Voice protecting him, the Veilkeepers'
+    containment protocol, or something inside Kairo himself that already knows and
+    is choosing not to?
+  - The Fracture Wastes are larger than any map shows. Something inside is still active
+    after 2847 years. Is it the residue of the Opening, a fragment of Varos's consciousness
+    that couldn't fit in the Fracture, or something that was already there when the
+    Fracture formed around it?
+  - Ren exists partially across three timelines simultaneously — the Shattered condition.
+    In the Echo Timeline, a version of him died at seventeen preventing a catastrophe.
+    What catastrophe? And is the Echo Timeline version of events the one where the
+    Opening wasn't suppressed?
+  - The rebuilt suppression layer is infrastructure — it has physical components.
+    Some of them are the Founding Age structures built into Caelum City. What happens
+    to the city if someone removes them?
+  - The Veilkeepers believe freeing Varos from the Fracture ends the world. Varos
+    — The Voice — believes the opposite. One of them is wrong. The story does not
+    decide which until the audience has enough information to have an opinion.
+  - Why do the Outer Districts produce more self-taught Resonants than anywhere else?
+    (Answer already exists — but it will take the characters 40+ episodes to find
+    it)

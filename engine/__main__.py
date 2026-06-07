@@ -23,7 +23,7 @@ def cmd_validate(args) -> int:
     if failures:
         print(f"{failures} invalid ent/ies", file=sys.stderr)
         return 1
-    print(f"OK — {len(store.list_ids())} entities valid")
+    print(f"OK -- {len(store.list_ids())} entities valid")
     return 0
 
 

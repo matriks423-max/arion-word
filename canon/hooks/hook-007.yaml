@@ -1,0 +1,18 @@
+id: hook-007
+type: hook
+name: hook-007
+provenance:
+  introduced_episode: 3
+  last_changed_episode: 3
+  source_run: migration-v1
+description: When Kairo first meets Serin and she introduces herself by name, he pauses
+  for exactly one beat before responding — a pause he covers by looking away. The
+  show never draws attention to it.
+planted_episode: 3
+payoff_episode: 112
+payoff_description: Kairo has been drawing the same face — Varos's face, surfacing
+  from buried memory — for months. When Serin gives her full name, Alda, it is Erian's
+  family name, last used in the Founding Age. Some part of Kairo's buried memory registered
+  it before his conscious mind could. The pause is the first crack.
+category: character_secret
+revealed: false

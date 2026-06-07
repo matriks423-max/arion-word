@@ -1,0 +1,56 @@
+id: char-the-voice
+type: character
+name: The Voice
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+public:
+  description: Speaks to Kairo during visions. Knows things it shouldn't. Shows genuine
+    care for Kairo. Never explains itself fully. Sometimes warns of danger seconds
+    before it arrives.
+  age: 2847 years trapped
+  role: presence in Kairo's visions — guide, warning, something that grieves
+  power_tier: 4
+canon:
+  role: presence in Kairo's visions — guide, warning, something that grieves
+  age: 2847 years trapped
+  description: Speaks to Kairo during visions. Knows things it shouldn't. Shows genuine
+    care for Kairo. Never explains itself fully. Sometimes warns of danger seconds
+    before it arrives.
+  power_tier: 4
+  visual_profile:
+    form: deliberately obscured — appears only in visions, never with a clear face
+    appearance: tall silhouette of warm golden-amber light at the edges, dark central
+      form, not fully solid
+    environment: always surrounded by dreamlike fracture imagery — cracked light,
+      floating fragments, impossible geometry
+    distinctive: never shows a face — always backlit, always partially obscured, makes
+      the viewer feel watched
+    prompt_tags: mysterious glowing silhouette, warm golden light outline, dark central
+      form, ethereal vision sequence, dreamlike fracture imagery, no visible face,
+      backlit figure, cracked light effects
+  who_it_is:
+    values:
+    - Kairo's survival — above everything else, above truth, above its own freedom
+    fears:
+    - that Kairo will make the same choice Varos made
+    - that telling Kairo the truth will destroy him
+    - that it has already waited too long
+    contradictions:
+    - claims to only guide but occasionally acts in ways that suggest it has more
+      direct influence than it admits
+    - speaks in riddles but the riddles always resolve — it is not being cryptic for
+      mystery's sake, it is being careful
+    - loves Kairo the way you love someone you have failed before
+    fatal_flaw: It is trying to protect Kairo from a truth that Kairo needs in order
+      to survive. The protection is becoming the danger.
+  secrets_the_world_does_not_know:
+  - It is Varos — the god who caused the Arion Fracture — trapped inside it for 2847
+    years
+  - Kairo is Varos reincarnated. The Voice is speaking to its own future self.
+  - It cannot tell Kairo this directly — the moment Kairo knows, the Veilkeepers'
+    containment protocol triggers
+  current_relationships:
+    Kairo Voss: past self to present self — the most complicated relationship in the
+      story

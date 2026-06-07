@@ -1,0 +1,64 @@
+id: char-director-malec-thorne
+type: character
+name: Director Malec Thorne
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+public:
+  description: Head of Enforcement for the Resonant Guild. Calm, measured, politically
+    untouchable. Has never raised his voice in a professional setting. Has done genuinely
+    terrible things and sleeps without difficulty.
+  age: 58
+  role: antagonist — but not a villain in his own story
+  power_tier: 3
+canon:
+  role: antagonist — but not a villain in his own story
+  age: 58
+  description: Head of Enforcement for the Resonant Guild. Calm, measured, politically
+    untouchable. Has never raised his voice in a professional setting. Has done genuinely
+    terrible things and sleeps without difficulty.
+  power_tier: 3
+  visual_profile:
+    hair: short neatly combed silver-white hair
+    eyes: pale cold grey eyes, very still, process everything
+    face: weathered distinguished face, strong jaw, deep expression lines, authoritative
+      not cruel
+    build: tall broad-shouldered, carries himself with absolute stillness, 58-year-old
+      man
+    clothing: near-black formal Guild coat, gold insignia at collar and cuffs, always
+      immaculate
+    distinctive: hands clasped behind his back or folded on a desk, never fidgets,
+      always seems like he already knows what you're about to say
+    prompt_tags: older male, 58 years old, short silver-white hair, pale grey eyes,
+      weathered distinguished face, tall broad-shouldered, near-black formal coat
+      with gold insignia, hands clasped behind back, authoritative stillness
+  who_he_is:
+    values:
+    - stability above all — he has seen what instability costs and he will not allow
+      it again
+    - the long view — he is always thinking 30 years ahead
+    - necessary sacrifice — some people must be harmed so that many more are not
+    fears:
+    - the Luminal Core being reassembled — he believes this ends the world
+    - dying before the work is finished
+    - that he is wrong and has been wrong for 30 years
+    contradictions:
+    - genuinely kind to people he considers no threat — remembered names, asked after
+      sick children, attended funerals
+    - has ordered deaths without hesitation and considered it arithmetic
+    - believes he is the only person with the discipline to do what must be done,
+      and he might be right
+    fatal_flaw: He decided the outcome before asking the question. Everything since
+      has been justification.
+  secrets_the_world_does_not_know:
+  - He is a senior Veilkeeper — one of seven in the inner circle
+  - He ordered the death of Kairo's parents when Kairo was three years old
+  - He has a Luminal Core fragment locked in a vault beneath his office
+  - He has been hunting Kairo's bloodline for 30 years not to destroy it — but to
+    control it
+  current_relationships:
+    Serin Alda: an instrument he has positioned carefully — she doesn't know this
+    Kairo Voss: an existential variable he is managing with great patience
+    The Veilkeeper Inner Circle: reports to them but privately believes two of the
+      seven have lost their nerve

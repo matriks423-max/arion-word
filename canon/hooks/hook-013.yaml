@@ -1,0 +1,22 @@
+id: hook-013
+type: hook
+name: hook-013
+provenance:
+  introduced_episode: 7
+  last_changed_episode: 7
+  source_run: migration-v1
+description: 'The Founding Gate — the one that opens at dawn and closes at dusk on
+  its own — makes a specific sound when it moves: a low resonant tone that lasts approximately
+  two seconds. In early episodes it is ambient background. Kairo walks past it twice
+  without reacting. In Episode 7, Ren walks past it and pauses mid-step for just a
+  moment before continuing.'
+planted_episode: 7
+payoff_episode: 55
+payoff_description: The tone the Gate produces is a Fracture frequency — the specific
+  resonance signature that Shattered individuals are most sensitive to, because it
+  matches the frequency of the timeline boundary they exist across. Kairo does not
+  hear it because his ability is Fracture Walking, not Shattered perception. Ren hears
+  it because he is Shattered. His pause is the first visible evidence of what he is,
+  planted in plain sight twelve episodes before he discovers it himself.
+category: character_secret
+revealed: false

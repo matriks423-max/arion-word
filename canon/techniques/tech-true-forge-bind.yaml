@@ -1,0 +1,63 @@
+id: tech-true-forge-bind
+type: technique
+name: True Forge Bind
+provenance:
+  introduced_episode: 1
+  last_changed_episode: 1
+  source_run: migration-v1
+branch: Craft Arts — True Smithing
+tier: 2
+description: The core act of True Smithing — integrating a specific resonance property
+  into metal during the forging process. The smith maintains conscious Resonance awareness
+  through the material while physically working it, holds the intended property as
+  a lived experience (not an abstract concept), and channels that state into the metal
+  through the sustained connection. The property becomes part of the material's grain
+  structure — not deposited on it, not enchanted after the fact. It is the thing itself.
+  Cannot be removed without destroying the object. The property in the finished object
+  reflects the clarity and intensity of what the smith experienced while binding it.
+cost: High. Sustained Resonance attention through the full physical working period
+  — distraction or exhaustion during binding reduces property quality. Physically
+  and mentally exhausting for complex properties.
+game_mechanic_concept: 'Core smithing enchantment: during active forging, choose one
+  property to permanently bind into the object being crafted. Available base properties:
+  edge retention, structural durability, resonance resistance (minor), signature lock
+  (see tech_011), material sensing. Property strength scales with smith''s skill and
+  mental state quality during binding. Multi-property objects require Long Work (tech_013).
+  Bound properties cannot be removed post-fabrication.'
+canon:
+  id: tech_010
+  name: True Forge Bind
+  branch: Craft Arts — True Smithing
+  tier: 2
+  introduced_episode: to be assigned when demonstrated
+  first_demonstrated_by: Harven Soldt (anticipated)
+  description: The core act of True Smithing — integrating a specific resonance property
+    into metal during the forging process. The smith maintains conscious Resonance
+    awareness through the material while physically working it, holds the intended
+    property as a lived experience (not an abstract concept), and channels that state
+    into the metal through the sustained connection. The property becomes part of
+    the material's grain structure — not deposited on it, not enchanted after the
+    fact. It is the thing itself. Cannot be removed without destroying the object.
+    The property in the finished object reflects the clarity and intensity of what
+    the smith experienced while binding it.
+  game_mechanic_concept: 'Core smithing enchantment: during active forging, choose
+    one property to permanently bind into the object being crafted. Available base
+    properties: edge retention, structural durability, resonance resistance (minor),
+    signature lock (see tech_011), material sensing. Property strength scales with
+    smith''s skill and mental state quality during binding. Multi-property objects
+    require Long Work (tech_013). Bound properties cannot be removed post-fabrication.'
+  cost: High. Sustained Resonance attention through the full physical working period
+    — distraction or exhaustion during binding reduces property quality. Physically
+    and mentally exhausting for complex properties.
+  how_to_learn: True Smithing training — either Guild licensed curriculum (covers
+    basic to intermediate binding) or traditional lineage instruction (which predates
+    Guild organization). The technique itself requires both Open Path access and smithing
+    skill.
+  variations_known:
+  - Basic bind (single property, single session, moderate quality ceiling)
+  - Precision bind (single property, multiple focused sessions, higher quality)
+  - Long Work bind (multi-property, multi-day, highest quality ceiling — see tech_013)
+  visual_effect_tags: intense forge fire with resonance shimmer in the flames, hammer
+    striking metal with light-trails following each blow, metal surface showing shifting
+    inner glow as grain structure integrates the binding, smith's eyes reflecting
+    metal light rather than forge fire, visible resonance currents in heated metal
