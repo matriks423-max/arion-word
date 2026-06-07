@@ -1,0 +1,23 @@
+---
+import Reader from "../../layouts/Reader.astro";
+import characters from "../../data/characters.json";
+import techniques from "../../data/techniques.json";
+import world from "../../data/world.json";
+const groups = [
+  { label: "Characters", items: characters },
+  { label: "Techniques", items: techniques },
+  { label: "The World", items: world },
+];
+---
+<Reader title="Arion World, Encyclopedia" label="The World">
+  {groups.map((g) => (
+    <section style="margin:0 0 2.5rem">
+      <h2 style="font-size:1.6rem;border-bottom:1px solid var(--rule);padding-bottom:.4rem">{g.label}</h2>
+      <ul class="grid">
+        {g.items.map((it) => (
+          <li><a href={`/world/${it.id}`}>{it.name}</a></li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Reader>

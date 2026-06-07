@@ -1,0 +1,18 @@
+---
+import Reader from "../../layouts/Reader.astro";
+import characters from "../../data/characters.json";
+import techniques from "../../data/techniques.json";
+import world from "../../data/world.json";
+export function getStaticPaths() {
+  const items = [...characters, ...techniques, ...world];
+  return items.map((it) => ({ params: { id: it.id }, props: { it } }));
+}
+const { it } = Astro.props;
+---
+<Reader title={`Arion World, ${it.name}`} label={String(it.type).replace("_", " ")}>
+  <h1 style="font-size:2.2rem;margin:0 0 1rem">{it.name}</h1>
+  {it.description && <p>{it.description}</p>}
+  {it.role && <p class="label">Role: {it.role}</p>}
+  {it.branch && <p class="label">Branch: {it.branch}</p>}
+  {it.game_mechanic_concept && <p class="dim">{it.game_mechanic_concept}</p>}
+</Reader>

@@ -1,0 +1,19 @@
+---
+import Reader from "../../layouts/Reader.astro";
+import episodes from "../../data/episodes.json";
+export function getStaticPaths() {
+  return episodes.map((ep) => ({ params: { id: ep.id }, props: { ep } }));
+}
+const { ep } = Astro.props;
+---
+<Reader title={`Arion World, ${ep.name}`} label={`Episode ${ep.number}`}>
+  <h1 style="font-size:2.4rem;line-height:1.15;margin:0 0 .5rem">{ep.name}</h1>
+  <p class="dim" style="margin:0 0 2.5rem">{ep.logline}</p>
+  {(ep.scenes || []).map((s) => (
+    <section style="margin:0 0 2.5rem">
+      {s.location && <p class="label">{s.location}</p>}
+      <p>{s.prose}</p>
+    </section>
+  ))}
+  {ep.cliffhanger && <p style="font-style:italic" class="dim">{ep.cliffhanger}</p>}
+</Reader>

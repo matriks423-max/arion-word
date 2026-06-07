@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 output/
 pending/
+node_modules/
+dist/
+.astro/
+.claude/launch.json

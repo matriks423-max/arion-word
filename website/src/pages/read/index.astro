@@ -1,0 +1,18 @@
+---
+import Reader from "../../layouts/Reader.astro";
+import episodes from "../../data/episodes.json";
+---
+<Reader title="Arion World, Read" label="Episodes">
+  {episodes.length === 0 ? (
+    <p class="dim">No episodes yet. The first will appear once the engine publishes it.</p>
+  ) : (
+    <ul style="list-style:none;padding:0">
+      {episodes.map((ep) => (
+        <li class="rule-top" style="margin:0 0 1.5rem">
+          <a href={`/read/${ep.id}`} style="font-size:1.4rem">{ep.number}. {ep.name}</a>
+          <p class="dim" style="margin:.3rem 0 0">{ep.logline}</p>
+        </li>
+      ))}
+    </ul>
+  )}
+</Reader>

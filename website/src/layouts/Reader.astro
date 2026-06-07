@@ -1,0 +1,23 @@
+---
+const { title = "Arion World", label } = Astro.props;
+import "../styles/reader.css";
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="Arion World, an epic fantasy universe." />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">Arion World</a>
+      <a href="/read">Read</a>
+      <a href="/world">World</a>
+    </nav>
+    <main class="reading fade-in">
+      {label && <p class="label">{label}</p>}
+      <slot />
+    </main>
+  </body>
+</html>
