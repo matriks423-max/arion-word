@@ -5,7 +5,7 @@
   "required": ["id", "type", "name", "provenance"],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
-    "type": { "type": "string", "enum": ["character", "hook", "technique", "world_doc"] },
+    "type": { "type": "string", "enum": ["character", "hook", "technique", "world_doc", "episode"] },
     "name": { "type": "string", "minLength": 1 },
     "provenance": {
       "type": "object",

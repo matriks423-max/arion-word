@@ -13,6 +13,7 @@ _TYPE_DIR = {
     "hook": "hooks",
     "technique": "techniques",
     "world_doc": "world",
+    "episode": "episodes",
 }
 
 

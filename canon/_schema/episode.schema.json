@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "episode.schema.json",
+  "allOf": [{ "$ref": "base.schema.json" }],
+  "properties": {
+    "type": { "const": "episode" },
+    "number": { "type": "integer" },
+    "logline": { "type": "string" },
+    "summary": { "type": "string" },
+    "cliffhanger": { "type": "string" },
+    "scenes": { "type": "array", "minItems": 1 }
+  },
+  "required": ["number", "scenes"]
+}
