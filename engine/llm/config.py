@@ -24,7 +24,12 @@ def build_chat(stage_cfg: dict):
 
 def build_critic_voters(critic_cfg: dict) -> list:
     key = os.environ["NVIDIA_API_KEY"]
-    return [NvidiaChat(api_key=key, model=m) for m in critic_cfg["voters"]]
+    return [
+        NvidiaChat(api_key=key, model=m,
+                   max_tokens=critic_cfg.get("max_tokens", 4096),
+                   timeout=critic_cfg.get("timeout", 90))
+        for m in critic_cfg["voters"]
+    ]
 
 
 def build_embeddings(emb_cfg: dict) -> NvidiaEmbeddings:

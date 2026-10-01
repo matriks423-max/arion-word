@@ -8,10 +8,17 @@ editor:
   max_tokens: 16000
 critic:
   provider: nvidia
+  # Re-probed 2026-10-01: the old panel (llama-3.3-70b, mistral-nemotron,
+  # llama-3.3-nemotron-super-49b) answers HTTP 410. These are reasoning models;
+  # thinking tokens count against max_tokens, so the budget leaves room for the verdict.
+  max_tokens: 16000
+  timeout: 300
   voters:
-    - meta/llama-3.3-70b-instruct
-    - mistralai/mistral-nemotron
-    - nvidia/llama-3.3-nemotron-super-49b-v1
+    - nvidia/nemotron-3-super-120b-a12b
+    - nvidia/nemotron-3-ultra-550b-a55b
+    - openai/gpt-oss-20b
 embeddings:
   provider: nvidia
-  model: baai/bge-m3
+  # baai/bge-m3 answers HTTP 410 since 2026-08-25. 2048-dim, asymmetric (query/passage);
+  # the engine rebuilds an index made by another model before using it.
+  model: nvidia/nemotron-3-embed-1b

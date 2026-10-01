@@ -10,4 +10,4 @@ pytestmark = pytest.mark.skipif(
 def test_nvidia_embeddings_roundtrip():
     from engine.llm.nvidia_client import NvidiaEmbeddings
     vecs = NvidiaEmbeddings(api_key=os.environ["NVIDIA_API_KEY"]).embed(["hello", "world"])
-    assert len(vecs) == 2 and len(vecs[0]) > 100      # bge-m3 dim ~1024
+    assert len(vecs) == 2 and len(vecs[0]) == 2048     # nvidia/nemotron-3-embed-1b

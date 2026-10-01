@@ -41,6 +41,51 @@ def test_relevant_raises_when_index_missing_but_canon_nonempty(tmp_canon):
         r.relevant("anything", k=1)
 
 
+class _NamedEmbeddings(FakeEmbeddings):
+    """FakeEmbeddings that reports a model id and records input types, like NvidiaEmbeddings."""
+
+    def __init__(self, model, dim=8):
+        super().__init__(dim=dim)
+        self.model = model
+        self.input_types = []
+
+    def embed(self, texts, input_type="passage"):
+        self.input_types.append(input_type)
+        return super().embed(texts, input_type)
+
+
+def test_index_uses_passage_and_search_uses_query(tmp_canon):
+    store = CanonStore(tmp_canon)
+    store.save(_char("char-ren", "Ren", "clockmaker"))
+    client = _NamedEmbeddings("nvidia/nemotron-3-embed-1b")
+    r = EmbeddingRetriever(store, client)
+    r.build()
+    r.relevant("clock", k=1)
+    assert client.input_types == ["passage", "query"]
+
+
+def test_index_from_another_model_is_stale_and_refused(tmp_canon):
+    store = CanonStore(tmp_canon)
+    store.save(_char("char-ren", "Ren", "clockmaker"))
+    EmbeddingRetriever(store, _NamedEmbeddings("baai/bge-m3")).build()
+    r = EmbeddingRetriever(store, _NamedEmbeddings("nvidia/nemotron-3-embed-1b"))
+    assert r.is_stale()
+    with pytest.raises(RuntimeError, match="--reindex"):
+        r.relevant("anything", k=1)
+    r.build()
+    assert not r.is_stale()
+
+
+def test_index_without_model_record_is_stale(tmp_canon):
+    # indexes built before the model was recorded came from the retired baai/bge-m3
+    store = CanonStore(tmp_canon)
+    store.save(_char("char-ren", "Ren", "clockmaker"))
+    r = EmbeddingRetriever(store, _NamedEmbeddings("nvidia/nemotron-3-embed-1b"))
+    r.build()
+    r.meta_path.unlink()
+    assert r.is_stale()
+
+
 def test_relevant_returns_empty_when_store_empty(tmp_canon):
     store = CanonStore(tmp_canon)                          # no entities, no index
     r = EmbeddingRetriever(store, FakeEmbeddings(dim=8))

@@ -37,4 +37,5 @@ class ChatClient(Protocol):
 
 
 class EmbeddingClient(Protocol):
-    def embed(self, texts: list[str]) -> list[list[float]]: ...
+    # input_type: "passage" for indexed documents, "query" for searches (asymmetric models).
+    def embed(self, texts: list[str], input_type: str = "passage") -> list[list[float]]: ...

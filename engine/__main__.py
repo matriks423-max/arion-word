@@ -54,7 +54,7 @@ def cmd_episode(args) -> int:
     store = CanonStore(Path(args.canon))
     cfg = load_config(Path(args.models))
     retriever = EmbeddingRetriever(store, build_embeddings(cfg["embeddings"]))
-    if args.reindex or not retriever.path.exists():
+    if args.reindex or not retriever.path.exists() or retriever.is_stale():
         retriever.build()
     pipe = EpisodePipeline(
         store=store,

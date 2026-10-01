@@ -31,7 +31,7 @@ class FakeEmbeddings:
     def __init__(self, dim: int = 16):
         self.dim = dim
 
-    def embed(self, texts: list[str]) -> list[list[float]]:
+    def embed(self, texts: list[str], input_type: str = "passage") -> list[list[float]]:
         out = []
         for t in texts:
             h = hashlib.sha256(t.encode("utf-8")).digest()
